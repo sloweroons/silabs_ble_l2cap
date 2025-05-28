@@ -1,0 +1,12 @@
+02:04:33 **** Incremental Build of configuration GNU ARM v12.2.1 - Default for project bootloader-apploader ****
+make -j16 all 
+make[1]: Nothing to be done for 'main-build'.
+"C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\commander\commander.exe" postbuild "C:\Users\berta\SimplicityStudio\v5_workspace\bootloader-apploader/bootloader-apploader.slpb" --parameter build_dir:"C:\Users\berta\SimplicityStudio\v5_workspace\bootloader-apploader\GNU ARM v12.2.1 - Default"
+Parsing file C:\Users\berta\SimplicityStudio\v5_workspace\bootloader-apploader/bootloader-apploader.slpb...
+Running task convert...
+Running task convert...
+DONE
+ 
+
+02:04:34 Build Finished. 0 errors, 0 warnings. (took 950ms)
+

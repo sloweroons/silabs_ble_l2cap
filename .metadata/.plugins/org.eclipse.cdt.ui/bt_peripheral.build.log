@@ -1,0 +1,11 @@
+23:06:58 **** Incremental Build of configuration GNU ARM v12.2.1 - Default for project bt_peripheral ****
+make -j16 all 
+make[1]: Nothing to be done for 'main-build'.
+"C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\commander\commander.exe" postbuild "C:\Users\berta\SimplicityStudio\v5_workspace\bt_peripheral/bt_soc_empty.slpb" --parameter build_dir:"C:\Users\berta\SimplicityStudio\v5_workspace\bt_peripheral\GNU ARM v12.2.1 - Default"
+ERROR: Could not open file: C:\Users\berta\SimplicityStudio\v5_workspace\bt_peripheral/bt_soc_empty.slpb
+DONE
+make[1]: [makefile:122: post-build] Error 127 (ignored)
+ 
+
+23:06:59 Build Finished. 0 errors, 0 warnings. (took 990ms)
+

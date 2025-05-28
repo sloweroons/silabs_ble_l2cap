@@ -1,0 +1,24 @@
+18:49:06 **** Build of configuration GNU ARM v12.2.1 - Default for project bt_soc_empty ****
+make -j16 all 
+make[1]: Nothing to be done for 'main-build'.
+"C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\commander\commander.exe" postbuild "C:\Users\berta\SimplicityStudio\v5_workspace\bt_soc_empty/bt_soc_empty.slpb" --parameter build_dir:"C:\Users\berta\SimplicityStudio\v5_workspace\bt_soc_empty\GNU ARM v12.2.1 - Default"
+Parsing file C:\Users\berta\SimplicityStudio\v5_workspace\bt_soc_empty/bt_soc_empty.slpb...
+Running task GBL create...
+ERROR: Got an error when running command gbl: 
+Parsing file C:/Users/berta/SimplicityStudio/v5_workspace/bt_soc_empty/GNU ARM v12.2.1 - Default/bt_soc_empty.out...
+
+Initializing GBL file...
+
+Adding application to GBL...
+
+ERROR: No application properties found in the application image.
+
+DONE
+
+
+DONE
+make[1]: [makefile:115: post-build] Error 127 (ignored)
+ 
+
+18:49:10 Build Finished. 0 errors, 0 warnings. (took 4s.830ms)
+

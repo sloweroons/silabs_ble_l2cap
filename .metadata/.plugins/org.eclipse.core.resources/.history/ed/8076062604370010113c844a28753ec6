@@ -1,0 +1,383 @@
+/***************************************************************************//**
+ * @file
+ * @brief Core application logic.
+ *******************************************************************************
+ * # License
+ * <b>Copyright 2024 Silicon Laboratories Inc. www.silabs.com</b>
+ *******************************************************************************
+ *
+ * SPDX-License-Identifier: Zlib
+ *
+ * The licensor of this software is Silicon Laboratories Inc.
+ *
+ * This software is provided 'as-is', without any express or implied
+ * warranty. In no event will the authors be held liable for any damages
+ * arising from the use of this software.
+ *
+ * Permission is granted to anyone to use this software for any purpose,
+ * including commercial applications, and to alter it and redistribute it
+ * freely, subject to the following restrictions:
+ *
+ * 1. The origin of this software must not be misrepresented; you must not
+ *    claim that you wrote the original software. If you use this software
+ *    in a product, an acknowledgment in the product documentation would be
+ *    appreciated but is not required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ *    misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
+ *
+ ******************************************************************************/
+#include "sl_common.h"
+#include "sl_bt_api.h"
+#include "app_assert.h"
+#include "app.h"
+#include "app_log.h"
+//#include "sl_simple_button_instances.c"
+#include "sl_simple_button_instances.h"
+#include "sl_simple_button.h"
+#include "sl_sleeptimer.h"
+
+
+/*
+// -- TODO --
+# PDU in accord with MTU size
+# Denoise data transfer
+# Service/Char. buffering + overflow protection + replica check
+# Give ATT operations meaning other than for detecting timeouts
+*/
+
+/* -- BLE declarations -- */
+static uint16_t max_sdu = 63; // 23 to 65533
+static uint16_t max_pdu = 23; // 23 to 252
+static uint16_t max_mtu = 1;
+static uint16_t credit = 64; // 1 to 65535
+static uint16_t spsm = 0x23; // IPSP
+static uint16_t cid = 0x00; // 0x40-0x7F
+
+// The advertising set handle allocated from Bluetooth stack.
+static uint8_t advertising_set_handle = 0xff;
+static uint8_t connection_handle = 0xff;
+static uint32_t service_handle = 0xff;
+static uint16_t characteristic_handle = 0xff;
+const uint8_t supported_service[] = {0x0f, 0x18};
+const uint8_t supported_characteristic[] = {0x19, 0x2a};
+
+
+/* -- MACROS -- */
+#define MAX_CONNECTIONS 64
+#define MAX_SERVICES 64
+#define MAX_CHARACTERISTICS 64
+#define MAX_BUFFER_SIZE 1024
+#define ANSI_COLOR_RED     "\x1b[31m"
+#define ANSI_COLOR_GREEN   "\x1b[32m"
+#define ANSI_COLOR_YELLOW  "\x1b[33m"
+#define ANSI_COLOR_BLUE    "\x1b[34m"
+#define ANSI_COLOR_MAGENTA "\x1b[35m"
+#define ANSI_COLOR_CYAN    "\x1b[36m"
+#define ANSI_COLOR_RESET   "\x1b[0m"
+#define ANSI_COLOR_GRAY    "\x1b[90m"
+
+/* -- Application declarations -- */
+uint8_t connection_handles[MAX_CONNECTIONS];
+uint8_t connection_index = 0;
+uint8_t connection_handles_blacklist[MAX_CONNECTIONS];
+uint8_t connection_blacklist_index = 0;
+uint16_t service_handles[MAX_SERVICES];
+uint8_t service_index = 0;
+uint16_t characteristic_handles[MAX_CHARACTERISTICS];
+uint8_t characteristic_index = 0;
+bd_addr peripheral_address = {
+    .addr = {0xC4, 0x31, 0x2D, 0x89, 0xC0, 0x1C} // original order
+};
+
+bool array_contains(const void *array, const void *target, size_t element_size, size_t length) {
+  for (size_t i = 0; i < length; i++) {
+    const void *element = (const uint8_t *)array + (i * element_size);
+    if (memcmp(element, target, element_size) == 0) {
+        return true;
+    }
+  }
+  return false;
+}
+
+bool adv_has_battery_service(uint8_t *data, uint8_t len) {
+  for (int i = 0; i < len - 1; ) {
+    uint8_t field_len = data[i];
+    if (field_len == 0) break;
+    uint8_t field_type = data[i + 1];
+
+    if (field_type == 0x03 || field_type == 0x02) {
+      for (int j = 0; j < field_len - 1; j += 2) {
+        uint16_t uuid = data[i + 2 + j] | (data[i + 3 + j] << 8);
+        if (uuid == 0x180F) return true;
+      }
+    }
+    i += field_len + 1;
+  }
+  return false;
+}
+
+
+void uint8_array_to_string(uint8_t *src, char *dest, size_t length) {
+    for (size_t i = 0; i < length; i++) {
+        dest[i] = (char)src[i];
+    }
+    dest[length] = '\0';  // null-terminate the string
+}
+
+/* -- Application declarations -- */
+char message_buffer[4 * MAX_BUFFER_SIZE];
+bool connected = false;
+uint8_t fragment_index = 0;
+uint8_t current_sdu_length = 0;
+uint8_t current_length_sum = 0;
+/* -- Application code -- */
+
+// Application Init.
+SL_WEAK void app_init(void)
+{
+  /////////////////////////////////////////////////////////////////////////////
+  // Put your additional application init code here!                         //
+  // This is called once during start-up.                                    //
+  /////////////////////////////////////////////////////////////////////////////
+  sl_simple_button_init(&sl_button_btn0);
+  sl_simple_button_enable(&sl_button_btn0);
+  app_log_iostream_set(SL_IOSTREAM_TYPE_UART);
+}
+
+bool was_pressed = false;
+bool is_pressed = false;
+
+// Application Process Action.
+SL_WEAK void app_process_action(void)
+{
+  if (app_is_process_required()) {
+    /////////////////////////////////////////////////////////////////////////////
+    // Put your additional application code here!                              //
+    // This is will run each time app_proceed() is called.                     //
+    // Do not call blocking functions from here!                               //
+    /////////////////////////////////////////////////////////////////////////////
+  }
+  is_pressed = sl_simple_button_get_state(&sl_button_btn0);
+  if (!was_pressed && is_pressed) {
+      uint8_t data = 0xff;
+      sl_bt_l2cap_channel_send_data(connection_handle, cid, sizeof(data), &data);
+  }
+  was_pressed = is_pressed;
+}
+
+/**************************************************************************//**
+ * Bluetooth stack event handler.
+ * This overrides the dummy weak implementation.
+ *
+ * @param[in] evt Event coming from the Bluetooth stack.
+ *****************************************************************************/
+void sl_bt_on_event(sl_bt_msg_t *evt) {
+  switch (SL_BT_MSG_ID(evt->header)) {
+    // -------------------------------
+    // This event indicates the device has started and the radio is ready.
+    // Do not call any stack command before receiving this boot event!
+    case sl_bt_evt_system_boot_id:
+      printf("\n> Begin\n\n");
+      printf("CEN - Booting central..\n");
+      memset(message_buffer, 0x00, sizeof(message_buffer));
+/*
+      // Create an advertising set.
+      sl_bt_advertiser_create_set(&advertising_set_handle);
+
+
+      // Generate data for advertising
+      sl_bt_legacy_advertiser_generate_data(advertising_set_handle,
+                                                 sl_bt_advertiser_general_discoverable);
+      // Set advertising interval to 100ms.
+      sl_bt_advertiser_set_timing(
+        advertising_set_handle,
+        160, // min. adv. interval (milliseconds * 1.6)
+        160, // max. adv. interval (milliseconds * 1.6)
+        0,   // adv. duration
+        0);  // max. num. adv. events
+
+      // Start advertising and enable connections.
+      sl_bt_legacy_advertiser_start(advertising_set_handle, sl_bt_legacy_advertiser_connectable);
+*/
+
+      // Start scanning (for WSTK)
+      sl_bt_scanner_set_parameters(sl_bt_scanner_scan_mode_active, 0x4, 0x2);
+      sl_bt_scanner_start(sl_bt_scanner_scan_phy_1m, sl_bt_scanner_discover_generic);
+      printf("CEN - Beginning scan..\n");
+
+      break;
+
+    case sl_bt_evt_scanner_legacy_advertisement_report_id:  // how to compare?
+      //if (memcmp(evt->data.evt_scanner_legacy_advertisement_report.address.addr, peripheral_address.addr, sizeof(peripheral_address.addr)) == 0) {
+      if (adv_has_battery_service(evt->data.evt_scanner_legacy_advertisement_report.data.data, evt->data.evt_scanner_legacy_advertisement_report.data.len)) {
+        sprintf(message_buffer, "%02X-%02X-%02X-%02X-%02X-%02X",
+                evt->data.evt_scanner_legacy_advertisement_report.address.addr[0],
+                evt->data.evt_scanner_legacy_advertisement_report.address.addr[1],
+                evt->data.evt_scanner_legacy_advertisement_report.address.addr[2],
+                evt->data.evt_scanner_legacy_advertisement_report.address.addr[3],
+                evt->data.evt_scanner_legacy_advertisement_report.address.addr[4],
+                evt->data.evt_scanner_legacy_advertisement_report.address.addr[5]);
+        printf(ANSI_COLOR_YELLOW "CEN - -> Peripheral found.\n" ANSI_COLOR_RESET);
+        printf("\t\tremote address : [%s]\n", message_buffer);
+        memset(message_buffer, 0x00, sizeof(message_buffer));
+        printf("CEN - Opening BLE connection..\n");
+        sl_bt_connection_open(evt->data.evt_scanner_legacy_advertisement_report.address, sl_bt_gap_public_address, sl_bt_gap_phy_1m, &connection_handle);
+      }
+      break;
+
+    // This event indicates that a connection was closed.
+    case sl_bt_evt_connection_closed_id:
+      connected = false;
+      // Generate data for advertising
+      printf(ANSI_COLOR_RED "CEN - -> Bluetooth connection closed.\n" ANSI_COLOR_RESET);
+      sl_bt_legacy_advertiser_generate_data(advertising_set_handle,
+                                                 sl_bt_advertiser_general_discoverable);
+
+      // Restart advertising after client has disconnected.
+      sl_bt_legacy_advertiser_start(advertising_set_handle,
+                                         sl_bt_legacy_advertiser_connectable);
+      break;
+
+    // This event indicates that a new connection was opened.
+    // TODO : filter out second connection attempt (sl_status)
+    case sl_bt_evt_connection_opened_id:
+      uint8_t connection_handle_l = evt->data.evt_connection_opened.connection;
+      connection_handles[connection_index++] = evt->data.evt_connection_opened.connection;
+      connected = true;
+      sprintf(message_buffer, "%02X-%02X-%02X-%02X-%02X-%02X",
+              evt->data.evt_connection_opened.address.addr[0],
+              evt->data.evt_connection_opened.address.addr[1],
+              evt->data.evt_connection_opened.address.addr[2],
+              evt->data.evt_connection_opened.address.addr[3],
+              evt->data.evt_connection_opened.address.addr[4],
+              evt->data.evt_connection_opened.address.addr[5]);
+      printf(ANSI_COLOR_GREEN "CEN - -> Bluetooth connection established.\n" ANSI_COLOR_RESET);
+      printf("\t\tremote address : [%s]\n", message_buffer);
+      printf("\t\tconnection handle : [%u]\n", connection_handle_l);
+      printf("CEN - Discovering max MTU size for ATT...\n");
+      sl_bt_gatt_get_mtu(connection_handle_l, &max_mtu);
+      printf("CEN - Discovering GATT primary services...\n");
+      sl_bt_gatt_discover_primary_services_by_uuid(connection_handle_l, sizeof(uint8_t)*2, supported_service);
+      printf("CEN - Opening L2CAP connection.\n");
+      memset(message_buffer, 0x00, sizeof(message_buffer));
+      sl_bt_l2cap_open_le_channel(connection_handle_l, spsm, max_sdu, max_pdu, credit, &cid);
+
+      break;
+
+    // -- L2CAP --
+    case sl_bt_evt_l2cap_le_channel_open_response_id:
+      if (evt->data.evt_l2cap_le_channel_open_response.errorcode == sl_bt_l2cap_connection_result_successful) {
+          printf(ANSI_COLOR_GREEN "CEN - -> L2CAP connection established.\n" ANSI_COLOR_RESET);
+          printf("\t\tcid : [%u]\n", cid);
+          printf("\t\tremote cid : [%u]\n", evt->data.evt_l2cap_le_channel_open_response.remote_cid);
+          printf("CEN - # Sending initial [%u] credit(s).\n", credit);
+          sl_bt_l2cap_channel_send_credit(evt->data.evt_l2cap_le_channel_open_response.connection, cid, credit);
+      } else {
+          printf(ANSI_COLOR_RED "CEN - -> L2CAP connection FAILED.\n" ANSI_COLOR_RESET);
+          printf("\t\terror code : [%u]\n", evt->data.evt_l2cap_le_channel_open_response.errorcode);
+      }
+      break;
+
+    case sl_bt_evt_l2cap_channel_credit_id:
+      printf(ANSI_COLOR_YELLOW "CEN - -> Credit received.\n" ANSI_COLOR_RESET);
+      printf("\t\tamount : [%hu]\n", evt->data.evt_l2cap_channel_credit.credit);
+      break;
+
+    // React to receiving data from peripheral, send additional credits
+    case sl_bt_evt_l2cap_channel_data_id:
+      connected = true;
+      // TODO If SDU sizes mismatch disconnect
+      char fragment_buffer[MAX_BUFFER_SIZE];
+      uint8_t increase_by = 0;
+      printf(ANSI_COLOR_YELLOW "CEN - -> Data fragment #%u received.\n" ANSI_COLOR_RESET, fragment_index);
+      if (fragment_index == 0) {
+          current_sdu_length = evt->data.evt_l2cap_channel_data.data.data[0] | (evt->data.evt_l2cap_channel_data.data.data[1] << 8);
+          uint8_array_to_string(&evt->data.evt_l2cap_channel_data.data.data[2], fragment_buffer, evt->data.evt_l2cap_channel_data.data.len - 2);
+          increase_by += evt->data.evt_l2cap_channel_data.data.len - 2;
+      } else {
+          uint8_array_to_string(evt->data.evt_l2cap_channel_data.data.data, fragment_buffer, evt->data.evt_l2cap_channel_data.data.len);
+          increase_by += evt->data.evt_l2cap_channel_data.data.len;
+      }
+      fragment_index++;
+      memcpy(message_buffer + current_length_sum, fragment_buffer, increase_by);
+      current_length_sum += increase_by;
+      printf("CEN - # Sending additional [%u] credit(s).\n", evt->data.evt_l2cap_channel_data.data.len);
+      sl_bt_l2cap_channel_send_credit(evt->data.evt_l2cap_channel_data.connection, evt->data.evt_l2cap_channel_data.cid, evt->data.evt_l2cap_channel_data.data.len);
+      if (current_sdu_length == current_length_sum) {
+          printf(ANSI_COLOR_CYAN "CEN - -> Data transmission finished.\n" ANSI_COLOR_RESET);
+          message_buffer[current_length_sum] = '\0';
+          printf("\t\tdata string: '%s'\n", message_buffer);
+          if (evt->data.evt_l2cap_channel_data.data.len > 0) {
+            if (evt->data.evt_l2cap_channel_data.data.data[0] == 8 && evt->data.evt_l2cap_channel_data.data.data[1] == 8) {
+                sl_bt_l2cap_close_channel(evt->data.evt_l2cap_channel_data.connection, evt->data.evt_l2cap_channel_data.cid);
+                printf("CEN - L2CAP connection closed (STOP COMMAND RECEIVED)\n");
+            }
+          }
+          memset(message_buffer, 0x00, 4*MAX_BUFFER_SIZE);
+          fragment_index = 0;
+          current_length_sum = 0;
+          current_sdu_length = 0;
+      }
+      break;
+
+    // -- GATT --
+    case sl_bt_evt_gatt_service_id:
+       service_handle = evt->data.evt_gatt_service.service;
+       service_handles[service_index++] = service_handle;
+       printf("CEN - -> Service discovered.\n");
+       if (evt->data.evt_gatt_service.uuid.len == 2) {
+           uint16_t uuid = evt->data.evt_gatt_service.uuid.data[0] | (evt->data.evt_gatt_service.uuid.data[1] << 8);
+           printf("\t\tuuid : 0x%04X\n", uuid);
+       }
+       printf("\t\thandle : [%lu]\n", service_handle);
+       printf("CEN - Discovering GATT characteristics for the given service...\n");
+       //sl_bt_gatt_discover_characteristics_by_uuid(evt->data.evt_gatt_service.connection, evt->data.evt_gatt_service.service, sizeof(uint8_t)*2, supported_characteristic);
+       sl_bt_gatt_discover_characteristics(evt->data.evt_gatt_service.connection, evt->data.evt_gatt_service.service);
+       break;
+
+    case sl_bt_evt_gatt_characteristic_id:
+       characteristic_handle = evt->data.evt_gatt_characteristic.characteristic;
+       characteristic_handles[characteristic_index++] = characteristic_handle;
+       printf("CEN - -> Characteristic discovered.\n");
+       if (evt->data.evt_gatt_characteristic.uuid.len == 2) {
+           uint16_t uuid = evt->data.evt_gatt_characteristic.uuid.data[0] | (evt->data.evt_gatt_characteristic.uuid.data[1] << 8);
+           printf("\t\tuuid : 0x%04X\n", uuid);
+       }
+       printf("\t\thandle : [%u]\n", characteristic_handle);
+       printf(ANSI_COLOR_CYAN "CEN - Enabling indications...\n" ANSI_COLOR_RESET);
+       sl_bt_gatt_set_characteristic_notification(evt->data.evt_gatt_characteristic.connection, evt->data.evt_gatt_characteristic.characteristic, sl_bt_gatt_indication);
+       break;
+
+    case sl_bt_evt_gatt_characteristic_value_id:
+      printf("CEN - -> Characteristic value received.\n");
+      printf("\t\tvalue at 0 : [%u]\n", evt->data.evt_gatt_characteristic_value.value.data[0]);
+      printf("CEN - # Sending additional [%u] credit(s).\n", credit);
+      sl_bt_l2cap_channel_send_credit(evt->data.evt_gatt_characteristic_value.connection, cid, 256);
+      break;
+
+    // switch-case for services and characteristics
+    case sl_bt_evt_gatt_procedure_completed_id:
+      if (evt->data.evt_gatt_procedure_completed.result == SL_STATUS_OK) {
+          printf(ANSI_COLOR_GRAY "CEN - -> GATT procedure successful.\n" ANSI_COLOR_RESET);
+      } else {
+          printf(ANSI_COLOR_GRAY "CEN - -> GATT procedure FAILED.\n" ANSI_COLOR_RESET);
+      }
+      break;
+
+    case sl_bt_evt_gatt_mtu_exchanged_id:
+      printf("CEN - -> MTU exchanged.\n");
+      printf("\t\tMTU size : [%hu]\n", evt->data.evt_gatt_mtu_exchanged.mtu);
+
+      break;
+
+    ///////////////////////////////////////////////////////////////////////////
+    // Add additional event handlers here as your application requires!      //
+    ///////////////////////////////////////////////////////////////////////////
+
+    // -------------------------------
+    // Default event handler.
+    default:
+      break;
+  }
+}

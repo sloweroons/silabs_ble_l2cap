@@ -1,0 +1,1541 @@
+!SESSION 2025-05-22 13:30:59.246 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.3
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+This is a continuation of log file C:\Users\berta\SimplicityStudio\v5_workspace\.metadata\.bak_0.log
+Created Time: 2025-05-22 13:32:49.783
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-05-22 13:32:49.783
+!MESSAGE Failed to connect, verify on line, due to exception https://updates.silabs.com/studio/v5/assets/
+!STACK 0
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:266)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:380)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:189)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:175)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:142)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.online(AssetService.java:1097)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.downloadAsset(AssetService.java:783)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:663)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:642)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.updateLicenses(LicenseRetriever.java:300)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getAsset(LicenseRetriever.java:76)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicenses(LicenseRetriever.java:134)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicensePackageDescriptorMap(LicenseRetriever.java:221)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.needsUpdate(CheckLicenses.java:141)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.checkLicenses(CheckLicenses.java:91)
+	at com.silabs.ss.tool.launcher.internal.product.AppStartupCompleteEventHandler.handleEvent(AppStartupCompleteEventHandler.java:107)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:647)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:554)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at com.silabs.ss.tool.launcher.internal.product.StudioV5Application.start(StudioV5Application.java:28)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY com.silabs.ss.tool.installer.core 4 0 2025-05-22 13:32:49.823
+!MESSAGE Error while updateLicenses from LicenseRetriever resolveAssets 
+!STACK 0
+java.lang.Exception: Failed to download https://updates.silabs.com/studio/v5/assets//common/Master_Software_License_Agreement.zip.timestamp
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.downloadAsset(AssetService.java:784)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:663)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:642)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.updateLicenses(LicenseRetriever.java:300)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getAsset(LicenseRetriever.java:76)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicenses(LicenseRetriever.java:134)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicensePackageDescriptorMap(LicenseRetriever.java:221)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.needsUpdate(CheckLicenses.java:141)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.checkLicenses(CheckLicenses.java:91)
+	at com.silabs.ss.tool.launcher.internal.product.AppStartupCompleteEventHandler.handleEvent(AppStartupCompleteEventHandler.java:107)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:647)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:554)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at com.silabs.ss.tool.launcher.internal.product.StudioV5Application.start(StudioV5Application.java:28)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-05-22 13:32:54.872
+!MESSAGE Exception comparing timestamps for: /common/Chromium_License.zip
+!STACK 0
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:266)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:380)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:189)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:175)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1665)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.isAssetUpdateNeeded(AssetService.java:623)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.updateLicenses(LicenseRetriever.java:291)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getAsset(LicenseRetriever.java:76)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicenses(LicenseRetriever.java:134)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicensePackageDescriptorMap(LicenseRetriever.java:221)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.needsUpdate(CheckLicenses.java:141)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.checkLicenses(CheckLicenses.java:91)
+	at com.silabs.ss.tool.launcher.internal.product.AppStartupCompleteEventHandler.handleEvent(AppStartupCompleteEventHandler.java:107)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:647)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:554)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at com.silabs.ss.tool.launcher.internal.product.StudioV5Application.start(StudioV5Application.java:28)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-05-22 13:32:59.880
+!MESSAGE Connect timed out
+!STACK 0
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:266)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:380)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:189)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:175)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1665)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.downloadFile(AssetService.java:1038)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.downloadAsset(AssetService.java:780)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:663)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:642)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.updateLicenses(LicenseRetriever.java:300)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getAsset(LicenseRetriever.java:76)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicenses(LicenseRetriever.java:134)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicensePackageDescriptorMap(LicenseRetriever.java:221)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.needsUpdate(CheckLicenses.java:141)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.checkLicenses(CheckLicenses.java:91)
+	at com.silabs.ss.tool.launcher.internal.product.AppStartupCompleteEventHandler.handleEvent(AppStartupCompleteEventHandler.java:107)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:647)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:554)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at com.silabs.ss.tool.launcher.internal.product.StudioV5Application.start(StudioV5Application.java:28)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-05-22 13:33:04.887
+!MESSAGE Failed to connect, verify on line, due to exception https://updates.silabs.com/studio/v5/assets/
+!STACK 0
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:266)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:380)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:189)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:175)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:142)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.online(AssetService.java:1097)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.downloadAsset(AssetService.java:783)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:663)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:642)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.updateLicenses(LicenseRetriever.java:300)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getAsset(LicenseRetriever.java:76)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicenses(LicenseRetriever.java:134)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicensePackageDescriptorMap(LicenseRetriever.java:221)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.needsUpdate(CheckLicenses.java:141)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.checkLicenses(CheckLicenses.java:91)
+	at com.silabs.ss.tool.launcher.internal.product.AppStartupCompleteEventHandler.handleEvent(AppStartupCompleteEventHandler.java:107)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:647)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:554)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at com.silabs.ss.tool.launcher.internal.product.StudioV5Application.start(StudioV5Application.java:28)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY com.silabs.ss.tool.installer.core 4 0 2025-05-22 13:33:04.895
+!MESSAGE Error while updateLicenses from LicenseRetriever resolveAssets 
+!STACK 0
+java.lang.Exception: Failed to download https://updates.silabs.com/studio/v5/assets//common/Chromium_License.zip.timestamp
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.downloadAsset(AssetService.java:784)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:663)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:642)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.updateLicenses(LicenseRetriever.java:300)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getAsset(LicenseRetriever.java:76)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicenses(LicenseRetriever.java:134)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicensePackageDescriptorMap(LicenseRetriever.java:221)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.needsUpdate(CheckLicenses.java:141)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.checkLicenses(CheckLicenses.java:91)
+	at com.silabs.ss.tool.launcher.internal.product.AppStartupCompleteEventHandler.handleEvent(AppStartupCompleteEventHandler.java:107)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:647)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:554)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at com.silabs.ss.tool.launcher.internal.product.StudioV5Application.start(StudioV5Application.java:28)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-05-22 13:33:09.903
+!MESSAGE Exception comparing timestamps for: /common/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.zip
+!STACK 0
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:266)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:380)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:189)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:175)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1665)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.isAssetUpdateNeeded(AssetService.java:623)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.updateLicenses(LicenseRetriever.java:291)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getAsset(LicenseRetriever.java:76)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicenses(LicenseRetriever.java:134)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicensePackageDescriptorMap(LicenseRetriever.java:221)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.needsUpdate(CheckLicenses.java:141)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.checkLicenses(CheckLicenses.java:91)
+	at com.silabs.ss.tool.launcher.internal.product.AppStartupCompleteEventHandler.handleEvent(AppStartupCompleteEventHandler.java:107)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:647)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:554)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at com.silabs.ss.tool.launcher.internal.product.StudioV5Application.start(StudioV5Application.java:28)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-05-22 13:33:14.907
+!MESSAGE Connect timed out
+!STACK 0
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:266)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:380)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:189)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:175)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1665)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.downloadFile(AssetService.java:1038)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.downloadAsset(AssetService.java:780)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:663)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:642)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.updateLicenses(LicenseRetriever.java:300)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getAsset(LicenseRetriever.java:76)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicenses(LicenseRetriever.java:134)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicensePackageDescriptorMap(LicenseRetriever.java:221)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.needsUpdate(CheckLicenses.java:141)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.checkLicenses(CheckLicenses.java:91)
+	at com.silabs.ss.tool.launcher.internal.product.AppStartupCompleteEventHandler.handleEvent(AppStartupCompleteEventHandler.java:107)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:647)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:554)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at com.silabs.ss.tool.launcher.internal.product.StudioV5Application.start(StudioV5Application.java:28)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-05-22 13:33:19.916
+!MESSAGE Failed to connect, verify on line, due to exception https://updates.silabs.com/studio/v5/assets/
+!STACK 0
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:266)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:380)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:189)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:175)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:142)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.online(AssetService.java:1097)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.downloadAsset(AssetService.java:783)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:663)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:642)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.updateLicenses(LicenseRetriever.java:300)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getAsset(LicenseRetriever.java:76)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicenses(LicenseRetriever.java:134)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicensePackageDescriptorMap(LicenseRetriever.java:221)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.needsUpdate(CheckLicenses.java:141)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.checkLicenses(CheckLicenses.java:91)
+	at com.silabs.ss.tool.launcher.internal.product.AppStartupCompleteEventHandler.handleEvent(AppStartupCompleteEventHandler.java:107)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:647)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:554)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at com.silabs.ss.tool.launcher.internal.product.StudioV5Application.start(StudioV5Application.java:28)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY com.silabs.ss.tool.installer.core 4 0 2025-05-22 13:33:21.045
+!MESSAGE Error while updateLicenses from LicenseRetriever resolveAssets 
+!STACK 0
+java.lang.Exception: Failed to download https://updates.silabs.com/studio/v5/assets//common/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.zip.timestamp
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.downloadAsset(AssetService.java:784)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:663)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAssets(AssetService.java:642)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.updateLicenses(LicenseRetriever.java:300)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getAsset(LicenseRetriever.java:76)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicenses(LicenseRetriever.java:134)
+	at com.silabs.ss.tool.internal.api.installer.core.LicenseRetriever.getLicensePackageDescriptorMap(LicenseRetriever.java:221)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.needsUpdate(CheckLicenses.java:141)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.CheckLicenses.checkLicenses(CheckLicenses.java:91)
+	at com.silabs.ss.tool.launcher.internal.product.AppStartupCompleteEventHandler.handleEvent(AppStartupCompleteEventHandler.java:107)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:647)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:554)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at com.silabs.ss.tool.launcher.internal.product.StudioV5Application.start(StudioV5Application.java:28)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2025-05-22 13:33:21.530
+!MESSAGE AdapterPack USB adapter pack has setupcheck function type 
+
+!ENTRY com.silabs.ss.tool.installer.core 4 0 2025-05-22 13:33:46.034
+!MESSAGE Unable to connect to repository https://updates.silabs.com/studio/v5/updates/content.xml
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to connect to repository https://updates.silabs.com/studio/v5/updates/content.xml
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:249)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:69)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:89)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.basicRefreshRepository(AbstractRepositoryManager.java:205)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.refreshRepository(MetadataRepositoryManager.java:115)
+	at com.silabs.ss.tool.internal.api.installer.core.SLSP2UpdateSites.ensureStudioReposLoaded(SLSP2UpdateSites.java:678)
+	at com.silabs.ss.tool.internal.api.installer.core.InstallerUtils.ensurePackagesFetched(InstallerUtils.java:1909)
+	at com.silabs.ss.tool.internal.installer.core.updates.UpdateManager.updatePackageMetadata(UpdateManager.java:236)
+	at com.silabs.ss.tool.internal.installer.core.updates.UpdateManager.ensureUpdatesFetched(UpdateManager.java:306)
+	at com.silabs.ss.tool.internal.installer.core.updates.UpdateManager$1.run(UpdateManager.java:189)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to https://updates.silabs.com:443 [updates.silabs.com/23.192.91.96] failed: Connection timed out: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:251)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2025-05-22 13:33:46.035
+!MESSAGE Unable to connect to repository https://updates.silabs.com/studio/v5/updates/content.xml
+!STACK 0
+org.apache.hc.client5.http.HttpHostConnectException: Connect to https://updates.silabs.com:443 [updates.silabs.com/23.192.91.96] failed: Connection timed out: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:251)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2025-05-22 13:34:07.086
+!MESSAGE Connection to https://updates.silabs.com/studio/v5/updates/p2.index failed on Connect to https://updates.silabs.com:443 [updates.silabs.com/23.192.91.96] failed: Connection timed out: no further information. Retry attempt 0 started
+!STACK 0
+org.apache.hc.client5.http.HttpHostConnectException: Connect to https://updates.silabs.com:443 [updates.silabs.com/23.192.91.96] failed: Connection timed out: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.silabs.ss.tool.installer.core 4 0 2025-05-22 13:35:11.536
+!MESSAGE Unable to connect to repository https://updates.silabs.com/studio/v5/updates/content.xml
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to connect to repository https://updates.silabs.com/studio/v5/updates/content.xml
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:249)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:69)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:89)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.basicRefreshRepository(AbstractRepositoryManager.java:205)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.refreshRepository(MetadataRepositoryManager.java:115)
+	at com.silabs.ss.tool.internal.api.installer.core.SLSP2UpdateSites.ensureStudioReposLoaded(SLSP2UpdateSites.java:678)
+	at com.silabs.ss.tool.internal.api.installer.core.InstallerUtils.ensurePackagesFetched(InstallerUtils.java:1918)
+	at com.silabs.ss.tool.internal.installer.core.updates.UpdateManager.updatePackageMetadata(UpdateManager.java:236)
+	at com.silabs.ss.tool.internal.installer.core.updates.UpdateManager.ensureUpdatesFetched(UpdateManager.java:306)
+	at com.silabs.ss.tool.internal.installer.core.updates.UpdateManager$1.run(UpdateManager.java:189)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to https://updates.silabs.com:443 [updates.silabs.com/23.192.91.96] failed: Connection timed out: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:251)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2025-05-22 13:35:11.536
+!MESSAGE Unable to connect to repository https://updates.silabs.com/studio/v5/updates/content.xml
+!STACK 0
+org.apache.hc.client5.http.HttpHostConnectException: Connect to https://updates.silabs.com:443 [updates.silabs.com/23.192.91.96] failed: Connection timed out: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:251)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2025-05-22 13:35:32.605
+!MESSAGE Connection to https://updates.silabs.com/studio/v5/updates/p2.index failed on Connect to https://updates.silabs.com:443 [updates.silabs.com/23.192.91.96] failed: Connection timed out: no further information. Retry attempt 0 started
+!STACK 0
+org.apache.hc.client5.http.HttpHostConnectException: Connect to https://updates.silabs.com:443 [updates.silabs.com/23.192.91.96] failed: Connection timed out: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2025-05-22 13:36:32.443
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2025-05-22 13:36:32.473
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-22 13:47:24.475
+!MESSAGE C:\Users\berta\SimplicityStudio\SDKs\simplicity_sdk\extension\aiml-extension\upgrade.slcu
+!STACK 0
+java.nio.file.NoSuchFileException: C:\Users\berta\SimplicityStudio\SDKs\simplicity_sdk\extension\aiml-extension\upgrade.slcu
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+	at com.silabs.ss.framework.uc.core.internal.api.parse.schema.UcJsonSchemaUtils.parseAndValidate(UcJsonSchemaUtils.java:114)
+	at com.silabs.ss.framework.uc.core.internal.api.parse.schema.slcu.SlcuValidator.parseAndValidate(SlcuValidator.java:38)
+	at com.silabs.ss.framework.uc.core.internal.api.parse.SdkKey.parseUpgradeManifest(SdkKey.java:394)
+	at com.silabs.ss.framework.uc.core.internal.api.parse.SdkKey.parse(SdkKey.java:185)
+	at com.silabs.ss.framework.uc.core.internal.api.parse.SdkParser.parse(SdkParser.java:224)
+	at com.silabs.ss.framework.uc.core.internal.api.parse.SdkParser.parse(SdkParser.java:1)
+	at com.silabs.ss.framework.uc.core.internal.parse.ParseTask.get(ParseTask.java:35)
+	at com.silabs.ss.framework.uc.core.internal.parse.ParseTask.get(ParseTask.java:1)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-22 13:47:25.392
+!MESSAGE Warning: C:\Users\berta\SimplicityStudio\SDKs\simplicity_sdk\extension\aiml-extension\aiml.slce
+  - upgrade_manifest -> [0]: could not parse C:\Users\berta\SimplicityStudio\SDKs\simplicity_sdk\extension\aiml-extension\upgrade.slcu due to java.nio.file.NoSuchFileException C:\Users\berta\SimplicityStudio\SDKs\simplicity_sdk\extension\aiml-extension\upgrade.slcu
+
+
+!ENTRY com.silabs.ss.platform.descriptor.core 4 0 2025-05-22 13:47:28.719
+!MESSAGE could not resolve type String
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:22.780
+!MESSAGE editor file home calculation for Studio resulted in C:\Users\berta\SimplicityStudio\v5_workspace\bt_central\.uceditor for bt_central with component Log
+
+!ENTRY com.silabs.ss.tool.uc.editor 1 0 2025-05-22 13:48:23.154
+!MESSAGE Inside PrimaryWebsocketCommunicator constructor
+
+!ENTRY com.silabs.ss.tool.uc.editor 1 0 2025-05-22 13:48:23.155
+!MESSAGE Websocket on server side linked to /ws/ucedit/filechanges
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:23.157
+!MESSAGE Servlet registered: /rest/ucedit/metadata
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:23.158
+!MESSAGE Servlet registered: /rest/ucedit/action/opensource
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:23.160
+!MESSAGE Servlet registered: /rest/ucedit/action/cmsisedit
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:23.160
+!MESSAGE sockets ready servlet being set up
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:23.162
+!MESSAGE Servlet registered: /rest/ucedit/action/socketsready
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:23.162
+!MESSAGE sockets ready servlet is ready
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:23.163
+!MESSAGE Servlet registered: /rest/ucedit/action/configsready
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:23.182
+!MESSAGE editor file home calculation for Studio resulted in C:\Users\berta\SimplicityStudio\v5_workspace\bt_central\.uceditor for bt_central with component Log
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:23.368
+!MESSAGE Initial cmsis parsing: {app_log_config.h=Start Parse Offset: 18357
+End Parse Offset: 18357
+Parsing Error: null
+Parsing Error offset: -1
+fContainWizard: true
+}
+
+!ENTRY com.silabs.ss.tool.uc.editor 4 0 2025-05-22 13:48:23.401
+!MESSAGE Could not load pintool device data within 30 second timeframe. Marker manager not connected to component editor -- device errors will not show up.
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:23.408
+!MESSAGE CMSIS Parse success for app_log_config.h
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:23.466
+!MESSAGE preparing cmsis websocket update: {"configurables":{"removed":[],"updated":[{"parent_category_id":"CMSIS_$app_log_config.h$_General","conf_type":"check","initial":false,"header":"app_log_config.h","label":"Trace","id":"CMSIS_$app_log_config.h$_APP_LOG_TRACE_ENABLE","type":"conf","desc":"Enables printing file, line and function information."},{"parent_category_id":"CMSIS_$app_log_config.h$_General","conf_type":"check","initial":false,"header":"app_log_config.h","label":"Timestamp","id":"CMSIS_$app_log_config.h$_APP_LOG_TIME_ENABLE","type":"conf","desc":"Enables printing timestamp"},{"parent_category_id":"CMSIS_$app_log_config.h$_General","conf_type":"check","initial":false,"header":"app_log_config.h","label":"Counter","id":"CMSIS_$app_log_config.h$_APP_LOG_COUNTER_ENABLE","type":"conf","desc":"Enables printing counter"},{"parent_category_id":"CMSIS_$app_log_config.h$_General","conf_type":"combo","initial":"\"\\n\"","header":"app_log_config.h","label":"Line ending","id":"CMSIS_$app_log_config.h$_APP_LOG_NEW_LINE","type":"conf","combo_options":["\"\\n\"","\"\\r\"","\"\\r\\n\""],"desc":"Default: APP_LOG_NEW_LINE_N"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_ENABLE","header":"app_log_config.h","label":"General","id":"CMSIS_$app_log_config.h$_General","type":"cat","conf_class":"cmsis"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_FILTER_ENABLE","conf_type":"combo","initial":"DEBUG","header":"app_log_config.h","label":"Threshold","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_FILTER_THRESHOLD","type":"conf","combo_options":["DEBUG","INFO","WARNING","ERROR","CRITICAL"],"desc":"Default: DEBUG"},{"parent_category_id":"CMSIS_$app_log_config.h$_Log level filtering","header":"app_log_config.h","toggle":true,"label":"Threshold filter","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_FILTER_ENABLE","type":"cat","conf_class":"cmsis"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_MASK_ENABLE","conf_type":"check","initial":true,"header":"app_log_config.h","label":"DEBUG","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_MASK_DEBUG","type":"conf","desc":"Enable mask entry for log DEBUG"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_MASK_ENABLE","conf_type":"check","initial":true,"header":"app_log_config.h","label":"INFO","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_MASK_INFO","type":"conf","desc":"Enable mask entry for log INFO"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_MASK_ENABLE","conf_type":"check","initial":true,"header":"app_log_config.h","label":"WARNING","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_MASK_WARNING","type":"conf","desc":"Enable mask entry for log WARNING"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_MASK_ENABLE","conf_type":"check","initial":true,"header":"app_log_config.h","label":"ERROR","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_MASK_ERROR","type":"conf","desc":"Enable mask entry for log ERROR"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_MASK_ENABLE","conf_type":"check","initial":true,"header":"app_log_config.h","label":"CRITICAL","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_MASK_CRITICAL","type":"conf","desc":"Enable mask entry for log CRITICAL"},{"parent_category_id":"CMSIS_$app_log_config.h$_Log level filtering","header":"app_log_config.h","toggle":false,"label":"Mask filter","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_MASK_ENABLE","type":"cat","conf_class":"cmsis"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_ENABLE","header":"app_log_config.h","label":"Log level filtering","id":"CMSIS_$app_log_config.h$_Log level filtering","type":"cat","conf_class":"cmsis"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_OVERRIDE_DEFAULT_STREAM","conf_type":"combo","initial":"UART","header":"app_log_config.h","label":"Stream type","id":"CMSIS_$app_log_config.h$_APP_LOG_STREAM_TYPE","type":"conf","combo_options":["SWO","RTT","UART","VUART"],"desc":"Default: UART"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_OVERRIDE_DEFAULT_STREAM","conf_type":"string","initial":"vcom","header":"app_log_config.h","label":"Preferred instance","id":"CMSIS_$app_log_config.h$_APP_LOG_STREAM_INSTANCE","type":"conf","desc":"Preferred IOStream instance name"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_ENABLE","header":"app_log_config.h","toggle":false,"label":"Override default stream","id":"CMSIS_$app_log_config.h$_APP_LOG_OVERRIDE_DEFAULT_STREAM","type":"cat","conf_class":"cmsis"},{"parent_category_id":"CMSIS_$app_log_config.h$_Dump settings","conf_type":"combo","initial":"None","header":"app_log_config.h","label":"Prefix","id":"CMSIS_$app_log_config.h$_APP_LOG_HEXDUMP_PREFIX","type":"conf","combo_options":["None","0X","0x","X","x"],"desc":"Default: None\r\nFormat string for hexdump"},{"parent_category_id":"CMSIS_$app_log_config.h$_Dump settings","conf_type":"combo","initial":"Uppercase with 0 padding (0F)","header":"app_log_config.h","label":"Format","id":"CMSIS_$app_log_config.h$_APP_LOG_HEXDUMP_FORMAT","type":"conf","combo_options":["Uppercase with 0 padding (0F)","Lowercase with 0 padding (0f)","Uppercase with padding ( F)","Lowercase with padding ( f)","Lowercase without padding (F)","Lowercase without padding (f)"],"desc":"Default: %02X\r\nFormat string for hexdump"},{"parent_category_id":"CMSIS_$app_log_config.h$_Dump settings","conf_type":"combo","initial":"Space ( )","header":"app_log_config.h","label":"Hexdump separator","id":"CMSIS_$app_log_config.h$_APP_LOG_HEXDUMP_SEPARATOR","type":"conf","combo_options":["None","Space ( )","Comma(,)","Tab (\\t)","Dash (-)","Underscore (_)","Colon(:)","Semicolon(;)"],"desc":"Default: \" \"\r\nSeparator for hexdump"},{"parent_category_id":"CMSIS_$app_log_config.h$_Dump settings","conf_type":"combo","initial":"Space ( )","header":"app_log_config.h","label":"Array Dump Separator","id":"CMSIS_$app_log_config.h$_APP_LOG_ARRAY_DUMP_SEPARATOR","type":"conf","combo_options":["None","Space ( )","Comma(,)","Tab (\\t)","Dash (-)","Underscore (_)","Colon(:)","Semicolon(;)"],"desc":"Default: \" \"\r\nSeparator for array dump"},{"parent_category_id":"CMSIS_$app_log_config.h$_Dump settings","conf_type":"combo","initial":"Space ( )","header":"app_log_config.h","label":"Custom Array Dump Separator","id":"CMSIS_$app_log_config.h$_APP_LOG_CUSTOM_ARRAY_DUMP_SEPARATOR","type":"conf","combo_options":["None","Space ( )","Comma(,)","Tab (\\t)","Dash (-)","Underscore (_)","Colon(:)","Semicolon(;)"],"desc":"Default: \" \"\r\nSeparator for custom array dump"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_ENABLE","header":"app_log_config.h","label":"Dump settings","id":"CMSIS_$app_log_config.h$_Dump settings","type":"cat","conf_class":"cmsis"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_PREFIX_ENABLE","conf_type":"string","initial":"[D]","header":"app_log_config.h","label":"Prefix for DEBUG","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_DEBUG_PREFIX","type":"conf","desc":"Log prefix for DEBUG"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_PREFIX_ENABLE","conf_type":"string","initial":"[I]","header":"app_log_config.h","label":"Prefix for INFO","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_INFO_PREFIX","type":"conf","desc":"Log prefix for INFO"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_PREFIX_ENABLE","conf_type":"string","initial":"[W]","header":"app_log_config.h","label":"Prefix for WARNING","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_WARNING_PREFIX","type":"conf","desc":"Log prefix for WARNING"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_PREFIX_ENABLE","conf_type":"string","initial":"[E]","header":"app_log_config.h","label":"Prefix for ERROR","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_ERROR_PREFIX","type":"conf","desc":"Log prefix for ERROR"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_PREFIX_ENABLE","conf_type":"string","initial":"[C]","header":"app_log_config.h","label":"Prefix for CRITICAL","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_CRITICAL_PREFIX","type":"conf","desc":"Log prefix for CRITICAL"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_ENABLE","header":"app_log_config.h","toggle":true,"label":"Log level prefixes","id":"CMSIS_$app_log_config.h$_APP_LOG_PREFIX_ENABLE","type":"cat","conf_class":"cmsis"},{"parent_category_id":"CMSIS_$app_log_config.h$_Text color","conf_type":"combo","initial":"BRIGHT_WHITE","header":"app_log_config.h","label":"Color for DEBUG","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_DEBUG_COLOR","type":"conf","combo_options":["BLACK","RED","GREEN","BLUE","YELLOW","BRIGHT_MAGENTA","CYAN","WHITE","BRIGHT_RED","BRIGHT_GREEN","BRIGHT_BLUE","BRIGHT_YELLOW","BRIGHT_CYAN","BRIGHT_WHITE"],"desc":"Default: BRIGHT_WHITE"},{"parent_category_id":"CMSIS_$app_log_config.h$_Text color","conf_type":"combo","initial":"BRIGHT_CYAN","header":"app_log_config.h","label":"Color for INFO","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_INFO_COLOR","type":"conf","combo_options":["BLACK","RED","GREEN","BLUE","YELLOW","BRIGHT_MAGENTA","CYAN","WHITE","BRIGHT_RED","BRIGHT_GREEN","BRIGHT_BLUE","BRIGHT_YELLOW","BRIGHT_CYAN","BRIGHT_WHITE"],"desc":"Default: BRIGHT_CYAN"},{"parent_category_id":"CMSIS_$app_log_config.h$_Text color","conf_type":"combo","initial":"BRIGHT_YELLOW","header":"app_log_config.h","label":"Color for WARNING","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_WARNING_COLOR","type":"conf","combo_options":["BLACK","RED","GREEN","BLUE","YELLOW","BRIGHT_MAGENTA","CYAN","WHITE","BRIGHT_RED","BRIGHT_GREEN","BRIGHT_BLUE","BRIGHT_YELLOW","BRIGHT_CYAN","BRIGHT_WHITE"],"desc":"Default: BRIGHT_YELLOW"},{"parent_category_id":"CMSIS_$app_log_config.h$_Text color","conf_type":"combo","initial":"BRIGHT_RED","header":"app_log_config.h","label":"Color for ERROR","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_ERROR_COLOR","type":"conf","combo_options":["BLACK","RED","GREEN","BLUE","YELLOW","BRIGHT_MAGENTA","CYAN","WHITE","BRIGHT_RED","BRIGHT_GREEN","BRIGHT_BLUE","BRIGHT_YELLOW","BRIGHT_CYAN","BRIGHT_WHITE"],"desc":"Default: BRIGHT_RED"},{"parent_category_id":"CMSIS_$app_log_config.h$_Text color","conf_type":"combo","initial":"BRIGHT_WHITE","header":"app_log_config.h","label":"Color for CRITICAL","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_CRITICAL_COLOR","type":"conf","combo_options":["BLACK","RED","GREEN","BLUE","YELLOW","BRIGHT_MAGENTA","CYAN","WHITE","BRIGHT_RED","BRIGHT_GREEN","BRIGHT_BLUE","BRIGHT_YELLOW","BRIGHT_CYAN","BRIGHT_WHITE"],"desc":"Default: BRIGHT_WHITE"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_COLOR_ENABLE","header":"app_log_config.h","label":"Text color","id":"CMSIS_$app_log_config.h$_Text color","type":"cat","conf_class":"cmsis"},{"parent_category_id":"CMSIS_$app_log_config.h$_Background color","conf_type":"combo","initial":"NONE","header":"app_log_config.h","label":"Background color for DEBUG","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_DEBUG_BACKGROUND_COLOR","type":"conf","combo_options":["NONE","BLACK","RED","GREEN","BLUE","YELLOW","MAGENTA","CYAN","WHITE","BRIGHT_RED","BRIGHT_GREEN","BRIGHT_BLUE","BRIGHT_YELLOW","BRIGHT_MAGENTA","BRIGHT_CYAN","BRIGHT_WHITE"],"desc":"Default: NONE"},{"parent_category_id":"CMSIS_$app_log_config.h$_Background color","conf_type":"combo","initial":"NONE","header":"app_log_config.h","label":"Background color for INFO","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_INFO_BACKGROUND_COLOR","type":"conf","combo_options":["NONE","BLACK","RED","GREEN","BLUE","YELLOW","MAGENTA","CYAN","WHITE","BRIGHT_RED","BRIGHT_GREEN","BRIGHT_BLUE","BRIGHT_YELLOW","BRIGHT_MAGENTA","BRIGHT_CYAN","BRIGHT_WHITE"],"desc":"Default: NONE"},{"parent_category_id":"CMSIS_$app_log_config.h$_Background color","conf_type":"combo","initial":"NONE","header":"app_log_config.h","label":"Background color for WARNING","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_WARNING_BACKGROUND_COLOR","type":"conf","combo_options":["NONE","BLACK","RED","GREEN","BLUE","YELLOW","MAGENTA","CYAN","WHITE","BRIGHT_RED","BRIGHT_GREEN","BRIGHT_BLUE","BRIGHT_YELLOW","BRIGHT_MAGENTA","BRIGHT_CYAN","BRIGHT_WHITE"],"desc":"Default: NONE"},{"parent_category_id":"CMSIS_$app_log_config.h$_Background color","conf_type":"combo","initial":"NONE","header":"app_log_config.h","label":"Background color for ERROR","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_ERROR_BACKGROUND_COLOR","type":"conf","combo_options":["NONE","BLACK","RED","GREEN","BLUE","YELLOW","MAGENTA","CYAN","WHITE","BRIGHT_RED","BRIGHT_GREEN","BRIGHT_BLUE","BRIGHT_YELLOW","BRIGHT_MAGENTA","BRIGHT_CYAN","BRIGHT_WHITE"],"desc":"Default: NONE"},{"parent_category_id":"CMSIS_$app_log_config.h$_Background color","conf_type":"combo","initial":"BRIGHT_RED","header":"app_log_config.h","label":"Background color for CRITICAL","id":"CMSIS_$app_log_config.h$_APP_LOG_LEVEL_CRITICAL_BACKGROUND_COLOR","type":"conf","combo_options":["NONE","BLACK","RED","GREEN","BLUE","YELLOW","MAGENTA","CYAN","WHITE","BRIGHT_RED","BRIGHT_GREEN","BRIGHT_BLUE","BRIGHT_YELLOW","BRIGHT_MAGENTA","BRIGHT_CYAN","BRIGHT_WHITE"],"desc":"Default: BRIGHT_RED"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_COLOR_ENABLE","header":"app_log_config.h","label":"Background color","id":"CMSIS_$app_log_config.h$_Background color","type":"cat","conf_class":"cmsis"},{"parent_category_id":"CMSIS_$app_log_config.h$_APP_LOG_ENABLE","header":"app_log_config.h","toggle":false,"label":"Colors for terminal logging","id":"CMSIS_$app_log_config.h$_APP_LOG_COLOR_ENABLE","type":"cat","conf_class":"cmsis"},{"header":"app_log_config.h","toggle":true,"label":"Application Logging","id":"CMSIS_$app_log_config.h$_APP_LOG_ENABLE","type":"cat","conf_class":"cmsis"}]},"clientId":"project/file_3A_2FC_3A_2FUsers_2Fberta_2FSimplicityStudio_2Fv5_workspace_2Fbt_central_2Fbt_central.slcp/component/app_log","header":"app_log_config.h","wsType":"config_update","conf_class":"cmsis"}
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:23.709
+!MESSAGE Client mentioned sockets are all ready: counting down latch
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:23.710
+!MESSAGE latch unlocked: cmsis socket response sending
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:23.918
+!MESSAGE Clear CMSIS Issues WS call: {"clientId":"project/file_3A_2FC_3A_2FUsers_2Fberta_2FSimplicityStudio_2Fv5_workspace_2Fbt_central_2Fbt_central.slcp/component/app_log","ids":[],"wsType":"clear_issues"}
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:53.169
+!MESSAGE Saving document for L/bt_central/config/app_log_config.h
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:53.199
+!MESSAGE Resource Changed: Reparsing L/bt_central/config/app_log_config.h for cmsis
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:53.209
+!MESSAGE A Cmsis Reparse was triggered for app_log_config.h
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:53.210
+!MESSAGE A Cmsis Reparse updated but did not alert client -- change came from editor and 'force' was false. Starting a parsing job that updates context model but client will not be alerted.
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:53.226
+!MESSAGE CMSIS Parse success for app_log_config.h
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:53.380
+!MESSAGE Clear CMSIS Issues WS call: {"clientId":"project/file_3A_2FC_3A_2FUsers_2Fberta_2FSimplicityStudio_2Fv5_workspace_2Fbt_central_2Fbt_central.slcp/component/app_log","ids":[],"wsType":"clear_issues"}
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:48:53.539
+!MESSAGE Clear CMSIS Issues WS call: {"clientId":"project/file_3A_2FC_3A_2FUsers_2Fberta_2FSimplicityStudio_2Fv5_workspace_2Fbt_central_2Fbt_central.slcp/component/app_log","ids":[],"wsType":"clear_issues"}
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:49:34.119
+!MESSAGE Saving document for L/bt_central/config/app_log_config.h
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:49:34.140
+!MESSAGE Resource Changed: Reparsing L/bt_central/config/app_log_config.h for cmsis
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:49:34.154
+!MESSAGE A Cmsis Reparse was triggered for app_log_config.h
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:49:34.154
+!MESSAGE A Cmsis Reparse updated but did not alert client -- change came from editor and 'force' was false. Starting a parsing job that updates context model but client will not be alerted.
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:49:34.182
+!MESSAGE CMSIS Parse success for app_log_config.h
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:49:34.365
+!MESSAGE Clear CMSIS Issues WS call: {"clientId":"project/file_3A_2FC_3A_2FUsers_2Fberta_2FSimplicityStudio_2Fv5_workspace_2Fbt_central_2Fbt_central.slcp/component/app_log","ids":[],"wsType":"clear_issues"}
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 13:49:34.512
+!MESSAGE Clear CMSIS Issues WS call: {"clientId":"project/file_3A_2FC_3A_2FUsers_2Fberta_2FSimplicityStudio_2Fv5_workspace_2Fbt_central_2Fbt_central.slcp/component/app_log","ids":[],"wsType":"clear_issues"}
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-22 14:07:23.451
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 14:07:52.700
+!MESSAGE Websocket on server side linked to /ws/memeditor/server/notifications
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 14:07:53.822
+!MESSAGE Clear CMSIS Issues WS call: {"clientId":"project/file_3A_2FC_3A_2FUsers_2Fberta_2FSimplicityStudio_2Fv5_workspace_2Fbt_central_2Fbt_central.slcp/component/app_log","ids":[],"wsType":"clear_issues"}
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-22 14:10:51.191
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.content.core 1 0 2025-05-22 14:14:40.139
+!MESSAGE Unable to download asset://common/photos/chip-packages/qfn68.png
+!STACK 0
+java.lang.Exception: No registered asset with URI asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.getAsset(AssetService.java:259)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:434)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService$2.run(AssetService.java:398)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.silabs.ss.platform.content.core 2 0 2025-05-22 14:14:40.140
+!MESSAGE Unable to download asset://common/photos/chip-packages/qfn68.png
+!STACK 0
+java.lang.Exception: No registered asset with URI asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.getAsset(AssetService.java:259)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:434)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService$2.run(AssetService.java:398)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.silabs.ss.support.browser.html 4 0 2025-05-22 14:14:40.140
+!MESSAGE  Problem with request for 'asset://common/photos/chip-packages/qfn68.png'
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to download asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:415)
+	at com.silabs.ss.support.browser.api.html.jxbrowser.JxBrowserService.interceptAndReadPhotos(JxBrowserService.java:358)
+	at com.teamdev.jxbrowser.net.internal.InterceptRequestCallbackProxy.on(InterceptRequestCallbackProxy.java:49)
+	at com.teamdev.jxbrowser.net.internal.InterceptRequestCallbackProxy.on(InterceptRequestCallbackProxy.java:32)
+	at com.teamdev.jxbrowser.internal.rpc.stream.CallbackStream.process(CallbackStream.java:181)
+	at com.teamdev.jxbrowser.internal.rpc.stream.Stream$StreamObserver.lambda$onNext$0(Stream.java:167)
+	at com.teamdev.jxbrowser.internal.RpcThreadImpl$TaskRunner.processTasks(RpcThreadImpl.java:172)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.Exception: No registered asset with URI asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.getAsset(AssetService.java:259)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:434)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService$2.run(AssetService.java:398)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.silabs.ss.platform.content.core 2 0 2025-05-22 14:14:40.141
+!MESSAGE Unable to download asset://common/photos/chip-packages/qfn68.png
+!STACK 0
+java.lang.Exception: No registered asset with URI asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.getAsset(AssetService.java:259)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:434)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService$2.run(AssetService.java:398)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.silabs.ss.support.browser.html 4 0 2025-05-22 14:14:40.141
+!MESSAGE  Problem with request for 'asset://common/photos/chip-packages/qfn68.png'
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to download asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:415)
+	at com.silabs.ss.support.browser.api.html.jxbrowser.JxBrowserService.interceptAndReadPhotos(JxBrowserService.java:358)
+	at com.teamdev.jxbrowser.net.internal.InterceptRequestCallbackProxy.on(InterceptRequestCallbackProxy.java:49)
+	at com.teamdev.jxbrowser.net.internal.InterceptRequestCallbackProxy.on(InterceptRequestCallbackProxy.java:32)
+	at com.teamdev.jxbrowser.internal.rpc.stream.CallbackStream.process(CallbackStream.java:181)
+	at com.teamdev.jxbrowser.internal.rpc.stream.Stream$StreamObserver.lambda$onNext$0(Stream.java:167)
+	at com.teamdev.jxbrowser.internal.RpcThreadImpl$TaskRunner.processTasks(RpcThreadImpl.java:172)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.Exception: No registered asset with URI asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.getAsset(AssetService.java:259)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:434)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService$2.run(AssetService.java:398)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.silabs.ss.platform.content.core 2 0 2025-05-22 14:14:40.141
+!MESSAGE Unable to download asset://common/photos/chip-packages/qfn68.png
+!STACK 0
+java.lang.Exception: No registered asset with URI asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.getAsset(AssetService.java:259)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:434)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService$2.run(AssetService.java:398)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 14:19:28.613
+!MESSAGE editor file home calculation for Studio resulted in C:\Users\berta\SimplicityStudio\v5_workspace\bt_central\.uceditor for bt_central with component Memory Manager region
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 14:19:28.629
+!MESSAGE editor file home calculation for Studio resulted in C:\Users\berta\SimplicityStudio\v5_workspace\bt_central\.uceditor for bt_central with component Memory Manager region
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 14:19:28.645
+!MESSAGE Initial cmsis parsing: {sl_memory_manager_region_config.h=Start Parse Offset: 2006
+End Parse Offset: 2006
+Parsing Error: null
+Parsing Error offset: -1
+fContainWizard: true
+}
+
+!ENTRY com.silabs.ss.tool.uc.editor 4 0 2025-05-22 14:19:28.646
+!MESSAGE Could not load pintool device data within 30 second timeframe. Marker manager not connected to component editor -- device errors will not show up.
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 14:19:28.648
+!MESSAGE CMSIS Parse success for sl_memory_manager_region_config.h
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 14:19:28.648
+!MESSAGE preparing cmsis websocket update: {"configurables":{"removed":[],"updated":[{"parent_category_id":"CMSIS_$sl_memory_manager_region_config.h$_Memory configuration","conf_type":"spinner","initial":"2752","header":"sl_memory_manager_region_config.h","label":"Stack size for the application.","id":"CMSIS_$sl_memory_manager_region_config.h$_SL_STACK_SIZE","type":"conf","desc":"Default: 4096\r\nThe stack size configured here will be used by the stack that the\r\napplication uses when coming out of a reset."},{"header":"sl_memory_manager_region_config.h","label":"Memory configuration","id":"CMSIS_$sl_memory_manager_region_config.h$_Memory configuration","type":"cat","conf_class":"cmsis"}]},"clientId":"project/file_3A_2FC_3A_2FUsers_2Fberta_2FSimplicityStudio_2Fv5_workspace_2Fbt_central_2Fbt_central.slcp/component/memory_manager_region","header":"sl_memory_manager_region_config.h","wsType":"config_update","conf_class":"cmsis"}
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 14:19:28.871
+!MESSAGE Client mentioned sockets are all ready: counting down latch
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 14:19:28.872
+!MESSAGE latch unlocked: cmsis socket response sending
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 14:19:29.003
+!MESSAGE Clear CMSIS Issues WS call: {"clientId":"project/file_3A_2FC_3A_2FUsers_2Fberta_2FSimplicityStudio_2Fv5_workspace_2Fbt_central_2Fbt_central.slcp/component/app_log","ids":[],"wsType":"clear_issues"}
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 14:19:29.004
+!MESSAGE Clear CMSIS Issues WS call: {"clientId":"project/file_3A_2FC_3A_2FUsers_2Fberta_2FSimplicityStudio_2Fv5_workspace_2Fbt_central_2Fbt_central.slcp/component/memory_manager_region","ids":[],"wsType":"clear_issues"}
+
+!ENTRY com.silabs.ss.tool.uc.editor 4 0 2025-05-22 14:27:03.081
+!MESSAGE UcEditorController: onWebSocketError CALLED cause=null
+
+!ENTRY com.silabs.ss.tool.uc.editor 4 0 2025-05-22 14:27:03.081
+!MESSAGE UcEditorController: onWebSocketError CALLED cause=null
+
+!ENTRY com.silabs.ss.tool.uc.editor 1 0 2025-05-22 14:27:03.082
+!MESSAGE UcEditorController: onWebSocketClose CALLED statusCode=1006 reason=Session Closed
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2025-05-22 14:27:03.082
+!MESSAGE ClosedChannelException
+!STACK 0
+java.nio.channels.ClosedChannelException
+	at org.eclipse.jetty.websocket.core.internal.WebSocketSessionState.onEof(WebSocketSessionState.java:169)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketCoreSession.onEof(WebSocketCoreSession.java:244)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketConnection.fillAndParse(WebSocketConnection.java:478)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketConnection.onFillable(WebSocketConnection.java:336)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SocketChannelEndPoint$1.run(SocketChannelEndPoint.java:101)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.silabs.ss.tool.uc.editor 1 0 2025-05-22 14:27:03.082
+!MESSAGE UcEditorController: onWebSocketClose CALLED statusCode=1006 reason=Session Closed
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2025-05-22 14:27:03.082
+!MESSAGE ClosedChannelException
+!STACK 0
+java.nio.channels.ClosedChannelException
+	at org.eclipse.jetty.websocket.core.internal.WebSocketSessionState.onEof(WebSocketSessionState.java:169)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketCoreSession.onEof(WebSocketCoreSession.java:244)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketConnection.fillAndParse(WebSocketConnection.java:478)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketConnection.onFillable(WebSocketConnection.java:336)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SocketChannelEndPoint$1.run(SocketChannelEndPoint.java:101)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 15:46:08.031
+!MESSAGE Client mentioned sockets are all ready: counting down latch
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 15:46:08.095
+!MESSAGE Client mentioned sockets are all ready: counting down latch
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2025-05-22 15:46:08.972
+!MESSAGE ClosedChannelException
+!STACK 0
+java.nio.channels.ClosedChannelException
+	at org.eclipse.jetty.websocket.core.internal.WebSocketSessionState.onEof(WebSocketSessionState.java:169)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketCoreSession.onEof(WebSocketCoreSession.java:244)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketConnection.fillAndParse(WebSocketConnection.java:478)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketConnection.onFillable(WebSocketConnection.java:336)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SocketChannelEndPoint$1.run(SocketChannelEndPoint.java:101)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:412)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:381)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:268)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:138)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:378)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2025-05-22 15:46:08.974
+!MESSAGE ClosedChannelException
+!STACK 0
+java.nio.channels.ClosedChannelException
+	at org.eclipse.jetty.websocket.core.internal.WebSocketSessionState.onEof(WebSocketSessionState.java:169)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketCoreSession.onEof(WebSocketCoreSession.java:244)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketConnection.fillAndParse(WebSocketConnection.java:478)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketConnection.onFillable(WebSocketConnection.java:336)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SocketChannelEndPoint$1.run(SocketChannelEndPoint.java:101)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:412)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:381)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:268)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:138)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:378)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.silabs.ss.tool.uc.editor 4 0 2025-05-22 15:46:08.975
+!MESSAGE UcEditorController: onWebSocketError CALLED cause=null
+
+!ENTRY com.silabs.ss.tool.uc.editor 1 0 2025-05-22 15:46:08.976
+!MESSAGE UcEditorController: onWebSocketClose CALLED statusCode=1006 reason=Session Closed
+
+!ENTRY com.silabs.ss.tool.uc.editor 4 0 2025-05-22 15:46:08.976
+!MESSAGE UcEditorController: onWebSocketError CALLED cause=null
+
+!ENTRY com.silabs.ss.tool.uc.editor 1 0 2025-05-22 15:46:08.976
+!MESSAGE UcEditorController: onWebSocketClose CALLED statusCode=1006 reason=Session Closed
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 15:56:42.070
+!MESSAGE Client mentioned sockets are all ready: counting down latch
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-22 15:56:42.107
+!MESSAGE Client mentioned sockets are all ready: counting down latch
+
+!ENTRY com.silabs.ss.tool.uc.editor 1 0 2025-05-22 15:57:00.594
+!MESSAGE UcEditorController: onWebSocketClose CALLED statusCode=1001 reason=null
+
+!ENTRY com.silabs.ss.tool.uc.editor 1 0 2025-05-22 15:57:00.603
+!MESSAGE UcEditorController: onWebSocketClose CALLED statusCode=1001 reason=null
+!SESSION 2025-05-25 18:20:22.767 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.3
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 18:20:31.952
+!MESSAGE Logging bundle not found: com.silabs.ss.logger, logging not initialized.
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2025-05-25 18:21:18.477
+!MESSAGE Jetty listening on: http://127.0.0.1:60052/
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2025-05-25 18:21:19.305
+!MESSAGE ContentServer started at: 127.0.0.1, 60052
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:19.406
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY com.silabs.ss.platform.descriptor.core 2 0 2025-05-25 18:21:23.263
+!MESSAGE re-registering property: com.silabs.ss.platform.api.descriptor.core.model.impl.MPropertyImpl@d6a929b (id: universalConfig.compSelProjInstanceId, name: compSelProjInstanceId, label: null, description: specific id for this instance of a project) (propertyScope: ) (id: universalConfig.compSelProjInstanceId, type: String, defaultValueLiteral: null)
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-05-25 18:21:24.312
+!MESSAGE Asset Loading Errors:
+Asset com.silabs.ss.platform.internal.content.core.asset.model.impl.AssetImpl@6387d840 (version: null, changelog: null, path: /aem/www.silabs.com/documents/public/data-sheets/siwx917-ncp-datasheet.pdf, diskSizeKB: 0.0, downloadSizeKB: 0.0, directory: false, category: null, label: null, description: null, priority: 0, keywords: null) is missing required properties.  Ignoring...
+
+
+!ENTRY com.silabs.ss.tool.uc.editor 1 0 2025-05-25 18:21:42.041
+!MESSAGE Inside PrimaryWebsocketCommunicator constructor
+
+!ENTRY com.silabs.ss.tool.uc.editor 1 0 2025-05-25 18:21:42.042
+!MESSAGE Websocket on server side linked to /ws/ucedit/filechanges
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:42.044
+!MESSAGE Servlet registered: /rest/ucedit/metadata
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:42.045
+!MESSAGE Servlet registered: /rest/ucedit/action/opensource
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:42.047
+!MESSAGE Servlet registered: /rest/ucedit/action/cmsisedit
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:42.049
+!MESSAGE sockets ready servlet being set up
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:42.050
+!MESSAGE Servlet registered: /rest/ucedit/action/socketsready
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:42.050
+!MESSAGE sockets ready servlet is ready
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:42.051
+!MESSAGE Servlet registered: /rest/ucedit/action/configsready
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 18:21:45.477
+!MESSAGE C:\Users\berta\SimplicityStudio\SDKs\simplicity_sdk\extension\aiml-extension\upgrade.slcu
+!STACK 0
+java.nio.file.NoSuchFileException: C:\Users\berta\SimplicityStudio\SDKs\simplicity_sdk\extension\aiml-extension\upgrade.slcu
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+	at com.silabs.ss.framework.uc.core.internal.api.parse.schema.UcJsonSchemaUtils.parseAndValidate(UcJsonSchemaUtils.java:114)
+	at com.silabs.ss.framework.uc.core.internal.api.parse.schema.slcu.SlcuValidator.parseAndValidate(SlcuValidator.java:38)
+	at com.silabs.ss.framework.uc.core.internal.api.parse.SdkKey.parseUpgradeManifest(SdkKey.java:394)
+	at com.silabs.ss.framework.uc.core.internal.api.parse.SdkKey.parse(SdkKey.java:185)
+	at com.silabs.ss.framework.uc.core.internal.api.parse.SdkParser.parse(SdkParser.java:224)
+	at com.silabs.ss.framework.uc.core.internal.api.parse.SdkParser.parse(SdkParser.java:1)
+	at com.silabs.ss.framework.uc.core.internal.parse.ParseTask.get(ParseTask.java:35)
+	at com.silabs.ss.framework.uc.core.internal.parse.ParseTask.get(ParseTask.java:1)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 18:21:46.416
+!MESSAGE Warning: C:\Users\berta\SimplicityStudio\SDKs\simplicity_sdk\extension\aiml-extension\aiml.slce
+  - upgrade_manifest -> [0]: could not parse C:\Users\berta\SimplicityStudio\SDKs\simplicity_sdk\extension\aiml-extension\upgrade.slcu due to java.nio.file.NoSuchFileException C:\Users\berta\SimplicityStudio\SDKs\simplicity_sdk\extension\aiml-extension\upgrade.slcu
+
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:49.624
+!MESSAGE editor file home calculation for Studio resulted in C:\Users\berta\SimplicityStudio\v5_workspace\bt_central\.uceditor for bt_central with component Memory Manager region
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:49.955
+!MESSAGE Initial cmsis parsing: {sl_memory_manager_region_config.h=Start Parse Offset: 2006
+End Parse Offset: 2006
+Parsing Error: null
+Parsing Error offset: -1
+fContainWizard: true
+}
+
+!ENTRY com.silabs.ss.tool.uc.editor 4 0 2025-05-25 18:21:49.981
+!MESSAGE Could not load pintool device data within 30 second timeframe. Marker manager not connected to component editor -- device errors will not show up.
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-05-25 18:21:52.500
+!MESSAGE Asset Loading Errors:
+Asset com.silabs.ss.platform.internal.content.core.asset.model.impl.AssetImpl@5ab62083 (version: null, changelog: null, path: /aem/www.silabs.com/documents/public/data-sheets/siwx917-ncp-datasheet.pdf, diskSizeKB: 0.0, downloadSizeKB: 0.0, directory: false, category: null, label: null, description: null, priority: 0, keywords: null) is missing required properties.  Ignoring...
+
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:55.317
+!MESSAGE Client mentioned sockets are all ready: counting down latch
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:55.534
+!MESSAGE CMSIS Parse success for sl_memory_manager_region_config.h
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:55.572
+!MESSAGE preparing cmsis websocket update: {"configurables":{"removed":[],"updated":[{"parent_category_id":"CMSIS_$sl_memory_manager_region_config.h$_Memory configuration","conf_type":"spinner","initial":"2752","header":"sl_memory_manager_region_config.h","label":"Stack size for the application.","id":"CMSIS_$sl_memory_manager_region_config.h$_SL_STACK_SIZE","type":"conf","desc":"Default: 4096\r\nThe stack size configured here will be used by the stack that the\r\napplication uses when coming out of a reset."},{"header":"sl_memory_manager_region_config.h","label":"Memory configuration","id":"CMSIS_$sl_memory_manager_region_config.h$_Memory configuration","type":"cat","conf_class":"cmsis"}]},"clientId":"project/file_3A_2FC_3A_2FUsers_2Fberta_2FSimplicityStudio_2Fv5_workspace_2Fbt_central_2Fbt_central.slcp/component/memory_manager_region","header":"sl_memory_manager_region_config.h","wsType":"config_update","conf_class":"cmsis"}
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:55.576
+!MESSAGE latch unlocked: cmsis socket response sending
+
+!ENTRY com.silabs.ss.tool.installer.core 1 0 2025-05-25 18:21:55.951
+!MESSAGE isInternalNetwork: false
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2025-05-25 18:21:57.780
+!MESSAGE AdapterPack USB adapter pack has setupcheck function type 
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:58.117
+!MESSAGE Clear CMSIS Issues WS call: {"clientId":"project/file_3A_2FC_3A_2FUsers_2Fberta_2FSimplicityStudio_2Fv5_workspace_2Fbt_central_2Fbt_central.slcp/component/memory_manager_region","ids":[],"wsType":"clear_issues"}
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 18:21:58.286
+!MESSAGE Clear CMSIS Issues WS call: {"clientId":"project/file_3A_2FC_3A_2FUsers_2Fberta_2FSimplicityStudio_2Fv5_workspace_2Fbt_central_2Fbt_central.slcp/component/memory_manager_region","ids":[],"wsType":"clear_issues"}
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2025-05-25 18:22:29.915
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2025-05-25 18:22:29.941
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 18:22:47.334
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 18:24:07.428
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 18:24:10.436
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 18:24:13.452
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 18:24:16.464
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 18:24:19.480
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 18:24:54.660
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 18:24:57.681
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.descriptor.core 4 0 2025-05-25 18:32:49.572
+!MESSAGE could not resolve type String
+
+!ENTRY com.silabs.ss.platform.content.core 1 0 2025-05-25 18:41:29.520
+!MESSAGE Unable to download asset://common/photos/chip-packages/qfn68.png
+!STACK 0
+java.lang.Exception: No registered asset with URI asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.getAsset(AssetService.java:259)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:434)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService$2.run(AssetService.java:398)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.silabs.ss.platform.content.core 2 0 2025-05-25 18:41:29.520
+!MESSAGE Unable to download asset://common/photos/chip-packages/qfn68.png
+!STACK 0
+java.lang.Exception: No registered asset with URI asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.getAsset(AssetService.java:259)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:434)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService$2.run(AssetService.java:398)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.silabs.ss.support.browser.html 4 0 2025-05-25 18:41:29.521
+!MESSAGE  Problem with request for 'asset://common/photos/chip-packages/qfn68.png'
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to download asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:415)
+	at com.silabs.ss.support.browser.api.html.jxbrowser.JxBrowserService.interceptAndReadPhotos(JxBrowserService.java:358)
+	at com.teamdev.jxbrowser.net.internal.InterceptRequestCallbackProxy.on(InterceptRequestCallbackProxy.java:49)
+	at com.teamdev.jxbrowser.net.internal.InterceptRequestCallbackProxy.on(InterceptRequestCallbackProxy.java:32)
+	at com.teamdev.jxbrowser.internal.rpc.stream.CallbackStream.process(CallbackStream.java:181)
+	at com.teamdev.jxbrowser.internal.rpc.stream.Stream$StreamObserver.lambda$onNext$0(Stream.java:167)
+	at com.teamdev.jxbrowser.internal.RpcThreadImpl$TaskRunner.processTasks(RpcThreadImpl.java:172)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.Exception: No registered asset with URI asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.getAsset(AssetService.java:259)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:434)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService$2.run(AssetService.java:398)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.silabs.ss.platform.content.core 2 0 2025-05-25 18:41:29.521
+!MESSAGE Unable to download asset://common/photos/chip-packages/qfn68.png
+!STACK 0
+java.lang.Exception: No registered asset with URI asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.getAsset(AssetService.java:259)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:434)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService$2.run(AssetService.java:398)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.silabs.ss.support.browser.html 4 0 2025-05-25 18:41:29.521
+!MESSAGE  Problem with request for 'asset://common/photos/chip-packages/qfn68.png'
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to download asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:415)
+	at com.silabs.ss.support.browser.api.html.jxbrowser.JxBrowserService.interceptAndReadPhotos(JxBrowserService.java:358)
+	at com.teamdev.jxbrowser.net.internal.InterceptRequestCallbackProxy.on(InterceptRequestCallbackProxy.java:49)
+	at com.teamdev.jxbrowser.net.internal.InterceptRequestCallbackProxy.on(InterceptRequestCallbackProxy.java:32)
+	at com.teamdev.jxbrowser.internal.rpc.stream.CallbackStream.process(CallbackStream.java:181)
+	at com.teamdev.jxbrowser.internal.rpc.stream.Stream$StreamObserver.lambda$onNext$0(Stream.java:167)
+	at com.teamdev.jxbrowser.internal.RpcThreadImpl$TaskRunner.processTasks(RpcThreadImpl.java:172)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.Exception: No registered asset with URI asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.getAsset(AssetService.java:259)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:434)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService$2.run(AssetService.java:398)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.silabs.ss.platform.content.core 2 0 2025-05-25 18:41:29.521
+!MESSAGE Unable to download asset://common/photos/chip-packages/qfn68.png
+!STACK 0
+java.lang.Exception: No registered asset with URI asset://common/photos/chip-packages/qfn68.png
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.getAsset(AssetService.java:259)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.resolveAsset(AssetService.java:434)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService$2.run(AssetService.java:398)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 20:00:15.154
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 20:01:50.198
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 20:02:49.628
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 20:02:52.633
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 20:05:09.399
+!MESSAGE Decryption failed
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 20:05:09.399
+!MESSAGE Decryption failed
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 20:07:53.423
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 20:08:35.626
+!MESSAGE Decryption failed
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 20:08:35.627
+!MESSAGE Decryption failed
+
+!ENTRY com.silabs.ss.tool.uc.editor 4 0 2025-05-25 20:35:31.390
+!MESSAGE UcEditorController: onWebSocketError CALLED cause=null
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2025-05-25 20:35:31.391
+!MESSAGE ClosedChannelException
+!STACK 0
+java.nio.channels.ClosedChannelException
+	at org.eclipse.jetty.websocket.core.internal.WebSocketSessionState.onEof(WebSocketSessionState.java:169)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketCoreSession.onEof(WebSocketCoreSession.java:244)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketConnection.fillAndParse(WebSocketConnection.java:478)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketConnection.onFillable(WebSocketConnection.java:336)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SocketChannelEndPoint$1.run(SocketChannelEndPoint.java:101)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.silabs.ss.tool.uc.editor 1 0 2025-05-25 20:35:31.392
+!MESSAGE UcEditorController: onWebSocketClose CALLED statusCode=1006 reason=Session Closed
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 21:55:21.455
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 21:55:22.935
+!MESSAGE Client mentioned sockets are all ready: counting down latch
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 21:55:28.199
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 22:46:13.504
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-25 23:11:08.149
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.tool.uc.editor 4 0 2025-05-25 23:44:13.323
+!MESSAGE UcEditorController: onWebSocketError CALLED cause=null
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2025-05-25 23:44:13.325
+!MESSAGE ClosedChannelException
+!STACK 0
+java.nio.channels.ClosedChannelException
+	at org.eclipse.jetty.websocket.core.internal.WebSocketSessionState.onEof(WebSocketSessionState.java:169)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketCoreSession.onEof(WebSocketCoreSession.java:244)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketConnection.fillAndParse(WebSocketConnection.java:478)
+	at org.eclipse.jetty.websocket.core.internal.WebSocketConnection.onFillable(WebSocketConnection.java:336)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SocketChannelEndPoint$1.run(SocketChannelEndPoint.java:101)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.silabs.ss.tool.uc.editor 1 0 2025-05-25 23:44:13.325
+!MESSAGE UcEditorController: onWebSocketClose CALLED statusCode=1006 reason=Session Closed
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-25 23:44:49.641
+!MESSAGE Client mentioned sockets are all ready: counting down latch
+
+!ENTRY com.silabs.ss.tool.uc.editor 1 0 2025-05-26 01:03:46.332
+!MESSAGE UcEditorController: onWebSocketClose CALLED statusCode=1001 reason=null
+!SESSION 2025-05-28 13:20:24.165 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.3
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-05-28 13:20:29.270
+!MESSAGE Logging bundle not found: com.silabs.ss.logger, logging not initialized.
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2025-05-28 13:21:00.305
+!MESSAGE Jetty listening on: http://127.0.0.1:54813/
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2025-05-28 13:21:00.943
+!MESSAGE ContentServer started at: 127.0.0.1, 54813
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-05-28 13:21:01.005
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY com.silabs.ss.platform.descriptor.core 2 0 2025-05-28 13:21:03.880
+!MESSAGE re-registering property: com.silabs.ss.platform.api.descriptor.core.model.impl.MPropertyImpl@d6a929b (id: universalConfig.compSelProjInstanceId, name: compSelProjInstanceId, label: null, description: specific id for this instance of a project) (propertyScope: ) (id: universalConfig.compSelProjInstanceId, type: String, defaultValueLiteral: null)
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-05-28 13:21:04.797
+!MESSAGE Asset Loading Errors:
+Asset com.silabs.ss.platform.internal.content.core.asset.model.impl.AssetImpl@2fc727fd (version: null, changelog: null, path: /aem/www.silabs.com/documents/public/data-sheets/siwx917-ncp-datasheet.pdf, diskSizeKB: 0.0, downloadSizeKB: 0.0, directory: false, category: null, label: null, description: null, priority: 0, keywords: null) is missing required properties.  Ignoring...
+
+
+!ENTRY com.silabs.ss.tool.installer.core 1 0 2025-05-28 13:21:23.343
+!MESSAGE isInternalNetwork: false
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2025-05-28 13:21:26.911
+!MESSAGE AdapterPack USB adapter pack has setupcheck function type 
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2025-05-28 13:23:01.608
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2025-05-28 13:23:01.635
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-05-28 13:23:02.899
+!MESSAGE Asset Loading Errors:
+Asset com.silabs.ss.platform.internal.content.core.asset.model.impl.AssetImpl@c15a48 (version: null, changelog: null, path: /aem/www.silabs.com/documents/public/data-sheets/siwx917-ncp-datasheet.pdf, diskSizeKB: 0.0, downloadSizeKB: 0.0, directory: false, category: null, label: null, description: null, priority: 0, keywords: null) is missing required properties.  Ignoring...
+

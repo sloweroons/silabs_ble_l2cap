@@ -1,0 +1,243 @@
+/***************************************************************************//**
+ * @file
+ * @brief Core application logic.
+ *******************************************************************************
+ * # License
+ * <b>Copyright 2024 Silicon Laboratories Inc. www.silabs.com</b>
+ *******************************************************************************
+ *
+ * SPDX-License-Identifier: Zlib
+ *
+ * The licensor of this software is Silicon Laboratories Inc.
+ *
+ * This software is provided 'as-is', without any express or implied
+ * warranty. In no event will the authors be held liable for any damages
+ * arising from the use of this software.
+ *
+ * Permission is granted to anyone to use this software for any purpose,
+ * including commercial applications, and to alter it and redistribute it
+ * freely, subject to the following restrictions:
+ *
+ * 1. The origin of this software must not be misrepresented; you must not
+ *    claim that you wrote the original software. If you use this software
+ *    in a product, an acknowledgment in the product documentation would be
+ *    appreciated but is not required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ *    misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
+ *
+ ******************************************************************************/
+#include "sl_common.h"
+#include "sl_bt_api.h"
+#include "app_assert.h"
+#include <string.h>
+#include <stdio.h>
+#include "app.h"
+#include "sl_simple_button.h"
+#include "sl_simple_button_instances.h"
+
+static uint16_t max_sdu = 63; // 23 to 65533
+static uint16_t max_pdu = 23; // 23 to 252, TODO: optimize for MTU
+static uint16_t max_mtu = 50;
+static uint16_t credit = 8; // 1 to 65535
+static uint16_t spsm = 0x23; // IPSP
+static uint16_t cid = 0x00; // 0x40-0x7F, device/channel endpoint identifier
+
+// The advertising set handle allocated from Bluetooth stack.
+static uint8_t advertising_set_handle = 0xff;
+static uint16_t connection_handle = 0xff;
+static uint16_t characteristic_handle = 0xff;
+
+bd_addr central_address = {
+    .addr = {0x84, 0x2E, 0x14, 0x31, 0xB9, 0x92} // reverse byte order
+};
+
+/* -- Application declarations -- */
+char message_buffer[256];
+bool connected = false;
+
+/*
+sl_simple_button_context_t sl_button_instance1_context = {
+  .state = 0,
+  .history = 0,
+  .port = SL_GPIO_PORT_B,
+  .pin = 1,
+  .mode = SL_SIMPLE_BUTTON_MODE_INTERRUPT,
+};
+
+const sl_button_t sl_button_instance1 = {
+  .context = &sl_button_instance1_context,
+  .init = sl_simple_button_init,
+  .get_state = sl_simple_button_get_state,
+  .poll = sl_simple_button_poll_step,
+  .enable = sl_simple_button_enable,
+  .disable = sl_simple_button_disable,
+};
+*/
+
+/* -- Application code -- */
+
+void fragment_and_send_l2cap_data(uint8_t connection_handle, uint16_t cid,
+                         uint8_t *data, uint16_t sdu_len, uint16_t pdu_len) {
+    uint16_t offset = 0;
+
+    uint16_t first_payload_len = (sdu_len < (pdu_len - 2)) ? sdu_len : (pdu_len - 2);
+    uint8_t first_frame[max_pdu];
+    first_frame[0] = (uint8_t)(sdu_len & 0xFF);
+    first_frame[1] = (uint8_t)((sdu_len >> 8) & 0xFF);
+    memcpy(&first_frame[2], &data[0], first_payload_len);
+    sl_bt_l2cap_channel_send_data(connection_handle, cid, first_payload_len + 2, first_frame);
+    offset += first_payload_len;
+
+    uint16_t remaining = sdu_len - first_payload_len;
+
+    while (remaining > 0) {
+        uint16_t chunk_size = (remaining > pdu_len) ? pdu_len : remaining;
+        sl_bt_l2cap_channel_send_data(connection_handle, cid, chunk_size, &data[offset]);
+        offset += chunk_size;
+        remaining -= chunk_size;
+    }
+}
+
+// Application Init.
+SL_WEAK void app_init(void)
+{
+  /////////////////////////////////////////////////////////////////////////////
+  // Put your additional application init code here!                         //
+  // This is called once during start-up.                                    //
+  /////////////////////////////////////////////////////////////////////////////
+  sl_simple_button_init(&sl_button_instance0);
+  sl_simple_button_enable(&sl_button_instance0);
+  //sl_simple_button_init(&sl_button_instance1);
+  //sl_simple_button_enable(&sl_button_instance1);
+  //app_log_iostream_set(SL_IOSTREAM_TYPE_UART);
+
+}
+
+bool was_pressed = false;
+bool is_pressed = false;
+
+// Application Process Action.
+SL_WEAK void app_process_action(void)
+{
+  if (app_is_process_required()) {
+    /////////////////////////////////////////////////////////////////////////////
+    // Put your additional application code here!                              //
+    // This is will run each time app_proceed() is called.                     //
+    // Do not call blocking functions from here!                               //
+    /////////////////////////////////////////////////////////////////////////////
+  }
+  is_pressed = sl_simple_button_get_state(&sl_button_instance0);
+  if (!was_pressed && is_pressed) {
+      //sl_bt_l2cap_channel_send_data(connection_handle, cid, sizeof(data), &data);
+      //fragment_and_send_l2cap_data(connection_handle, cid, data, max_sdu, max_pdu);
+      uint8_t value[] = {105, 110, 100, 105, 99, 97, 116, 105, 111, 110}; // "indication"
+      sl_bt_gatt_server_send_indication(connection_handle, characteristic_handle, sizeof(value), value);
+      uint8_t data[] = {103, 101, 110, 101, 114, 97, 116, 101, 100}; // "generated"
+      fragment_and_send_l2cap_data(connection_handle, cid, data, max_sdu, max_pdu);
+  }
+  was_pressed = is_pressed;
+}
+
+/**************************************************************************//**
+ * Bluetooth stack event handler.
+ * This overrides the dummy weak implementation.
+ *
+ * @param[in] evt Event coming from the Bluetooth stack.
+ *****************************************************************************/
+void sl_bt_on_event(sl_bt_msg_t *evt) {
+  switch (SL_BT_MSG_ID(evt->header)) {
+    // -------------------------------
+    // This event indicates the device has started and the radio is ready.
+    // Do not call any stack command before receiving this boot event!
+    case sl_bt_evt_system_boot_id:
+      printf("\n> Begin\n\n");
+      printf("PER - Booting peripheral..\n");
+      // Create an advertising set.
+      sl_bt_advertiser_create_set(&advertising_set_handle);
+
+      sl_bt_advertiser_set_report_scan_request(advertising_set_handle, 1);
+
+      // Generate data for advertising
+      sl_bt_legacy_advertiser_generate_data(advertising_set_handle, sl_bt_advertiser_general_discoverable);
+
+      // Set advertising interval to 100ms.
+      sl_bt_advertiser_set_timing(
+        advertising_set_handle,
+        160, // min. adv. interval (milliseconds * 1.6)
+        160, // max. adv. interval (milliseconds * 1.6)
+        0,   // adv. duration
+        0);  // max. num. adv. events
+
+      // Start advertising and enable connections.
+
+      sl_bt_legacy_advertiser_start(advertising_set_handle, sl_bt_legacy_advertiser_connectable);
+
+      break;
+
+    // -------------------------------
+    // This event indicates that a connection was closed.
+    case sl_bt_evt_connection_closed_id:
+      // Generate data for advertising
+      sl_bt_legacy_advertiser_generate_data(advertising_set_handle,
+                                                 sl_bt_advertiser_general_discoverable);
+
+      // Restart advertising after client has disconnected.
+      sl_bt_legacy_advertiser_start(advertising_set_handle,
+                                         sl_bt_legacy_advertiser_connectable);
+      break;
+
+      // -------------------------------
+      // This event indicates that a new connection was opened.
+    case sl_bt_evt_connection_opened_id:
+      connection_handle = evt->data.evt_connection_opened.connection;
+      sl_bt_gatt_server_set_max_mtu(50, &max_mtu);
+      break;
+
+    case sl_bt_evt_advertiser_scan_request_id:
+      break;
+
+      // React to L2CAP channel open request
+    case sl_bt_evt_l2cap_le_channel_open_request_id:
+      cid = evt->data.evt_l2cap_le_channel_open_request.cid;
+      sl_bt_l2cap_send_le_channel_open_response(evt->data.evt_l2cap_le_channel_open_request.connection, evt->data.evt_l2cap_le_channel_open_request.cid, max_sdu, max_pdu, credit, sl_bt_l2cap_connection_result_successful);
+      break;
+
+      // React to being able to send more data
+    case sl_bt_evt_l2cap_channel_credit_id:
+      break;
+
+      // React to receiving data
+    case sl_bt_evt_l2cap_channel_data_id:
+      if (evt->data.evt_l2cap_channel_data.data.len == 1 && evt->data.evt_l2cap_channel_data.data.data == 0xff) {
+          sl_bt_l2cap_channel_send_credit(connection_handle, cid, credit);
+          uint8_t data[] = {114, 101, 113, 117, 101, 115, 116, 101, 100}; // "requested"
+          sl_bt_l2cap_channel_send_data(connection_handle, cid, sizeof(data), data);
+      }
+      break;
+
+    ///////////////////////////////////////////////////////////////////////////
+    // Add additional event handlers here as your application requires!      //
+    ///////////////////////////////////////////////////////////////////////////
+
+    // -- GATT --
+    case sl_bt_evt_gatt_server_characteristic_status_id:
+      if (evt->data.evt_gatt_server_characteristic_status.status_flags == 0x1) { // Changed (CEN subscribed)
+          characteristic_handle = evt->data.evt_gatt_server_characteristic_status.characteristic;
+          sl_bt_l2cap_channel_send_credit(connection_handle, cid, credit);
+      }
+      if (evt->data.evt_gatt_server_characteristic_status.status_flags == 0x2) { // Client confirmation received
+
+      }
+      break;
+
+    case sl_bt_evt_gatt_server_indication_timeout_id:
+      sl_bt_connection_close(evt->data.evt_gatt_server_indication_timeout.connection);
+      break;
+
+    // -------------------------------
+    // Default event handler.
+    default:
+      break;
+  }
+}
