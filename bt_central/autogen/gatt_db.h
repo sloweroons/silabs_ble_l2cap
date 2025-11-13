@@ -20,11 +20,8 @@ extern const sli_bt_gattdb_t gattdb;
 #define gattdb_hardware_revision_string       20
 #define gattdb_firmware_revision_string       22
 #define gattdb_system_id                      24
-#define gattdb_battery_service_0              25
-#define gattdb_battery_level                  27
-#define gattdb_characteristic_presentation_format 28
-#define gattdb_ota                            29
-#define gattdb_ota_control                    31
+#define gattdb_ota                            26
+#define gattdb_ota_control                    28
 
 
 #endif // __GATT_DB_H

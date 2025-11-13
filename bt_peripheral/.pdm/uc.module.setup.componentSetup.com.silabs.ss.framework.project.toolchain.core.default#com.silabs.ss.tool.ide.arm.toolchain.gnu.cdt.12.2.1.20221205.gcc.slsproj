@@ -184,16 +184,6 @@
             <file name="sl_interrupt_manager.h" uri="studio:/sdk/platform/service/interrupt_manager/inc/sl_interrupt_manager.h"/>
           </folder>
         </folder>
-        <folder name="iostream">
-          <folder name="src">
-            <file name="sl_iostream.c" uri="studio:/sdk/platform/service/iostream/src/sl_iostream.c"/>
-            <file name="sl_iostream_stdio.c" uri="studio:/sdk/platform/service/iostream/src/sl_iostream_stdio.c"/>
-          </folder>
-          <folder name="inc">
-            <file name="sl_iostream.h" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream.h"/>
-            <file name="sl_iostream_stdio.h" uri="studio:/sdk/platform/service/iostream/inc/sl_iostream_stdio.h"/>
-          </folder>
-        </folder>
         <folder name="memory_manager">
           <folder name="src">
             <file name="sl_memory_manager.c" uri="studio:/sdk/platform/service/memory_manager/src/sl_memory_manager.c"/>
@@ -608,45 +598,10 @@
             <file name="app_assert.h" uri="studio:/sdk/app/common/util/app_assert/app_assert.h"/>
             <file name="sl_app_assert.h" uri="studio:/sdk/app/common/util/app_assert/sl_app_assert.h"/>
           </folder>
-          <folder name="app_button_press">
-            <file name="app_button_press.c" uri="studio:/sdk/app/common/util/app_button_press/app_button_press.c"/>
-            <file name="app_button_press.h" uri="studio:/sdk/app/common/util/app_button_press/app_button_press.h"/>
-            <file name="app_button_press_internal.h" uri="studio:/sdk/app/common/util/app_button_press/app_button_press_internal.h"/>
-          </folder>
-          <folder name="app_queue">
-            <file name="app_queue.c" uri="studio:/sdk/app/common/util/app_queue/app_queue.c"/>
-            <file name="app_queue.h" uri="studio:/sdk/app/common/util/app_queue/app_queue.h"/>
-          </folder>
-          <folder name="app_rta">
-            <folder name="src">
-              <folder name="bm">
-                <file name="app_rta_bm.c" uri="studio:/sdk/app/common/util/app_rta/src/bm/app_rta_bm.c"/>
-              </folder>
-            </folder>
-            <folder name="inc">
-              <folder name="bm">
-                <file name="app_rta_internal_bm.h" uri="studio:/sdk/app/common/util/app_rta/inc/bm/app_rta_internal_bm.h"/>
-              </folder>
-              <file name="app_rta.h" uri="studio:/sdk/app/common/util/app_rta/inc/app_rta.h"/>
-            </folder>
-          </folder>
-          <folder name="app_timer">
-            <folder name="bm">
-              <file name="app_timer.c" uri="studio:/sdk/app/common/util/app_timer/bm/app_timer.c"/>
-              <file name="app_timer_internal.h" uri="studio:/sdk/app/common/util/app_timer/bm/app_timer_internal.h"/>
-              <file name="app_timer_types.h" uri="studio:/sdk/app/common/util/app_timer/bm/app_timer_types.h"/>
-            </folder>
-            <file name="app_timer.h" uri="studio:/sdk/app/common/util/app_timer/app_timer.h"/>
-            <file name="sl_simple_timer.h" uri="studio:/sdk/app/common/util/app_timer/sl_simple_timer.h"/>
-          </folder>
         </folder>
       </folder>
       <folder name="bluetooth">
         <folder name="common">
-          <folder name="gatt_service_battery">
-            <file name="sl_gatt_service_battery.c" uri="studio:/sdk/app/bluetooth/common/gatt_service_battery/sl_gatt_service_battery.c"/>
-            <file name="sl_gatt_service_battery.h" uri="studio:/sdk/app/bluetooth/common/gatt_service_battery/sl_gatt_service_battery.h"/>
-          </folder>
           <folder name="gatt_service_device_information">
             <file name="sl_gatt_service_device_information.h" uri="studio:/sdk/app/bluetooth/common/gatt_service_device_information/sl_gatt_service_device_information.h"/>
           </folder>
@@ -985,12 +940,6 @@
   <includePath uri="studio:/project/"/>
   <includePath uri="studio:/sdk/platform/Device/SiliconLabs/EFR32MG26/Include"/>
   <includePath uri="studio:/sdk/app/common/util/app_assert"/>
-  <includePath uri="studio:/sdk/app/common/util/app_button_press"/>
-  <includePath uri="studio:/sdk/app/common/util/app_queue"/>
-  <includePath uri="studio:/sdk/app/common/util/app_rta/inc"/>
-  <includePath uri="studio:/sdk/app/common/util/app_rta/inc/bm"/>
-  <includePath uri="studio:/sdk/app/common/util/app_timer"/>
-  <includePath uri="studio:/sdk/app/common/util/app_timer/bm"/>
   <includePath uri="studio:/sdk/platform/common/inc"/>
   <includePath uri="studio:/sdk/protocol/bluetooth/bgcommon/inc"/>
   <includePath uri="studio:/sdk/protocol/bluetooth/inc"/>
@@ -1003,14 +952,12 @@
   <includePath uri="studio:/sdk/platform/service/device_init/inc"/>
   <includePath uri="studio:/sdk/platform/emdrv/common/inc"/>
   <includePath uri="studio:/sdk/platform/emlib/inc"/>
-  <includePath uri="studio:/sdk/app/bluetooth/common/gatt_service_battery"/>
   <includePath uri="studio:/sdk/app/bluetooth/common/gatt_service_device_information"/>
   <includePath uri="studio:/sdk/platform/driver/gpio/inc"/>
   <includePath uri="studio:/sdk/platform/peripheral/inc"/>
   <includePath uri="studio:/sdk/platform/service/hfxo_manager/inc"/>
   <includePath uri="studio:/sdk/platform/service/interrupt_manager/inc"/>
   <includePath uri="studio:/sdk/platform/service/interrupt_manager/inc/arm"/>
-  <includePath uri="studio:/sdk/platform/service/iostream/inc"/>
   <includePath uri="studio:/sdk/platform/security/sl_component/sl_mbedtls_support/config"/>
   <includePath uri="studio:/sdk/platform/security/sl_component/sl_mbedtls_support/config/preset"/>
   <includePath uri="studio:/sdk/platform/security/sl_component/sl_mbedtls_support/inc"/>

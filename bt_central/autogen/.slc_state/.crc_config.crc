@@ -1,7 +1,5 @@
 #CRC Codes for initially generated config files -- do not modify!
-FreeRTOSConfig.h=1171533076
 app_assert_config.h=1479688922
-app_button_press_config.h=148746057
 app_log_config.h=-1893283838
 app_properties_config.h=-763091270
 btconf/gatt_configuration.btconf=-810178408
@@ -18,8 +16,6 @@ sl_bluetooth_l2cap_config.h=379821
 sl_board_control_config.h=1575914095
 sl_bt_host_adaptation_config.h=2078815630
 sl_bt_in_place_ota_dfu_config.h=1544707737
-sl_bt_rtos_config.h=-428670639
-sl_bt_rtos_config_s2.h=-1287460929
 sl_clock_manager_oscillator_config.h=-2087918708
 sl_clock_manager_tree_config.h=-999196857
 sl_core_config.h=-119586893

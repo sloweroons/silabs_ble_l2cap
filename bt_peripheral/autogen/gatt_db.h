@@ -20,12 +20,6 @@ extern const sli_bt_gattdb_t gattdb;
 #define gattdb_hardware_revision_string       20
 #define gattdb_firmware_revision_string       22
 #define gattdb_system_id                      24
-#define gattdb_battery_service_c              25
-#define gattdb_batt_measurement_c             27
-#define gattdb_battery_service                29
-#define gattdb_batt_measurement               31
-#define gattdb_power_source                   33
-#define gattdb_power_source_type              35
 
 
 #endif // __GATT_DB_H

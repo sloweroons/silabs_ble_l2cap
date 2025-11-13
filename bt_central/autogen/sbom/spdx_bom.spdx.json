@@ -5,7 +5,7 @@
   "name" : "Silicon-Laboratories",
   "documentNamespace" : "https://silabs.com",
   "creationInfo" : {
-    "created" : "2025-05-21T21:18:29.459261900Z",
+    "created" : "2025-10-21T09:11:47Z",
     "creators" : [ "Tool: Silicon Labs Configuration Tooling" ]
   },
   "comment" : "TERMS OF USE - SILICON LABORATORIES INC.\n(With respect to Silicon Labs software components, this Software Bill of Materials (SBOM) is based upon Silicon Labs'\nreview and analysis of the code version when released.  It is provided \"AS IS\" and does not modify, change or alter\nthe terms or conditions of your use of Silicon Labs' software and/or SDKs based upon license terms and/or agreements\nassociated with this software or SDKs when distributed to you, received by you, or installed by you.  Further, no\nwarranties or obligations are created by this SBOM.  It is your obligation to comply with the terms of licenses\nreferenced in this SBOM.)",
@@ -28,14 +28,6 @@
   }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-app_assert",
     "name" : "Assert",
-    "versionInfo" : "2024.12.0",
-    "primaryPackagePurpose" : "LIBRARY",
-    "downloadLocation" : "NOASSERTION",
-    "supplier" : "Organization: Silicon Laboratories, Inc.",
-    "licenseConcluded" : "Zlib"
-  }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-app_button_press",
-    "name" : "Button Press",
     "versionInfo" : "2024.12.0",
     "primaryPackagePurpose" : "LIBRARY",
     "downloadLocation" : "NOASSERTION",
@@ -73,14 +65,6 @@
     "downloadLocation" : "NOASSERTION",
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "MSLA"
-  }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-bluetooth_feature_l2cap",
-    "name" : "L2CAP",
-    "versionInfo" : "2024.12.0",
-    "primaryPackagePurpose" : "LIBRARY",
-    "downloadLocation" : "NOASSERTION",
-    "supplier" : "Organization: Silicon Laboratories, Inc.",
-    "licenseConcluded" : "Zlib AND MSLA"
   }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-bluetooth_feature_legacy_advertiser",
     "name" : "Legacy Advertising",
@@ -194,6 +178,14 @@
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
   }, {
+    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-simple_button",
+    "name" : "Simple Button",
+    "versionInfo" : "2024.12.0",
+    "primaryPackagePurpose" : "LIBRARY",
+    "downloadLocation" : "NOASSERTION",
+    "supplier" : "Organization: Silicon Laboratories, Inc.",
+    "licenseConcluded" : "Zlib"
+  }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-sl_common",
     "name" : "Common Functions",
     "versionInfo" : "2024.12.0",
@@ -246,16 +238,16 @@
     "homepage" : "https://github.com/Mbed-TLS/mbedtls.git",
     "comment" : "Mbed TLS is a C library implementing the PSA Cryptography API, cryptographic primitives, X.509 certificate manipulation and the SSL/TLS and DTLS protocols"
   }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-power_manager",
-    "name" : "Power Manager",
+    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-device_manager",
+    "name" : "Device Manager",
     "versionInfo" : "2024.12.0",
     "primaryPackagePurpose" : "LIBRARY",
     "downloadLocation" : "NOASSERTION",
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
   }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-device_manager",
-    "name" : "Device Manager",
+    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-power_manager",
+    "name" : "Power Manager",
     "versionInfo" : "2024.12.0",
     "primaryPackagePurpose" : "LIBRARY",
     "downloadLocation" : "NOASSERTION",
@@ -354,14 +346,6 @@
   }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-iostream_retarget_stdio",
     "name" : "IO Stream: Retarget STDIO",
-    "versionInfo" : "2024.12.0",
-    "primaryPackagePurpose" : "LIBRARY",
-    "downloadLocation" : "NOASSERTION",
-    "supplier" : "Organization: Silicon Laboratories, Inc.",
-    "licenseConcluded" : "Zlib"
-  }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-simple_button",
-    "name" : "Simple Button",
     "versionInfo" : "2024.12.0",
     "primaryPackagePurpose" : "LIBRARY",
     "downloadLocation" : "NOASSERTION",
@@ -468,16 +452,16 @@
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
   }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-power_manager_core_impl_sleep_loop",
-    "name" : "Power Manager: Core implementation",
+    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-enum",
+    "name" : "Enumerations",
     "versionInfo" : "2024.12.0",
     "primaryPackagePurpose" : "LIBRARY",
     "downloadLocation" : "NOASSERTION",
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
   }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-enum",
-    "name" : "Enumerations",
+    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-power_manager_core_impl_sleep_loop",
+    "name" : "Power Manager: Core implementation",
     "versionInfo" : "2024.12.0",
     "primaryPackagePurpose" : "LIBRARY",
     "downloadLocation" : "NOASSERTION",
@@ -809,16 +793,16 @@
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
   }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-device_peripheral",
-    "name" : "Device Manager Peripheral",
+    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-nvm3_default",
+    "name" : "NVM3 Default Instance",
     "versionInfo" : "2024.12.0",
     "primaryPackagePurpose" : "LIBRARY",
     "downloadLocation" : "NOASSERTION",
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
   }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-nvm3_default",
-    "name" : "NVM3 Default Instance",
+    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-device_peripheral",
+    "name" : "Device Manager Peripheral",
     "versionInfo" : "2024.12.0",
     "primaryPackagePurpose" : "LIBRARY",
     "downloadLocation" : "NOASSERTION",
@@ -849,14 +833,6 @@
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
   }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-power_manager_handler_implementation",
-    "name" : "Power Manager: Handler",
-    "versionInfo" : "2024.12.0",
-    "primaryPackagePurpose" : "LIBRARY",
-    "downloadLocation" : "NOASSERTION",
-    "supplier" : "Organization: Silicon Laboratories, Inc.",
-    "licenseConcluded" : "Zlib"
-  }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-psa_crypto_ecc",
     "name" : "ECC",
     "versionInfo" : "2024.12.0",
@@ -874,6 +850,14 @@
     "originator" : "Organization: NOASSERTION",
     "homepage" : "https://github.com/Mbed-TLS/mbedtls.git",
     "comment" : "Mbed TLS is a C library implementing the PSA Cryptography API, cryptographic primitives, X.509 certificate manipulation and the SSL/TLS and DTLS protocols"
+  }, {
+    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-power_manager_handler_implementation",
+    "name" : "Power Manager: Handler",
+    "versionInfo" : "2024.12.0",
+    "primaryPackagePurpose" : "LIBRARY",
+    "downloadLocation" : "NOASSERTION",
+    "supplier" : "Organization: Silicon Laboratories, Inc.",
+    "licenseConcluded" : "Zlib"
   }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-mbedtls_source",
     "name" : "Source Code",
@@ -967,14 +951,6 @@
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
   }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-hal_gpio",
-    "name" : "GPIO",
-    "versionInfo" : "2024.12.0",
-    "primaryPackagePurpose" : "LIBRARY",
-    "downloadLocation" : "NOASSERTION",
-    "supplier" : "Organization: Silicon Laboratories, Inc.",
-    "licenseConcluded" : "Zlib"
-  }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-rail_lib",
     "name" : "RAIL Library, Core",
     "versionInfo" : "2024.12.0",
@@ -982,6 +958,14 @@
     "downloadLocation" : "NOASSERTION",
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "MSLA"
+  }, {
+    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-hal_gpio",
+    "name" : "GPIO",
+    "versionInfo" : "2024.12.0",
+    "primaryPackagePurpose" : "LIBRARY",
+    "downloadLocation" : "NOASSERTION",
+    "supplier" : "Organization: Silicon Laboratories, Inc.",
+    "licenseConcluded" : "Zlib"
   }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-se_manager",
     "name" : "SE Manager",
@@ -1063,14 +1047,6 @@
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
   }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-interrupt_manager_cortexm",
-    "name" : "Interrupt Manager Cortex-M",
-    "versionInfo" : "2024.12.0",
-    "primaryPackagePurpose" : "LIBRARY",
-    "downloadLocation" : "NOASSERTION",
-    "supplier" : "Organization: Silicon Laboratories, Inc.",
-    "licenseConcluded" : "Zlib"
-  }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-rail_util_features",
     "name" : "RAIL Library Features, Core",
     "versionInfo" : "2024.12.0",
@@ -1078,6 +1054,14 @@
     "downloadLocation" : "NOASSERTION",
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "MSLA"
+  }, {
+    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-interrupt_manager_cortexm",
+    "name" : "Interrupt Manager Cortex-M",
+    "versionInfo" : "2024.12.0",
+    "primaryPackagePurpose" : "LIBRARY",
+    "downloadLocation" : "NOASSERTION",
+    "supplier" : "Organization: Silicon Laboratories, Inc.",
+    "licenseConcluded" : "Zlib"
   }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-apploader",
     "name" : "AppLoader Support for Applications",
@@ -1127,14 +1111,6 @@
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
   }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-emlib_gpio",
-    "name" : "GPIO",
-    "versionInfo" : "2024.12.0",
-    "primaryPackagePurpose" : "LIBRARY",
-    "downloadLocation" : "NOASSERTION",
-    "supplier" : "Organization: Silicon Laboratories, Inc.",
-    "licenseConcluded" : "Zlib"
-  }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-nvm3_default_flash_backend",
     "name" : "NVM3 back-end for default instance in flash",
     "versionInfo" : "2024.12.0",
@@ -1143,8 +1119,8 @@
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
   }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-app_queue",
-    "name" : "Application Queue",
+    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-emlib_gpio",
+    "name" : "GPIO",
     "versionInfo" : "2024.12.0",
     "primaryPackagePurpose" : "LIBRARY",
     "downloadLocation" : "NOASSERTION",
@@ -1289,6 +1265,14 @@
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
   }, {
+    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-emlib_common",
+    "name" : "Common Headers",
+    "versionInfo" : "2024.12.0",
+    "primaryPackagePurpose" : "LIBRARY",
+    "downloadLocation" : "NOASSERTION",
+    "supplier" : "Organization: Silicon Laboratories, Inc.",
+    "licenseConcluded" : "Zlib"
+  }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-mbedtls_core",
     "name" : "Mbed TLS",
     "versionInfo" : "2024.12.0",
@@ -1339,22 +1323,6 @@
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "MSLA"
   }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-emlib_common",
-    "name" : "Common Headers",
-    "versionInfo" : "2024.12.0",
-    "primaryPackagePurpose" : "LIBRARY",
-    "downloadLocation" : "NOASSERTION",
-    "supplier" : "Organization: Silicon Laboratories, Inc.",
-    "licenseConcluded" : "Zlib"
-  }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-simple_button_core",
-    "name" : "Simple Button Configuration",
-    "versionInfo" : "2024.12.0",
-    "primaryPackagePurpose" : "LIBRARY",
-    "downloadLocation" : "NOASSERTION",
-    "supplier" : "Organization: Silicon Laboratories, Inc.",
-    "licenseConcluded" : "Zlib"
-  }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-iostream_stdlib_config",
     "name" : "IO Stream: STDLIB Configuration",
     "versionInfo" : "2024.12.0",
@@ -1365,6 +1333,14 @@
   }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-brd4184a_config",
     "name" : "brd4184a config",
+    "versionInfo" : "2024.12.0",
+    "primaryPackagePurpose" : "LIBRARY",
+    "downloadLocation" : "NOASSERTION",
+    "supplier" : "Organization: Silicon Laboratories, Inc.",
+    "licenseConcluded" : "Zlib"
+  }, {
+    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-simple_button_core",
+    "name" : "Simple Button Configuration",
     "versionInfo" : "2024.12.0",
     "primaryPackagePurpose" : "LIBRARY",
     "downloadLocation" : "NOASSERTION",
@@ -1436,22 +1412,6 @@
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
   }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-app_rta",
-    "name" : "Application Runtime Adaptor (RTA)",
-    "versionInfo" : "2024.12.0",
-    "primaryPackagePurpose" : "LIBRARY",
-    "downloadLocation" : "NOASSERTION",
-    "supplier" : "Organization: Silicon Laboratories, Inc.",
-    "licenseConcluded" : "Zlib"
-  }, {
-    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-sleeptimer",
-    "name" : "Sleep Timer",
-    "versionInfo" : "2024.12.0",
-    "primaryPackagePurpose" : "LIBRARY",
-    "downloadLocation" : "NOASSERTION",
-    "supplier" : "Organization: Silicon Laboratories, Inc.",
-    "licenseConcluded" : "Zlib"
-  }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-psa_crypto_common",
     "name" : "Common",
     "versionInfo" : "2024.12.0",
@@ -1469,6 +1429,14 @@
     "originator" : "Organization: NOASSERTION",
     "homepage" : "https://github.com/Mbed-TLS/mbedtls.git",
     "comment" : "Mbed TLS is a C library implementing the PSA Cryptography API, cryptographic primitives, X.509 certificate manipulation and the SSL/TLS and DTLS protocols"
+  }, {
+    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-sleeptimer",
+    "name" : "Sleep Timer",
+    "versionInfo" : "2024.12.0",
+    "primaryPackagePurpose" : "LIBRARY",
+    "downloadLocation" : "NOASSERTION",
+    "supplier" : "Organization: Silicon Laboratories, Inc.",
+    "licenseConcluded" : "Zlib"
   }, {
     "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-apploader_util",
     "name" : "AppLoader Utility",
@@ -1503,6 +1471,14 @@
     "downloadLocation" : "NOASSERTION",
     "supplier" : "Organization: Silicon Laboratories, Inc.",
     "licenseConcluded" : "Zlib"
+  }, {
+    "SPDXID" : "SPDXRef-simplicity_sdk-2024.12.0-bluetooth_feature_l2cap",
+    "name" : "L2CAP",
+    "versionInfo" : "2024.12.0",
+    "primaryPackagePurpose" : "LIBRARY",
+    "downloadLocation" : "NOASSERTION",
+    "supplier" : "Organization: Silicon Laboratories, Inc.",
+    "licenseConcluded" : "Zlib AND MSLA"
   } ],
   "relationships" : [ {
     "spdxElementId" : "SPDXRef-DOCUMENT",
@@ -1515,10 +1491,6 @@
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-app_assert",
-    "relationshipType" : "CONTAINS"
-  }, {
-    "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-app_button_press",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
@@ -1535,10 +1507,6 @@
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-bluetooth_feature_gatt_server",
-    "relationshipType" : "CONTAINS"
-  }, {
-    "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-bluetooth_feature_l2cap",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
@@ -1598,6 +1566,10 @@
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-simple_button",
+    "relationshipType" : "CONTAINS"
+  }, {
+    "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-sl_common",
     "relationshipType" : "CONTAINS"
   }, {
@@ -1622,11 +1594,11 @@
     "relationshipType" : "ANCESTOR_OF"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-power_manager",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-device_manager",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-device_manager",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-power_manager",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
@@ -1678,10 +1650,6 @@
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-simple_button",
-    "relationshipType" : "CONTAINS"
-  }, {
-    "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-nvm3_source",
     "relationshipType" : "CONTAINS"
   }, {
@@ -1730,11 +1698,11 @@
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-power_manager_core_impl_sleep_loop",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-enum",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-enum",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-power_manager_core_impl_sleep_loop",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
@@ -1898,11 +1866,11 @@
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-device_peripheral",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-nvm3_default",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-nvm3_default",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-device_peripheral",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
@@ -1918,16 +1886,16 @@
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-power_manager_handler_implementation",
-    "relationshipType" : "CONTAINS"
-  }, {
-    "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-psa_crypto_ecc",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0-psa_crypto_ecc",
     "relatedSpdxElement" : "SPDXRef-psa_crypto_ecc-v3.6.2",
     "relationshipType" : "ANCESTOR_OF"
+  }, {
+    "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-power_manager_handler_implementation",
+    "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-mbedtls_source",
@@ -1974,11 +1942,11 @@
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-hal_gpio",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-rail_lib",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-rail_lib",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-hal_gpio",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
@@ -2022,11 +1990,11 @@
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-interrupt_manager_cortexm",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-rail_util_features",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-rail_util_features",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-interrupt_manager_cortexm",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
@@ -2054,15 +2022,11 @@
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-emlib_gpio",
-    "relationshipType" : "CONTAINS"
-  }, {
-    "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-nvm3_default_flash_backend",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-app_queue",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-emlib_gpio",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
@@ -2134,6 +2098,10 @@
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-emlib_common",
+    "relationshipType" : "CONTAINS"
+  }, {
+    "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-mbedtls_core",
     "relationshipType" : "CONTAINS"
   }, {
@@ -2158,19 +2126,15 @@
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-emlib_common",
-    "relationshipType" : "CONTAINS"
-  }, {
-    "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-simple_button_core",
-    "relationshipType" : "CONTAINS"
-  }, {
-    "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-iostream_stdlib_config",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-brd4184a_config",
+    "relationshipType" : "CONTAINS"
+  }, {
+    "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-simple_button_core",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
@@ -2202,20 +2166,16 @@
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-app_rta",
-    "relationshipType" : "CONTAINS"
-  }, {
-    "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
-    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-sleeptimer",
-    "relationshipType" : "CONTAINS"
-  }, {
-    "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-psa_crypto_common",
     "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0-psa_crypto_common",
     "relatedSpdxElement" : "SPDXRef-psa_crypto_common-v3.6.2",
     "relationshipType" : "ANCESTOR_OF"
+  }, {
+    "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-sleeptimer",
+    "relationshipType" : "CONTAINS"
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-apploader_util",
@@ -2231,6 +2191,10 @@
   }, {
     "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
     "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-gpio",
+    "relationshipType" : "CONTAINS"
+  }, {
+    "spdxElementId" : "SPDXRef-simplicity_sdk-2024.12.0",
+    "relatedSpdxElement" : "SPDXRef-simplicity_sdk-2024.12.0-bluetooth_feature_l2cap",
     "relationshipType" : "CONTAINS"
   } ]
 }

@@ -8,7 +8,7 @@
 
     <!--Device Name-->
     <characteristic const="false" id="device_name" name="Device Name" sourceId="org.bluetooth.characteristic.gap.device_name" uuid="2A00">
-      <value length="0" type="utf-8" variable_length="false">WSTK Client</value>
+      <value length="13" type="utf-8" variable_length="false">Empty Example</value>
       <properties>
         <read authenticated="false" bonded="false" encrypted="false"/>
         <write authenticated="false" bonded="false" encrypted="false"/>
@@ -75,18 +75,25 @@
     </characteristic>
   </service>
 
-  <!--Battery Service-->
-  <service advertise="true" id="battery_service_c" name="Battery Service" requirement="mandatory" sourceId="org.bluetooth.service.battery_service" type="primary" uuid="180F">
-    <informativeText>Abstract:  The Battery Service exposes the state of a battery within a device.  Summary:  The Battery Service exposes the Battery State and Battery Level of a single battery or set of batteries in a device.  </informativeText>
+  <!--IPSP-->
+  <service advertise="true" name="IPSP" requirement="mandatory" sourceId="" type="primary" uuid="1820">
+    <informativeText>Custom IPSP implementation for PTS testing.</informativeText>
 
-    <!--Battery Level-->
-    <characteristic const="false" id="batt_measurement_c" name="Battery Level" sourceId="org.bluetooth.characteristic.battery_level" uuid="2A19">
-      <informativeText>Abstract:  The current charge level of a battery. 100% represents fully charged while 0% represents fully discharged.  </informativeText>
-      <value length="1" type="user" variable_length="false"/>
+    <!--Test Characteristic 1.0-->
+    <characteristic const="false" name="Test Characteristic 1.0" sourceId="" uuid="643cc5a0-344a-480a-89fd-6819861474d1">
+      <value length="0" type="hex" variable_length="false">00</value>
       <properties>
         <read authenticated="false" bonded="false" encrypted="false"/>
-        <indicate authenticated="false" bonded="false" encrypted="false"/>
-        <notify authenticated="false" bonded="false" encrypted="false"/>
+        <write authenticated="false" bonded="false" encrypted="false"/>
+      </properties>
+    </characteristic>
+
+    <!--Test Characteristic 2.0-->
+    <characteristic const="false" name="Test Characteristic 2.0" sourceId="" uuid="391ca73a-5096-402e-abcd-8710c3981e54">
+      <value length="0" type="hex" variable_length="false">01</value>
+      <properties>
+        <read authenticated="false" bonded="false" encrypted="false"/>
+        <write authenticated="false" bonded="false" encrypted="false"/>
       </properties>
     </characteristic>
   </service>

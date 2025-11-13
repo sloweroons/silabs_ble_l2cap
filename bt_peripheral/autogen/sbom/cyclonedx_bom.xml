@@ -10,7 +10,7 @@ referenced in this SBOM.)
 -->
 <bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
   <metadata>
-    <timestamp>2025-05-14T21:45:05.634824700Z</timestamp>
+    <timestamp>2025-10-21T09:12:07Z</timestamp>
     <authors>
       <author>
         <name>Silicon Laboratories, Inc.</name>
@@ -37,16 +37,6 @@ referenced in this SBOM.)
         </component>
         <component bom-ref="simplicity_sdk:2024.12.0:app_assert" type="library">
           <name>Assert</name>
-          <version>2024.12.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:app_button_press" type="library">
-          <name>Button Press</name>
           <version>2024.12.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -83,16 +73,6 @@ referenced in this SBOM.)
 	      </supplier>
           <licenses>
             <expression>MSLA</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:bluetooth_feature_l2cap" type="library">
-          <name>L2CAP</name>
-          <version>2024.12.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib AND MSLA</expression>
           </licenses>
         </component>
         <component bom-ref="simplicity_sdk:2024.12.0:bluetooth_feature_legacy_advertiser" type="library">
@@ -185,28 +165,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:gatt_service_battery" type="library">
-          <name>Battery GATT Service</name>
-          <version>2024.12.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2024.12.0:gatt_service_device_information" type="library">
           <name>Device Information GATT Service</name>
-          <version>2024.12.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:iostream_stdio" type="library">
-          <name>IO Stream: STDIO</name>
           <version>2024.12.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -227,6 +187,16 @@ referenced in this SBOM.)
         </component>
         <component bom-ref="simplicity_sdk:2024.12.0:rail_util_pti" type="library">
           <name>RAIL Utility, PTI</name>
+          <version>2024.12.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2024.12.0:simple_button" type="library">
+          <name>Simple Button</name>
           <version>2024.12.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -313,8 +283,8 @@ referenced in this SBOM.)
             </ancestors>
           </pedigree>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:power_manager" type="library">
-          <name>Power Manager</name>
+        <component bom-ref="simplicity_sdk:2024.12.0:device_manager" type="library">
+          <name>Device Manager</name>
           <version>2024.12.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -323,8 +293,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:device_manager" type="library">
-          <name>Device Manager</name>
+        <component bom-ref="simplicity_sdk:2024.12.0:power_manager" type="library">
+          <name>Power Manager</name>
           <version>2024.12.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -511,16 +481,6 @@ referenced in this SBOM.)
             </ancestors>
           </pedigree>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:iostream" type="library">
-          <name>IO Stream</name>
-          <version>2024.12.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2024.12.0:psa_crypto_aes" type="library">
           <name>AES Block Cipher</name>
           <version>2024.12.0</version>
@@ -580,8 +540,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:power_manager_core_impl_sleep_loop" type="library">
-          <name>Power Manager: Core implementation</name>
+        <component bom-ref="simplicity_sdk:2024.12.0:enum" type="library">
+          <name>Enumerations</name>
           <version>2024.12.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -590,8 +550,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:enum" type="library">
-          <name>Enumerations</name>
+        <component bom-ref="simplicity_sdk:2024.12.0:power_manager_core_impl_sleep_loop" type="library">
+          <name>Power Manager: Core implementation</name>
           <version>2024.12.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -968,16 +928,6 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:device_peripheral" type="library">
-          <name>Device Manager Peripheral</name>
-          <version>2024.12.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2024.12.0:nvm3_default" type="library">
           <name>NVM3 Default Instance</name>
           <version>2024.12.0</version>
@@ -988,8 +938,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:app_timer" type="library">
-          <name>Timer</name>
+        <component bom-ref="simplicity_sdk:2024.12.0:device_peripheral" type="library">
+          <name>Device Manager Peripheral</name>
           <version>2024.12.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -1010,16 +960,6 @@ referenced in this SBOM.)
         </component>
         <component bom-ref="simplicity_sdk:2024.12.0:se_manager_config" type="library">
           <name>Config</name>
-          <version>2024.12.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:power_manager_handler_implementation" type="library">
-          <name>Power Manager: Handler</name>
           <version>2024.12.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -1056,6 +996,16 @@ referenced in this SBOM.)
               </component>
             </ancestors>
           </pedigree>
+        </component>
+        <component bom-ref="simplicity_sdk:2024.12.0:power_manager_handler_implementation" type="library">
+          <name>Power Manager: Handler</name>
+          <version>2024.12.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
         </component>
         <component bom-ref="simplicity_sdk:2024.12.0:mbedtls_source" type="library">
           <name>Source Code</name>
@@ -1165,16 +1115,6 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:hal_gpio" type="library">
-          <name>GPIO</name>
-          <version>2024.12.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2024.12.0:rail_lib" type="library">
           <name>RAIL Library, Core</name>
           <version>2024.12.0</version>
@@ -1183,6 +1123,16 @@ referenced in this SBOM.)
 	      </supplier>
           <licenses>
             <expression>MSLA</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2024.12.0:hal_gpio" type="library">
+          <name>GPIO</name>
+          <version>2024.12.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
           </licenses>
         </component>
         <component bom-ref="simplicity_sdk:2024.12.0:se_manager" type="library">
@@ -1265,16 +1215,6 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:interrupt_manager_cortexm" type="library">
-          <name>Interrupt Manager Cortex-M</name>
-          <version>2024.12.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2024.12.0:rail_util_features" type="library">
           <name>RAIL Library Features, Core</name>
           <version>2024.12.0</version>
@@ -1283,6 +1223,16 @@ referenced in this SBOM.)
 	      </supplier>
           <licenses>
             <expression>MSLA</expression>
+          </licenses>
+        </component>
+        <component bom-ref="simplicity_sdk:2024.12.0:interrupt_manager_cortexm" type="library">
+          <name>Interrupt Manager Cortex-M</name>
+          <version>2024.12.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
           </licenses>
         </component>
         <component bom-ref="simplicity_sdk:2024.12.0:bluetooth_host_adaptation" type="library">
@@ -1305,16 +1255,6 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:emlib_gpio" type="library">
-          <name>GPIO</name>
-          <version>2024.12.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2024.12.0:nvm3_default_flash_backend" type="library">
           <name>NVM3 back-end for default instance in flash</name>
           <version>2024.12.0</version>
@@ -1325,8 +1265,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:app_queue" type="library">
-          <name>Application Queue</name>
+        <component bom-ref="simplicity_sdk:2024.12.0:emlib_gpio" type="library">
+          <name>GPIO</name>
           <version>2024.12.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
@@ -1672,26 +1612,6 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:app_rta" type="library">
-          <name>Application Runtime Adaptor (RTA)</name>
-          <version>2024.12.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:sleeptimer" type="library">
-          <name>Sleep Timer</name>
-          <version>2024.12.0</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2024.12.0:psa_crypto_common" type="library">
           <name>Common</name>
           <version>2024.12.0</version>
@@ -1720,6 +1640,16 @@ referenced in this SBOM.)
               </component>
             </ancestors>
           </pedigree>
+        </component>
+        <component bom-ref="simplicity_sdk:2024.12.0:sleeptimer" type="library">
+          <name>Sleep Timer</name>
+          <version>2024.12.0</version>
+	      <supplier>
+	        <name>Silicon Laboratories, Inc.</name>
+	      </supplier>
+          <licenses>
+            <expression>Zlib</expression>
+          </licenses>
         </component>
         <component bom-ref="simplicity_sdk:2024.12.0:mbedtls_config" type="library">
           <name>Configuration</name>
@@ -1760,14 +1690,14 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.0:simple_button" type="library">
-          <name>Simple Button</name>
+        <component bom-ref="simplicity_sdk:2024.12.0:bluetooth_feature_l2cap" type="library">
+          <name>L2CAP</name>
           <version>2024.12.0</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
 	      </supplier>
           <licenses>
-            <expression>Zlib</expression>
+            <expression>Zlib AND MSLA</expression>
           </licenses>
         </component>
       </components>

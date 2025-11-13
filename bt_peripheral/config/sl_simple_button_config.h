@@ -33,8 +33,6 @@
 
 #include "sl_gpio.h"
 // <<< Use Configuration Wizard in Context Menu >>>
-#define SL_SIMPLE_BUTTON_INSTANCE0_PORT               SL_GPIO_PORT_B
-#define SL_SIMPLE_BUTTON_INSTANCE0_PIN                1
 
 // <h> Simple Button Driver Configuration
 

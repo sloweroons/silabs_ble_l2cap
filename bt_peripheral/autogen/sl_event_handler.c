@@ -12,18 +12,13 @@
 #include "sl_rail_util_pti.h"
 #include "sl_sleeptimer.h"
 #include "sl_mpu.h"
-#include "app_rta_internal_bm.h"
-#include "app_timer_internal.h"
 #include "sl_bluetooth.h"
 #include "sl_gpio.h"
-#include "sl_iostream_stdio.h"
 #include "sl_mbedtls.h"
 #include "sl_simple_button_instances.h"
 #include "psa/crypto.h"
 #include "sl_se_manager.h"
 #include "sli_protocol_crypto.h"
-#include "sl_iostream_init_instances.h"
-#include "sl_iostream_handles.h"
 #include "nvm3_default.h"
 #include "sl_power_manager.h"
 
@@ -56,7 +51,6 @@ void sl_service_init(void)
   sl_se_init();
   sli_protocol_crypto_init();
   sli_aes_seed_mask();
-  sl_iostream_init_instances();
 }
 
 void sl_stack_init(void)
@@ -69,7 +63,6 @@ void sl_stack_init(void)
 
 void sl_internal_app_init(void)
 {
-  app_rta_internal_init();
 }
 
 void sl_platform_process_action(void)
@@ -78,7 +71,6 @@ void sl_platform_process_action(void)
 
 void sl_service_process_action(void)
 {
-  sli_app_timer_step();
 }
 
 void sl_stack_process_action(void)
@@ -88,12 +80,5 @@ void sl_stack_process_action(void)
 
 void sl_internal_app_process_action(void)
 {
-  app_rta_step();
-}
-
-void sl_iostream_init_instances(void)
-{
-  sl_iostream_stdio_init();
-  sl_iostream_set_console_instance();
 }
 

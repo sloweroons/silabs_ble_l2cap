@@ -164,22 +164,6 @@
 // [EUSART0]$
 
 // $[PTI]
-// PTI DFRAME on PD05
-#ifndef PTI_DFRAME_PORT                         
-#define PTI_DFRAME_PORT                          SL_GPIO_PORT_D
-#endif
-#ifndef PTI_DFRAME_PIN                          
-#define PTI_DFRAME_PIN                           5
-#endif
-
-// PTI DOUT on PD04
-#ifndef PTI_DOUT_PORT                           
-#define PTI_DOUT_PORT                            SL_GPIO_PORT_D
-#endif
-#ifndef PTI_DOUT_PIN                            
-#define PTI_DOUT_PIN                             4
-#endif
-
 // [PTI]$
 
 // $[MODEM]
@@ -191,20 +175,6 @@
 #endif
 #ifndef _PIN                                    
 #define _PIN                                     0
-#endif
-
-#ifndef btn0_PORT                               
-#define btn0_PORT                                SL_GPIO_PORT_B
-#endif
-#ifndef btn0_PIN                                
-#define btn0_PIN                                 0
-#endif
-
-#ifndef btn1_PORT                               
-#define btn1_PORT                                SL_GPIO_PORT_B
-#endif
-#ifndef btn1_PIN                                
-#define btn1_PIN                                 1
 #endif
 
 // [CUSTOM_PIN_NAME]$

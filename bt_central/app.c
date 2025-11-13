@@ -28,6 +28,7 @@
  *
  ******************************************************************************/
 #include "sl_common.h"
+#include "sl_sleeptimer.h"
 #include "sl_bt_api.h"
 #include "app_assert.h"
 #include "app.h"
@@ -35,39 +36,51 @@
 //#include "sl_simple_button_instances.c"
 #include "sl_simple_button_instances.h"
 #include "sl_simple_button.h"
-#include "sl_sleeptimer.h"
-
 
 /*
 // -- TODO --
 # PDU in accord with MTU size
-# Denoise data transfer
-# Service/Char. buffering + overflow protection + replica check
 # Give ATT operations meaning other than for detecting timeouts
 */
 
 /* -- BLE declarations -- */
-static uint16_t max_sdu = 63; // 23 to 65533
-static uint16_t max_pdu = 23; // 23 to 252
-static uint16_t max_mtu = 1;
-static uint16_t credit = 64; // 1 to 65535
+static uint16_t max_sdu = 1280; // 23 to 65533
+static uint16_t max_pdu = 252; // 23 to 252
+static uint16_t credit = 10000; // 1 to 65535
 static uint16_t spsm = 0x23; // IPSP
 static uint16_t cid = 0x00; // 0x40-0x7F
+
+typedef enum States {
+  IDLE,
+  SERVICE_DISCOVERY,
+  CHARACTERISTIC_DISCOVERY
+} States;
+
+typedef struct connection_address_pair {
+  bd_addr address;
+  uint8_t connection_handle;
+} connection_address_pair;
+
+States gatt_state = IDLE;
+
+sl_sleeptimer_date_t timestamp;
 
 // The advertising set handle allocated from Bluetooth stack.
 static uint8_t advertising_set_handle = 0xff;
 static uint8_t connection_handle = 0xff;
 static uint32_t service_handle = 0xff;
 static uint16_t characteristic_handle = 0xff;
-const uint8_t supported_service[] = {0x0f, 0x18};
+const uint8_t supported_service[] = {0x20, 0x18};
 const uint8_t supported_characteristic[] = {0x19, 0x2a};
 
 
 /* -- MACROS -- */
+#define MAX_ACTIVE_ADDRESSES 64
 #define MAX_CONNECTIONS 64
 #define MAX_SERVICES 64
 #define MAX_CHARACTERISTICS 64
 #define MAX_BUFFER_SIZE 1024
+#define INITIAL_BUFFER_SIZE 256
 #define ANSI_COLOR_RED     "\x1b[31m"
 #define ANSI_COLOR_GREEN   "\x1b[32m"
 #define ANSI_COLOR_YELLOW  "\x1b[33m"
@@ -78,11 +91,15 @@ const uint8_t supported_characteristic[] = {0x19, 0x2a};
 #define ANSI_COLOR_GRAY    "\x1b[90m"
 
 /* -- Application declarations -- */
+connection_address_pair active_connections[MAX_CONNECTIONS];
+size_t active_connections_size = 0;
+bd_addr active_address;
+
 uint8_t connection_handles[MAX_CONNECTIONS];
 uint8_t connection_index = 0;
 uint8_t connection_handles_blacklist[MAX_CONNECTIONS];
 uint8_t connection_blacklist_index = 0;
-uint16_t service_handles[MAX_SERVICES];
+uint32_t service_handles[MAX_SERVICES];
 uint8_t service_index = 0;
 uint16_t characteristic_handles[MAX_CHARACTERISTICS];
 uint8_t characteristic_index = 0;
@@ -90,17 +107,73 @@ bd_addr peripheral_address = {
     .addr = {0xC4, 0x31, 0x2D, 0x89, 0xC0, 0x1C} // original order
 };
 
-bool array_contains(const void *array, const void *target, size_t element_size, size_t length) {
-  for (size_t i = 0; i < length; i++) {
-    const void *element = (const uint8_t *)array + (i * element_size);
-    if (memcmp(element, target, element_size) == 0) {
-        return true;
+bool connection_address_pair_contains_address(const connection_address_pair *array, const bd_addr *target) {
+    for (size_t i = 0; i < active_connections_size; i++) {
+        if (memcmp(&array[i].address, target, sizeof(bd_addr)) == 0) {
+            return true;
+        }
     }
-  }
-  return false;
+    return false;
 }
 
-bool adv_has_battery_service(uint8_t *data, uint8_t len) {
+bool connection_address_pair_add(connection_address_pair *array, const bd_addr *new_addr, uint8_t handle) {
+    if (active_connections_size >= MAX_ACTIVE_ADDRESSES) return false;
+    if (connection_address_pair_contains_address(array, new_addr)) return false;
+
+    array[active_connections_size].address = *new_addr;
+    array[active_connections_size].connection_handle = handle;
+    active_connections_size++;
+    return true;
+}
+
+
+bool connection_address_pair_remove_by_address(connection_address_pair *array, const bd_addr *target) {
+    for (size_t i = 0; i < active_connections_size; i++) {
+        if (memcmp(&array[i].address, target, sizeof(bd_addr)) == 0) {
+            for (size_t j = i; j < active_connections_size - 1; j++) {
+                array[j] = array[j + 1];
+            }
+            active_connections_size--;
+            return true;
+        }
+    }
+    return false;
+}
+
+bool connection_address_pair_remove_by_handle(connection_address_pair *array, uint8_t handle) {
+    for (size_t i = 0; i < active_connections_size; i++) {
+        if (array[i].connection_handle == handle) {
+            for (size_t j = i; j < active_connections_size - 1; j++) {
+                array[j] = array[j + 1];
+            }
+            active_connections_size--;
+            return true;
+        }
+    }
+    return false;
+}
+
+bd_addr* connection_address_pair_get_address_by_handle(connection_address_pair *array, uint8_t handle) {
+    for (size_t i = 0; i < active_connections_size; i++) {
+        if (array[i].connection_handle == handle) {
+            return &array[i].address;
+        }
+    }
+    return NULL;
+}
+
+
+bool connection_address_pair_update_handle(connection_address_pair *array, const bd_addr *target, uint8_t new_handle) {
+    for (size_t i = 0; i < active_connections_size; i++) {
+        if (memcmp(&array[i].address, target, sizeof(bd_addr)) == 0) {
+            array[i].connection_handle = new_handle;
+            return true;
+        }
+    }
+    return false;
+}
+
+bool adv_has_supported_service(uint8_t *data, uint8_t len) {
   for (int i = 0; i < len - 1; ) {
     uint8_t field_len = data[i];
     if (field_len == 0) break;
@@ -109,7 +182,7 @@ bool adv_has_battery_service(uint8_t *data, uint8_t len) {
     if (field_type == 0x03 || field_type == 0x02) {
       for (int j = 0; j < field_len - 1; j += 2) {
         uint16_t uuid = data[i + 2 + j] | (data[i + 3 + j] << 8);
-        if (uuid == 0x180F) return true;
+        if (uuid == 0x1820) return true;
       }
     }
     i += field_len + 1;
@@ -122,7 +195,7 @@ void uint8_array_to_string(uint8_t *src, char *dest, size_t length) {
     for (size_t i = 0; i < length; i++) {
         dest[i] = (char)src[i];
     }
-    dest[length] = '\0';  // null-terminate the string
+    dest[length] = '\0';
 }
 
 /* -- Application declarations -- */
@@ -161,7 +234,8 @@ SL_WEAK void app_process_action(void)
   is_pressed = sl_simple_button_get_state(&sl_button_btn0);
   if (!was_pressed && is_pressed) {
       uint8_t data = 0xff;
-      sl_bt_l2cap_channel_send_data(connection_handle, cid, sizeof(data), &data);
+      sl_status_t status = sl_bt_l2cap_channel_send_data(connection_handle, cid, sizeof(data), &data);
+      printf("\t\tresult : 0X%04lx\n", status);
   }
   was_pressed = is_pressed;
 }
@@ -178,7 +252,12 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
     // This event indicates the device has started and the radio is ready.
     // Do not call any stack command before receiving this boot event!
     case sl_bt_evt_system_boot_id:
-      printf("\n> Begin\n\n");
+      gatt_state = IDLE;
+      printf("\n> Begin\n");
+      /*TODO: sl_sleeptimer_get_datetime(&timestamp);
+      printf("%04d-%02d-%02d Time: %02d:%02d:%02d\n\n",
+             timestamp.year, timestamp.month, timestamp.month_day,
+             timestamp.hour, timestamp.min, timestamp.sec);*/
       printf("CEN - Booting central..\n");
       memset(message_buffer, 0x00, sizeof(message_buffer));
 /*
@@ -201,16 +280,34 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
       sl_bt_legacy_advertiser_start(advertising_set_handle, sl_bt_legacy_advertiser_connectable);
 */
 
-      // Start scanning (for WSTK)
-      sl_bt_scanner_set_parameters(sl_bt_scanner_scan_mode_active, 0x4, 0x2);
+      // Start scanning (for GATT Server)
+      // Interval is one second, window is one tenth
+      sl_bt_scanner_set_parameters(sl_bt_scanner_scan_mode_active, 0x0640, 0x00A0);
       sl_bt_scanner_start(sl_bt_scanner_scan_phy_1m, sl_bt_scanner_discover_generic);
       printf("CEN - Beginning scan..\n");
 
+      bd_addr address;
+      uint8_t address_type;
+
+      sl_bt_gap_get_identity_address(&address, &address_type);
+      //app_log_hexdump_reverse_info_s(":", address.addr, sizeof(address.addr));
+      sprintf(message_buffer, "%02X-%02X-%02X-%02X-%02X-%02X",
+               address.addr[0],
+               address.addr[1],
+               address.addr[2],
+               address.addr[3],
+               address.addr[4],
+               address.addr[5]);
+      printf(ANSI_COLOR_GREEN "CEN - -> Bluetooth online.\n" ANSI_COLOR_RESET);
+      printf("\t\tlocal address : %s\n", message_buffer);
+
       break;
 
-    case sl_bt_evt_scanner_legacy_advertisement_report_id:  // how to compare?
-      //if (memcmp(evt->data.evt_scanner_legacy_advertisement_report.address.addr, peripheral_address.addr, sizeof(peripheral_address.addr)) == 0) {
-      if (adv_has_battery_service(evt->data.evt_scanner_legacy_advertisement_report.data.data, evt->data.evt_scanner_legacy_advertisement_report.data.len)) {
+    case sl_bt_evt_scanner_legacy_advertisement_report_id:
+      if (adv_has_supported_service(evt->data.evt_scanner_legacy_advertisement_report.data.data, evt->data.evt_scanner_legacy_advertisement_report.data.len)
+          && !connection_address_pair_contains_address(active_connections, &evt->data.evt_scanner_legacy_advertisement_report.address)) {
+        active_address = evt->data.evt_scanner_legacy_advertisement_report.address;
+        connection_address_pair_add(active_connections, &active_address, 0x0); // handle is a placeholder, need to add the active connection to filter out redundant scan reports, true connection_handle added upon successful BT connection
         sprintf(message_buffer, "%02X-%02X-%02X-%02X-%02X-%02X",
                 evt->data.evt_scanner_legacy_advertisement_report.address.addr[0],
                 evt->data.evt_scanner_legacy_advertisement_report.address.addr[1],
@@ -219,18 +316,28 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
                 evt->data.evt_scanner_legacy_advertisement_report.address.addr[4],
                 evt->data.evt_scanner_legacy_advertisement_report.address.addr[5]);
         printf(ANSI_COLOR_YELLOW "CEN - -> Peripheral found.\n" ANSI_COLOR_RESET);
-        printf("\t\tremote address : [%s]\n", message_buffer);
+        printf("\t\tremote address : %s\n", message_buffer);
         memset(message_buffer, 0x00, sizeof(message_buffer));
         printf("CEN - Opening BLE connection..\n");
         sl_bt_connection_open(evt->data.evt_scanner_legacy_advertisement_report.address, sl_bt_gap_public_address, sl_bt_gap_phy_1m, &connection_handle);
       }
       break;
 
-    // This event indicates that a connection was closed.
     case sl_bt_evt_connection_closed_id:
       connected = false;
       // Generate data for advertising
+      bd_addr connection_address = *connection_address_pair_get_address_by_handle(active_connections, evt->data.evt_connection_closed.connection);
+      connection_address_pair_remove_by_handle(active_connections, evt->data.evt_connection_closed.connection);
       printf(ANSI_COLOR_RED "CEN - -> Bluetooth connection closed.\n" ANSI_COLOR_RESET);
+      sprintf(message_buffer, "%02X-%02X-%02X-%02X-%02X-%02X",
+              connection_address.addr[0],
+              connection_address.addr[1],
+              connection_address.addr[2],
+              connection_address.addr[3],
+              connection_address.addr[4],
+              connection_address.addr[5]);
+      printf("\t\tremote address : %s\n", message_buffer);
+      memset(message_buffer, 0x00, sizeof(message_buffer));
       sl_bt_legacy_advertiser_generate_data(advertising_set_handle,
                                                  sl_bt_advertiser_general_discoverable);
 
@@ -239,12 +346,12 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
                                          sl_bt_legacy_advertiser_connectable);
       break;
 
-    // This event indicates that a new connection was opened.
-    // TODO : filter out second connection attempt (sl_status)
     case sl_bt_evt_connection_opened_id:
-      uint8_t connection_handle_l = evt->data.evt_connection_opened.connection;
+      //uint8_t connection_handle_l = evt->data.evt_connection_opened.connection;
+      connection_handle = evt->data.evt_connection_opened.connection;
       connection_handles[connection_index++] = evt->data.evt_connection_opened.connection;
       connected = true;
+      connection_address_pair_update_handle(active_connections, &active_address, connection_handle);
       sprintf(message_buffer, "%02X-%02X-%02X-%02X-%02X-%02X",
               evt->data.evt_connection_opened.address.addr[0],
               evt->data.evt_connection_opened.address.addr[1],
@@ -253,15 +360,14 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
               evt->data.evt_connection_opened.address.addr[4],
               evt->data.evt_connection_opened.address.addr[5]);
       printf(ANSI_COLOR_GREEN "CEN - -> Bluetooth connection established.\n" ANSI_COLOR_RESET);
-      printf("\t\tremote address : [%s]\n", message_buffer);
-      printf("\t\tconnection handle : [%u]\n", connection_handle_l);
-      printf("CEN - Discovering max MTU size for ATT...\n");
-      sl_bt_gatt_get_mtu(connection_handle_l, &max_mtu);
-      printf("CEN - Discovering GATT primary services...\n");
-      sl_bt_gatt_discover_primary_services_by_uuid(connection_handle_l, sizeof(uint8_t)*2, supported_service);
-      printf("CEN - Opening L2CAP connection.\n");
-      memset(message_buffer, 0x00, sizeof(message_buffer));
-      sl_bt_l2cap_open_le_channel(connection_handle_l, spsm, max_sdu, max_pdu, credit, &cid);
+      printf("\t\tremote address : %s\n", message_buffer);
+      printf("\t\tconnection handle : %u\n", connection_handle);
+      //printf("CEN - Discovering max MTU size for ATT...\n"); // TODO : move to proc_comp
+      //sl_bt_gatt_get_mtu(connection_handle_l, &max_mtu);
+
+      printf("CEN - Scanning for primary services...\n");
+      gatt_state = SERVICE_DISCOVERY;
+      sl_bt_gatt_discover_primary_services_by_uuid(connection_handle, sizeof(uint8_t)*2, supported_service);
 
       break;
 
@@ -269,29 +375,28 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
     case sl_bt_evt_l2cap_le_channel_open_response_id:
       if (evt->data.evt_l2cap_le_channel_open_response.errorcode == sl_bt_l2cap_connection_result_successful) {
           printf(ANSI_COLOR_GREEN "CEN - -> L2CAP connection established.\n" ANSI_COLOR_RESET);
-          printf("\t\tcid : [%u]\n", cid);
-          printf("\t\tremote cid : [%u]\n", evt->data.evt_l2cap_le_channel_open_response.remote_cid);
-          printf("CEN - # Sending initial [%u] credit(s).\n", credit);
-          sl_bt_l2cap_channel_send_credit(evt->data.evt_l2cap_le_channel_open_response.connection, cid, credit);
+          printf("\t\tlocal cid : %u\n", cid);
+          printf("\t\tremote cid : %u\n", evt->data.evt_l2cap_le_channel_open_response.remote_cid);
+          //printf("CEN - # Sending initial %u credit(s).\n", credit);
+          //sl_bt_l2cap_channel_send_credit(evt->data.evt_l2cap_le_channel_open_response.connection, cid, credit);
       } else {
           printf(ANSI_COLOR_RED "CEN - -> L2CAP connection FAILED.\n" ANSI_COLOR_RESET);
-          printf("\t\terror code : [%u]\n", evt->data.evt_l2cap_le_channel_open_response.errorcode);
+          printf("\t\terror code : %u\n", evt->data.evt_l2cap_le_channel_open_response.errorcode);
       }
       break;
 
     case sl_bt_evt_l2cap_channel_credit_id:
       printf(ANSI_COLOR_YELLOW "CEN - -> Credit received.\n" ANSI_COLOR_RESET);
-      printf("\t\tamount : [%hu]\n", evt->data.evt_l2cap_channel_credit.credit);
+      printf("\t\tamount : %hu\n", evt->data.evt_l2cap_channel_credit.credit);
       break;
 
-    // React to receiving data from peripheral, send additional credits
+      // Called for every fragment
     case sl_bt_evt_l2cap_channel_data_id:
       connected = true;
-      // TODO If SDU sizes mismatch disconnect
       char fragment_buffer[MAX_BUFFER_SIZE];
       uint8_t increase_by = 0;
       printf(ANSI_COLOR_YELLOW "CEN - -> Data fragment #%u received.\n" ANSI_COLOR_RESET, fragment_index);
-      if (fragment_index == 0) {
+      if (fragment_index == 0) { // First fragment? If yes, extract first two bytes to know the message length
           current_sdu_length = evt->data.evt_l2cap_channel_data.data.data[0] | (evt->data.evt_l2cap_channel_data.data.data[1] << 8);
           uint8_array_to_string(&evt->data.evt_l2cap_channel_data.data.data[2], fragment_buffer, evt->data.evt_l2cap_channel_data.data.len - 2);
           increase_by += evt->data.evt_l2cap_channel_data.data.len - 2;
@@ -302,8 +407,8 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
       fragment_index++;
       memcpy(message_buffer + current_length_sum, fragment_buffer, increase_by);
       current_length_sum += increase_by;
-      printf("CEN - # Sending additional [%u] credit(s).\n", evt->data.evt_l2cap_channel_data.data.len);
-      sl_bt_l2cap_channel_send_credit(evt->data.evt_l2cap_channel_data.connection, evt->data.evt_l2cap_channel_data.cid, evt->data.evt_l2cap_channel_data.data.len);
+      printf("CEN - # Sending additional %u credit(s).\n", evt->data.evt_l2cap_channel_data.data.len);
+      sl_bt_l2cap_channel_send_credit(evt->data.evt_l2cap_channel_data.connection, evt->data.evt_l2cap_channel_data.cid, max_pdu);
       if (current_sdu_length == current_length_sum) {
           printf(ANSI_COLOR_CYAN "CEN - -> Data transmission finished.\n" ANSI_COLOR_RESET);
           message_buffer[current_length_sum] = '\0';
@@ -322,52 +427,97 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
       break;
 
     // -- GATT --
-    case sl_bt_evt_gatt_service_id:
+    case sl_bt_evt_gatt_service_id: // save results into a buffer
        service_handle = evt->data.evt_gatt_service.service;
        service_handles[service_index++] = service_handle;
-       printf("CEN - -> Service discovered.\n");
+       printf(ANSI_COLOR_YELLOW "CEN - -> Service discovered.\n" ANSI_COLOR_RESET);
        if (evt->data.evt_gatt_service.uuid.len == 2) {
            uint16_t uuid = evt->data.evt_gatt_service.uuid.data[0] | (evt->data.evt_gatt_service.uuid.data[1] << 8);
            printf("\t\tuuid : 0x%04X\n", uuid);
        }
        printf("\t\thandle : [%lu]\n", service_handle);
-       printf("CEN - Discovering GATT characteristics for the given service...\n");
-       //sl_bt_gatt_discover_characteristics_by_uuid(evt->data.evt_gatt_service.connection, evt->data.evt_gatt_service.service, sizeof(uint8_t)*2, supported_characteristic);
-       sl_bt_gatt_discover_characteristics(evt->data.evt_gatt_service.connection, evt->data.evt_gatt_service.service);
+
        break;
 
     case sl_bt_evt_gatt_characteristic_id:
        characteristic_handle = evt->data.evt_gatt_characteristic.characteristic;
        characteristic_handles[characteristic_index++] = characteristic_handle;
-       printf("CEN - -> Characteristic discovered.\n");
+       printf(ANSI_COLOR_YELLOW "CEN - -> Characteristic discovered.\n" ANSI_COLOR_RESET);
        if (evt->data.evt_gatt_characteristic.uuid.len == 2) {
            uint16_t uuid = evt->data.evt_gatt_characteristic.uuid.data[0] | (evt->data.evt_gatt_characteristic.uuid.data[1] << 8);
            printf("\t\tuuid : 0x%04X\n", uuid);
+       } else if (evt->data.evt_gatt_characteristic.uuid.len == 16) {
+           uint8_t *uuid = evt->data.evt_gatt_characteristic.uuid.data;
+           printf("\t\tuuid : %02X%02X%02X%02X-%02X%02X-%02X%02X-%02X%02X-%02X%02X%02X%02X%02X%02X\n",
+                  uuid[15], uuid[14], uuid[13], uuid[12],
+                  uuid[11], uuid[10],
+                  uuid[9], uuid[8],
+                  uuid[7], uuid[6],
+                  uuid[5], uuid[4], uuid[3], uuid[2], uuid[1], uuid[0]);
        }
        printf("\t\thandle : [%u]\n", characteristic_handle);
-       printf(ANSI_COLOR_CYAN "CEN - Enabling indications...\n" ANSI_COLOR_RESET);
-       sl_bt_gatt_set_characteristic_notification(evt->data.evt_gatt_characteristic.connection, evt->data.evt_gatt_characteristic.characteristic, sl_bt_gatt_indication);
+
        break;
 
+       // TODO : implement, currently ONLY SCANNING for characteristics
     case sl_bt_evt_gatt_characteristic_value_id:
-      printf("CEN - -> Characteristic value received.\n");
-      printf("\t\tvalue at 0 : [%u]\n", evt->data.evt_gatt_characteristic_value.value.data[0]);
-      printf("CEN - # Sending additional [%u] credit(s).\n", credit);
+      printf(ANSI_COLOR_YELLOW "CEN - -> Characteristic value received.\n" ANSI_COLOR_RESET);
+      printf("\t\tvalue at 0 : %u\n", evt->data.evt_gatt_characteristic_value.value.data[0]);
+      printf("CEN - # Sending additional %u credit(s).\n", credit);
       sl_bt_l2cap_channel_send_credit(evt->data.evt_gatt_characteristic_value.connection, cid, 256);
       break;
 
-    // TODO : switch-case for services and characteristics, enum proocedure state machine for monitoring which terminates, check sl_status
     case sl_bt_evt_gatt_procedure_completed_id:
+
       if (evt->data.evt_gatt_procedure_completed.result == SL_STATUS_OK) {
-          printf(ANSI_COLOR_GRAY "CEN - -> GATT procedure successful.\n" ANSI_COLOR_RESET);
+        printf(ANSI_COLOR_GRAY "CEN - -> GATT procedure successful.\n" ANSI_COLOR_RESET);
+        switch (gatt_state) {
+          case IDLE:
+            printf(ANSI_COLOR_GREEN "CEN - -> GATT Idle.\n" ANSI_COLOR_RESET);
+            break;
+          case SERVICE_DISCOVERY: // Service discovery successful, start discovering characteristics
+            printf(ANSI_COLOR_GREEN "CEN - -> Service discovery successful.\n" ANSI_COLOR_RESET);
+            printf("CEN - Scanning for characteristics...\n");
+            printf("\t\ttarget handle : %u\n", service_handle);
+            gatt_state = CHARACTERISTIC_DISCOVERY;
+            sl_bt_gatt_discover_characteristics(connection_handle, service_handle);
+
+            break;
+          case CHARACTERISTIC_DISCOVERY: // Characteristic discovery successful, done
+            printf(ANSI_COLOR_GREEN "CEN - -> Characteristic discovery successful.\n" ANSI_COLOR_RESET);
+
+            gatt_state = IDLE;
+
+            printf("CEN - Opening L2CAP connection...\n");
+            printf("\t\tremote address : %s\n", message_buffer);
+            printf("\t\tconnection handle : %u\n", connection_handle);
+            printf("\t\tSDU size : %u\n", max_sdu);
+            printf("\t\tPDU size : %u\n", max_pdu);
+
+            memset(message_buffer, 0x00, sizeof(message_buffer));
+            sl_status_t status = sl_bt_l2cap_open_le_channel(connection_handle, spsm, max_sdu, max_pdu, credit, &cid);
+            printf("\t\tresult : 0X%04lx\n", status);
+            printf("CEN - # Sending initial %u credit(s).\n", credit);
+
+            //sl_bt_gatt_set_characteristic_notification(evt->data.evt_gatt_characteristic.connection, evt->data.evt_gatt_characteristic.characteristic, sl_bt_gatt_indication);
+
+            break;
+        }
       } else {
-          printf(ANSI_COLOR_GRAY "CEN - -> GATT procedure FAILED.\n" ANSI_COLOR_RESET);
+          printf(ANSI_COLOR_GRAY "CEN - -> GATT procedure failed.\n" ANSI_COLOR_RESET);
       }
+
       break;
 
     case sl_bt_evt_gatt_mtu_exchanged_id:
-      printf("CEN - -> MTU exchanged.\n");
-      printf("\t\tMTU size : [%hu]\n", evt->data.evt_gatt_mtu_exchanged.mtu);
+      printf(ANSI_COLOR_YELLOW "CEN - -> MTU exchanged.\n" ANSI_COLOR_RESET);
+      printf("\t\tMTU size : %hu\n", evt->data.evt_gatt_mtu_exchanged.mtu);
+      printf("CEN - Optimizing local buffers to match remote MTU...\n");
+      uint16_t max_mtu = evt->data.evt_gatt_mtu_exchanged.mtu;
+      //printf("\t\told PDU size : %hu\n", max_pdu);
+      //uint16_t calculated_pdu = INITIAL_BUFFER_SIZE / (MAX_BUFFER_SIZE / (max_mtu - MAX_BUFFER_SIZE % max_mtu));
+      //max_pdu = (calculated_pdu < 23) ? 23 : calculated_pdu;
+      printf("\t\tnew PDU size : %hu\n", max_pdu);
 
       break;
 

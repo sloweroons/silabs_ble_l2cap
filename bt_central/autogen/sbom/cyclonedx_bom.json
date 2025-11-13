@@ -3,7 +3,7 @@
   "specVersion" : "1.6",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2025-05-21T21:18:29.459261900Z",
+    "timestamp" : "2025-10-21T09:11:47Z",
     "authors" : [ {
       "name" : "Silicon Laboratories, Inc."
     } ],
@@ -38,18 +38,6 @@
       "type" : "library",
       "bom-ref" : "simplicity_sdk:2024.12.0:app_assert",
       "name" : "Assert",
-      "version" : "2024.12.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:app_button_press",
-      "name" : "Button Press",
       "version" : "2024.12.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -104,18 +92,6 @@
       },
       "licenses" : [ {
         "expression" : "MSLA"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:bluetooth_feature_l2cap",
-      "name" : "L2CAP",
-      "version" : "2024.12.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib AND MSLA"
       } ]
     }, {
       "scope" : "required",
@@ -288,6 +264,18 @@
     }, {
       "scope" : "required",
       "type" : "library",
+      "bom-ref" : "simplicity_sdk:2024.12.0:simple_button",
+      "name" : "Simple Button",
+      "version" : "2024.12.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
       "bom-ref" : "simplicity_sdk:2024.12.0:sl_common",
       "name" : "Common Functions",
       "version" : "2024.12.0",
@@ -374,8 +362,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:power_manager",
-      "name" : "Power Manager",
+      "bom-ref" : "simplicity_sdk:2024.12.0:device_manager",
+      "name" : "Device Manager",
       "version" : "2024.12.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -386,8 +374,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:device_manager",
-      "name" : "Device Manager",
+      "bom-ref" : "simplicity_sdk:2024.12.0:power_manager",
+      "name" : "Power Manager",
       "version" : "2024.12.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -539,18 +527,6 @@
       "type" : "library",
       "bom-ref" : "simplicity_sdk:2024.12.0:iostream_retarget_stdio",
       "name" : "IO Stream: Retarget STDIO",
-      "version" : "2024.12.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:simple_button",
-      "name" : "Simple Button",
       "version" : "2024.12.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -719,8 +695,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:power_manager_core_impl_sleep_loop",
-      "name" : "Power Manager: Core implementation",
+      "bom-ref" : "simplicity_sdk:2024.12.0:enum",
+      "name" : "Enumerations",
       "version" : "2024.12.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -731,8 +707,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:enum",
-      "name" : "Enumerations",
+      "bom-ref" : "simplicity_sdk:2024.12.0:power_manager_core_impl_sleep_loop",
+      "name" : "Power Manager: Core implementation",
       "version" : "2024.12.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -1240,8 +1216,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:device_peripheral",
-      "name" : "Device Manager Peripheral",
+      "bom-ref" : "simplicity_sdk:2024.12.0:nvm3_default",
+      "name" : "NVM3 Default Instance",
       "version" : "2024.12.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -1252,8 +1228,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:nvm3_default",
-      "name" : "NVM3 Default Instance",
+      "bom-ref" : "simplicity_sdk:2024.12.0:device_peripheral",
+      "name" : "Device Manager Peripheral",
       "version" : "2024.12.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -1300,18 +1276,6 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:power_manager_handler_implementation",
-      "name" : "Power Manager: Handler",
-      "version" : "2024.12.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
       "bom-ref" : "simplicity_sdk:2024.12.0:psa_crypto_ecc",
       "name" : "ECC",
       "version" : "2024.12.0",
@@ -1340,6 +1304,18 @@
           }
         } ]
       }
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2024.12.0:power_manager_handler_implementation",
+      "name" : "Power Manager: Handler",
+      "version" : "2024.12.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
     }, {
       "scope" : "required",
       "type" : "library",
@@ -1489,18 +1465,6 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:hal_gpio",
-      "name" : "GPIO",
-      "version" : "2024.12.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
       "bom-ref" : "simplicity_sdk:2024.12.0:rail_lib",
       "name" : "RAIL Library, Core",
       "version" : "2024.12.0",
@@ -1509,6 +1473,18 @@
       },
       "licenses" : [ {
         "expression" : "MSLA"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2024.12.0:hal_gpio",
+      "name" : "GPIO",
+      "version" : "2024.12.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
       } ]
     }, {
       "scope" : "required",
@@ -1633,18 +1609,6 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:interrupt_manager_cortexm",
-      "name" : "Interrupt Manager Cortex-M",
-      "version" : "2024.12.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
       "bom-ref" : "simplicity_sdk:2024.12.0:rail_util_features",
       "name" : "RAIL Library Features, Core",
       "version" : "2024.12.0",
@@ -1653,6 +1617,18 @@
       },
       "licenses" : [ {
         "expression" : "MSLA"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2024.12.0:interrupt_manager_cortexm",
+      "name" : "Interrupt Manager Cortex-M",
+      "version" : "2024.12.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
       } ]
     }, {
       "scope" : "required",
@@ -1729,18 +1705,6 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:emlib_gpio",
-      "name" : "GPIO",
-      "version" : "2024.12.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
       "bom-ref" : "simplicity_sdk:2024.12.0:nvm3_default_flash_backend",
       "name" : "NVM3 back-end for default instance in flash",
       "version" : "2024.12.0",
@@ -1753,8 +1717,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:app_queue",
-      "name" : "Application Queue",
+      "bom-ref" : "simplicity_sdk:2024.12.0:emlib_gpio",
+      "name" : "GPIO",
       "version" : "2024.12.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -1976,6 +1940,18 @@
     }, {
       "scope" : "required",
       "type" : "library",
+      "bom-ref" : "simplicity_sdk:2024.12.0:emlib_common",
+      "name" : "Common Headers",
+      "version" : "2024.12.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
       "bom-ref" : "simplicity_sdk:2024.12.0:mbedtls_core",
       "name" : "Mbed TLS",
       "version" : "2024.12.0",
@@ -2055,30 +2031,6 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:emlib_common",
-      "name" : "Common Headers",
-      "version" : "2024.12.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:simple_button_core",
-      "name" : "Simple Button Configuration",
-      "version" : "2024.12.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
       "bom-ref" : "simplicity_sdk:2024.12.0:iostream_stdlib_config",
       "name" : "IO Stream: STDLIB Configuration",
       "version" : "2024.12.0",
@@ -2093,6 +2045,18 @@
       "type" : "library",
       "bom-ref" : "simplicity_sdk:2024.12.0:brd4184a_config",
       "name" : "brd4184a config",
+      "version" : "2024.12.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2024.12.0:simple_button_core",
+      "name" : "Simple Button Configuration",
       "version" : "2024.12.0",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
@@ -2202,30 +2166,6 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:app_rta",
-      "name" : "Application Runtime Adaptor (RTA)",
-      "version" : "2024.12.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.0:sleeptimer",
-      "name" : "Sleep Timer",
-      "version" : "2024.12.0",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
       "bom-ref" : "simplicity_sdk:2024.12.0:psa_crypto_common",
       "name" : "Common",
       "version" : "2024.12.0",
@@ -2254,6 +2194,18 @@
           }
         } ]
       }
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2024.12.0:sleeptimer",
+      "name" : "Sleep Timer",
+      "version" : "2024.12.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
     }, {
       "scope" : "required",
       "type" : "library",
@@ -2308,6 +2260,18 @@
       },
       "licenses" : [ {
         "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2024.12.0:bluetooth_feature_l2cap",
+      "name" : "L2CAP",
+      "version" : "2024.12.0",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib AND MSLA"
       } ]
     } ]
   } ]

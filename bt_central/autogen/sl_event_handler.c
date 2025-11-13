@@ -15,7 +15,6 @@
 #include "sl_sleeptimer.h"
 #include "sl_mpu.h"
 #include "app_log.h"
-#include "app_rta_internal_bm.h"
 #include "app_timer_internal.h"
 #include "sl_bluetooth.h"
 #include "sl_debug_swo.h"
@@ -81,7 +80,6 @@ void sl_stack_init(void)
 void sl_internal_app_init(void)
 {
   app_log_init();
-  app_rta_internal_init();
 }
 
 void sl_platform_process_action(void)
@@ -100,7 +98,6 @@ void sl_stack_process_action(void)
 
 void sl_internal_app_process_action(void)
 {
-  app_rta_step();
 }
 
 void sl_iostream_init_instances(void)

@@ -33,7 +33,7 @@
 
 #include "sl_simple_button.h"
 
-extern const sl_button_t sl_button_instance0;
+extern const sl_button_t sl_button_btn0;
 
 extern const sl_button_t *sl_simple_button_array[];
 

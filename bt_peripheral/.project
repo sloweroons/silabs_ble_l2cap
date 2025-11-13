@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>bt_soc_empty</name>
+	<name>bt_peripheral_</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -481,16 +481,6 @@
 			<locationURI>STUDIO_SDK_LOC/protocol/bluetooth/src/sli_bt_sync_config.c</locationURI>
 		</link>
 		<link>
-			<name>simplicity_sdk_2024.12.0/app/bluetooth/common/gatt_service_battery/sl_gatt_service_battery.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/bluetooth/common/gatt_service_battery/sl_gatt_service_battery.c</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/app/bluetooth/common/gatt_service_battery/sl_gatt_service_battery.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/bluetooth/common/gatt_service_battery/sl_gatt_service_battery.h</locationURI>
-		</link>
-		<link>
 			<name>simplicity_sdk_2024.12.0/app/bluetooth/common/gatt_service_device_information/sl_gatt_service_device_information.h</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/app/bluetooth/common/gatt_service_device_information/sl_gatt_service_device_information.h</locationURI>
@@ -504,41 +494,6 @@
 			<name>simplicity_sdk_2024.12.0/app/common/util/app_assert/sl_app_assert.h</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/app/common/util/app_assert/sl_app_assert.h</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/app/common/util/app_button_press/app_button_press.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_button_press/app_button_press.c</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/app/common/util/app_button_press/app_button_press.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_button_press/app_button_press.h</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/app/common/util/app_button_press/app_button_press_internal.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_button_press/app_button_press_internal.h</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/app/common/util/app_queue/app_queue.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_queue/app_queue.c</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/app/common/util/app_queue/app_queue.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_queue/app_queue.h</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/app/common/util/app_timer/app_timer.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_timer/app_timer.h</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/app/common/util/app_timer/sl_simple_timer.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_timer/sl_simple_timer.h</locationURI>
 		</link>
 		<link>
 			<name>simplicity_sdk_2024.12.0/platform/CMSIS/Core/Include/cmsis_compiler.h</name>
@@ -884,26 +839,6 @@
 			<name>simplicity_sdk_2024.12.0/platform/service/interrupt_manager/src/sli_interrupt_manager.h</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/platform/service/interrupt_manager/src/sli_interrupt_manager.h</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/platform/service/iostream/inc/sl_iostream.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/iostream/inc/sl_iostream.h</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/platform/service/iostream/inc/sl_iostream_stdio.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/iostream/inc/sl_iostream_stdio.h</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/platform/service/iostream/src/sl_iostream.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/iostream/src/sl_iostream.c</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/platform/service/iostream/src/sl_iostream_stdio.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/iostream/src/sl_iostream_stdio.c</locationURI>
 		</link>
 		<link>
 			<name>simplicity_sdk_2024.12.0/platform/service/memory_manager/inc/sl_memory_manager.h</name>
@@ -1454,26 +1389,6 @@
 			<name>simplicity_sdk_2024.12.0/util/third_party/mbedtls/library/x509_internal.h</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/util/third_party/mbedtls/library/x509_internal.h</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/app/common/util/app_rta/inc/app_rta.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_rta/inc/app_rta.h</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/app/common/util/app_timer/bm/app_timer.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_timer/bm/app_timer.c</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/app/common/util/app_timer/bm/app_timer_internal.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_timer/bm/app_timer_internal.h</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/app/common/util/app_timer/bm/app_timer_types.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_timer/bm/app_timer_types.h</locationURI>
 		</link>
 		<link>
 			<name>simplicity_sdk_2024.12.0/platform/Device/SiliconLabs/EFR32MG26/Include/efr32mg26_acmp.h</name>
@@ -2789,16 +2704,6 @@
 			<name>simplicity_sdk_2024.12.0/util/third_party/mbedtls/include/psa/crypto_values.h</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/util/third_party/mbedtls/include/psa/crypto_values.h</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/app/common/util/app_rta/inc/bm/app_rta_internal_bm.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_rta/inc/bm/app_rta_internal_bm.h</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.0/app/common/util/app_rta/src/bm/app_rta_bm.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_rta/src/bm/app_rta_bm.c</locationURI>
 		</link>
 		<link>
 			<name>simplicity_sdk_2024.12.0/platform/radio/rail_lib/chip/efr32/efr32xg2x/rail_chip_specific.h</name>

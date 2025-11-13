@@ -33,7 +33,6 @@
 #include "sl_assert.h"
 #include "sl_bt_stack_init.h"
 #include "sl_component_catalog.h"
-#include "sl_gatt_service_battery.h"
 #include "sl_gatt_service_device_information.h"
 /**
  * Internal stack function to start the Bluetooth stack.
@@ -66,7 +65,6 @@ SL_WEAK void sl_bt_on_event(sl_bt_msg_t* evt)
 
 void sl_bt_process_event(sl_bt_msg_t *evt)
 {
-  sl_gatt_service_battery_on_event(evt);
   sl_gatt_service_device_information_on_event(evt);
   sl_bt_on_event(evt);
 }
