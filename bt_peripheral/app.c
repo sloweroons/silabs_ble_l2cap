@@ -36,8 +36,8 @@
 #include "sl_simple_button.h"
 #include "sl_simple_button_instances.h"
 
-static uint16_t max_sdu = 1280; // 23 to 65533
-static uint16_t max_pdu = 250; // 23 to 252, TODO: optimize for MTU
+static uint16_t local_sdu_size = 576; // 23 to 65533
+static uint16_t local_pdu_size = 124; // 23 to 252, TODO: optimize for MTU
 static uint16_t credit = 8; // 1 to 65535
 static uint16_t spsm = 0x23; // IPSP
 static uint16_t cid = 0x00; // 0x40-0x7F, device/channel endpoint identifier
@@ -47,12 +47,7 @@ static uint8_t advertising_set_handle = 0xff;
 static uint16_t connection_handle = 0xff;
 static uint16_t characteristic_handle = 0xff;
 
-bd_addr central_address = {
-    .addr = {0x84, 0x2E, 0x14, 0x31, 0xB9, 0x92} // reverse byte order
-};
-
 /* -- Application declarations -- */
-bool connected = false;
 
 /*
 sl_simple_button_context_t sl_button_instance1_context = {
@@ -79,7 +74,7 @@ void fragment_and_send_l2cap_data(uint8_t connection_handle, uint16_t cid,
                          uint8_t *data, uint16_t data_len) {
     uint16_t offset = 0;
 
-    uint16_t first_frame_length = (2 + data_len <= max_pdu) ? 2 + data_len : max_pdu;
+    uint16_t first_frame_length = (2 + data_len <= local_pdu_size) ? 2 + data_len : local_pdu_size;
     uint8_t first_frame[first_frame_length];
     first_frame[0] = (uint8_t)(data_len & 0xFF);
     first_frame[1] = (uint8_t)((data_len >> 8) & 0xFF);
@@ -91,7 +86,7 @@ void fragment_and_send_l2cap_data(uint8_t connection_handle, uint16_t cid,
     uint16_t remaining = data_len - (first_frame_length - 2);
 
     while (remaining > 0) {
-        uint16_t chunk_size = (2 + remaining > max_pdu) ? 2 + remaining : max_pdu;
+        uint16_t chunk_size = (remaining > local_pdu_size) ? local_pdu_size : remaining;
         sl_status_t status = sl_bt_l2cap_channel_send_data(connection_handle, cid, chunk_size, &data[offset]);
         offset += chunk_size;
         remaining -= chunk_size;
@@ -166,7 +161,7 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
 
       // Start advertising and enable connections.
 
-      sl_bt_gatt_server_set_max_mtu(max_pdu, &max_pdu);
+      sl_bt_gatt_server_set_max_mtu(local_pdu_size, &local_pdu_size);
       sl_bt_legacy_advertiser_start(advertising_set_handle, sl_bt_legacy_advertiser_connectable);
 
 
@@ -196,7 +191,7 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
       // React to L2CAP channel open request
     case sl_bt_evt_l2cap_le_channel_open_request_id:
       cid = evt->data.evt_l2cap_le_channel_open_request.cid;
-      sl_bt_l2cap_send_le_channel_open_response(evt->data.evt_l2cap_le_channel_open_request.connection, evt->data.evt_l2cap_le_channel_open_request.cid, max_sdu, max_pdu, credit, sl_bt_l2cap_connection_result_successful);
+      sl_bt_l2cap_send_le_channel_open_response(evt->data.evt_l2cap_le_channel_open_request.connection, evt->data.evt_l2cap_le_channel_open_request.cid, local_sdu_size, local_pdu_size, credit, sl_bt_l2cap_connection_result_successful);
       break;
 
       // React to being able to send more data

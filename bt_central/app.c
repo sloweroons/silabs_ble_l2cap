@@ -44,11 +44,17 @@
 */
 
 /* -- BLE declarations -- */
-static uint16_t max_sdu = 1280; // 23 to 65533
-static uint16_t max_pdu = 252; // 23 to 252
+static uint16_t local_mtu_size = 1280;
+static uint16_t local_sdu_size = 1280; // 23 to 65533
+static uint16_t local_pdu_size = 252; // 23 to 252
 static uint16_t credit = 10000; // 1 to 65535
 static uint16_t spsm = 0x23; // IPSP
 static uint16_t cid = 0x00; // 0x40-0x7F
+
+// TODO : buffer these
+static uint16_t remote_sdu_size = 0; // 23 to 65533
+static uint16_t remote_pdu_size = 0; // 23 to 252
+static uint8_t remote_cid = 0;
 
 typedef enum States {
   IDLE,
@@ -202,8 +208,9 @@ void uint8_array_to_string(uint8_t *src, char *dest, size_t length) {
 char message_buffer[4 * MAX_BUFFER_SIZE];
 bool connected = false;
 uint8_t fragment_index = 0;
-uint8_t current_sdu_length = 0;
-uint8_t current_length_sum = 0;
+uint8_t message_length = 0;
+uint16_t length_index = 0;
+uint16_t payload_offset = 0;
 /* -- Application code -- */
 
 // Application Init.
@@ -231,11 +238,12 @@ SL_WEAK void app_process_action(void)
     // Do not call blocking functions from here!                               //
     /////////////////////////////////////////////////////////////////////////////
   }
+  // Query data
   is_pressed = sl_simple_button_get_state(&sl_button_btn0);
   if (!was_pressed && is_pressed) {
       uint8_t data = 0xff;
       sl_status_t status = sl_bt_l2cap_channel_send_data(connection_handle, cid, sizeof(data), &data);
-      printf("\t\tresult : 0X%04lx\n", status);
+      //printf("\t\tresult : 0X%04lx\n", status);
   }
   was_pressed = is_pressed;
 }
@@ -375,8 +383,18 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
     case sl_bt_evt_l2cap_le_channel_open_response_id:
       if (evt->data.evt_l2cap_le_channel_open_response.errorcode == sl_bt_l2cap_connection_result_successful) {
           printf(ANSI_COLOR_GREEN "CEN - -> L2CAP connection established.\n" ANSI_COLOR_RESET);
+
+          remote_pdu_size = evt->data.evt_l2cap_le_channel_open_response.max_pdu;
+          remote_sdu_size = evt->data.evt_l2cap_le_channel_open_response.max_sdu;
+          remote_cid = evt->data.evt_l2cap_le_channel_open_response.remote_cid;
+
           printf("\t\tlocal cid : %u\n", cid);
-          printf("\t\tremote cid : %u\n", evt->data.evt_l2cap_le_channel_open_response.remote_cid);
+          printf("\t\tremote cid : %u\n", remote_cid);
+          printf("\t\tlocal PDU size : %u\n", local_pdu_size);
+          printf("\t\tremote PDU size : %u\n", remote_pdu_size);
+          printf("\t\tlocal SDU size : %u\n", local_sdu_size);
+          printf("\t\tremote SDU size : %u\n", remote_sdu_size);
+
           //printf("CEN - # Sending initial %u credit(s).\n", credit);
           //sl_bt_l2cap_channel_send_credit(evt->data.evt_l2cap_le_channel_open_response.connection, cid, credit);
       } else {
@@ -394,24 +412,22 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
     case sl_bt_evt_l2cap_channel_data_id:
       connected = true;
       char fragment_buffer[MAX_BUFFER_SIZE];
-      uint8_t increase_by = 0;
-      printf(ANSI_COLOR_YELLOW "CEN - -> Data fragment #%u received.\n" ANSI_COLOR_RESET, fragment_index);
+      printf(ANSI_COLOR_YELLOW "CEN - -> Data fragment #%u received.\n" ANSI_COLOR_RESET, fragment_index + 1);
       if (fragment_index == 0) { // First fragment? If yes, extract first two bytes to know the message length
-          current_sdu_length = evt->data.evt_l2cap_channel_data.data.data[0] | (evt->data.evt_l2cap_channel_data.data.data[1] << 8);
+          message_length = evt->data.evt_l2cap_channel_data.data.data[0] | (evt->data.evt_l2cap_channel_data.data.data[1] << 8);
           uint8_array_to_string(&evt->data.evt_l2cap_channel_data.data.data[2], fragment_buffer, evt->data.evt_l2cap_channel_data.data.len - 2);
-          increase_by += evt->data.evt_l2cap_channel_data.data.len - 2;
-      } else {
+          payload_offset = evt->data.evt_l2cap_channel_data.data.len - 2;
+      } else { // If not, buffer the entire message
           uint8_array_to_string(evt->data.evt_l2cap_channel_data.data.data, fragment_buffer, evt->data.evt_l2cap_channel_data.data.len);
-          increase_by += evt->data.evt_l2cap_channel_data.data.len;
+          payload_offset = evt->data.evt_l2cap_channel_data.data.len;
       }
       fragment_index++;
-      memcpy(message_buffer + current_length_sum, fragment_buffer, increase_by);
-      current_length_sum += increase_by;
+      memcpy(message_buffer + length_index, fragment_buffer, payload_offset);
+      length_index += payload_offset;
       printf("CEN - # Sending additional %u credit(s).\n", evt->data.evt_l2cap_channel_data.data.len);
-      sl_bt_l2cap_channel_send_credit(evt->data.evt_l2cap_channel_data.connection, evt->data.evt_l2cap_channel_data.cid, max_pdu);
-      if (current_sdu_length == current_length_sum) {
+      sl_bt_l2cap_channel_send_credit(evt->data.evt_l2cap_channel_data.connection, evt->data.evt_l2cap_channel_data.cid, evt->data.evt_l2cap_channel_data.data.len);
+      if (length_index == message_length) {
           printf(ANSI_COLOR_CYAN "CEN - -> Data transmission finished.\n" ANSI_COLOR_RESET);
-          message_buffer[current_length_sum] = '\0';
           printf("\t\tdata string: '%s'\n", message_buffer);
           if (evt->data.evt_l2cap_channel_data.data.len > 0) {
             if (evt->data.evt_l2cap_channel_data.data.data[0] == 8 && evt->data.evt_l2cap_channel_data.data.data[1] == 8) {
@@ -421,8 +437,8 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
           }
           memset(message_buffer, 0x00, 4*MAX_BUFFER_SIZE);
           fragment_index = 0;
-          current_length_sum = 0;
-          current_sdu_length = 0;
+          length_index = 0;
+          message_length = 0;
       }
       break;
 
@@ -491,12 +507,10 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
             printf("CEN - Opening L2CAP connection...\n");
             printf("\t\tremote address : %s\n", message_buffer);
             printf("\t\tconnection handle : %u\n", connection_handle);
-            printf("\t\tSDU size : %u\n", max_sdu);
-            printf("\t\tPDU size : %u\n", max_pdu);
 
             memset(message_buffer, 0x00, sizeof(message_buffer));
-            sl_status_t status = sl_bt_l2cap_open_le_channel(connection_handle, spsm, max_sdu, max_pdu, credit, &cid);
-            printf("\t\tresult : 0X%04lx\n", status);
+            sl_status_t status = sl_bt_l2cap_open_le_channel(connection_handle, spsm, local_sdu_size, local_pdu_size, credit, &cid);
+            //printf("\t\tresult : 0X%04lx\n", status);
             printf("CEN - # Sending initial %u credit(s).\n", credit);
 
             //sl_bt_gatt_set_characteristic_notification(evt->data.evt_gatt_characteristic.connection, evt->data.evt_gatt_characteristic.characteristic, sl_bt_gatt_indication);
@@ -512,12 +526,8 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
     case sl_bt_evt_gatt_mtu_exchanged_id:
       printf(ANSI_COLOR_YELLOW "CEN - -> MTU exchanged.\n" ANSI_COLOR_RESET);
       printf("\t\tMTU size : %hu\n", evt->data.evt_gatt_mtu_exchanged.mtu);
-      printf("CEN - Optimizing local buffers to match remote MTU...\n");
-      uint16_t max_mtu = evt->data.evt_gatt_mtu_exchanged.mtu;
-      //printf("\t\told PDU size : %hu\n", max_pdu);
-      //uint16_t calculated_pdu = INITIAL_BUFFER_SIZE / (MAX_BUFFER_SIZE / (max_mtu - MAX_BUFFER_SIZE % max_mtu));
-      //max_pdu = (calculated_pdu < 23) ? 23 : calculated_pdu;
-      printf("\t\tnew PDU size : %hu\n", max_pdu);
+      printf("CEN - TODO - Optimizing local MTU buffer to match remote PDU size (L3 constraint of minimum 1280 bytes)...\n");
+      local_mtu_size = evt->data.evt_gatt_mtu_exchanged.mtu;
 
       break;
 
