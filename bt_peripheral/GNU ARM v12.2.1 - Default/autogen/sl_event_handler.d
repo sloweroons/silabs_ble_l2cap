@@ -63,7 +63,7 @@ autogen/sl_event_handler.o: ../autogen/sl_event_handler.c \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_system.h \
@@ -82,7 +82,7 @@ autogen/sl_event_handler.o: ../autogen/sl_event_handler.c \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_types.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\chip\efr32\efr32xg2x\rail_chip_specific.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_features.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_rail_util_pa_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_rail_util_pa_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\plugin\pa-conversions\pa_curve_types_efr32.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\plugin\pa-conversions\pa_curves_efr32.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\plugin\pa-conversions\efr32xg26/sl_rail_util_pa_curves_20dbm.h \
@@ -92,11 +92,11 @@ autogen/sl_event_handler.o: ../autogen/sl_event_handler.c \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\mpu\inc\sl_mpu.h \
  ../autogen/sl_bluetooth.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_power_manager_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_power_manager_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_bluetooth_config.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_bluetooth_connection_config.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_bluetooth_advertiser_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_bluetooth_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_bluetooth_connection_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_bluetooth_advertiser_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bt_stack_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bt_ll_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bt_api.h \
@@ -113,16 +113,16 @@ autogen/sl_event_handler.o: ../autogen/sl_event_handler.c \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\mbedtls\private_access.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\psa\build_info.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\mbedtls\build_info.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_mbedtls_config.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_mbedtls_config_autogen.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_mbedtls_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_mbedtls_config_autogen.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sl_mbedtls_support\config\sli_mbedtls_omnipresent.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sl_mbedtls_support\config\sli_mbedtls_acceleration.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_mbedtls_device_config.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_mbedtls_config_transform_autogen.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/psa_crypto_config.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_psa_config_autogen.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_mbedtls_device_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_mbedtls_config_transform_autogen.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/psa_crypto_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_psa_config_autogen.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sl_mbedtls_support\config\sli_psa_acceleration.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_psa_builtin_config_autogen.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_psa_builtin_config_autogen.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\mbedtls\config_psa.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\psa\crypto_legacy.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\psa\crypto_adjust_config_synonyms.h \
@@ -263,7 +263,7 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\ef
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_system.h:
@@ -282,7 +282,7 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\plugin
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_types.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\chip\efr32\efr32xg2x\rail_chip_specific.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_features.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_rail_util_pa_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_rail_util_pa_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\plugin\pa-conversions\pa_curve_types_efr32.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\plugin\pa-conversions\pa_curves_efr32.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\plugin\pa-conversions\efr32xg26/sl_rail_util_pa_curves_20dbm.h:
@@ -292,11 +292,11 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\in
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\mpu\inc\sl_mpu.h:
 ../autogen/sl_bluetooth.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_power_manager_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_power_manager_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_bluetooth_config.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_bluetooth_connection_config.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_bluetooth_advertiser_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_bluetooth_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_bluetooth_connection_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_bluetooth_advertiser_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bt_stack_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bt_ll_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bt_api.h:
@@ -313,16 +313,16 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\inclu
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\mbedtls\private_access.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\psa\build_info.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\mbedtls\build_info.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_mbedtls_config.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_mbedtls_config_autogen.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_mbedtls_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_mbedtls_config_autogen.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sl_mbedtls_support\config\sli_mbedtls_omnipresent.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sl_mbedtls_support\config\sli_mbedtls_acceleration.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_mbedtls_device_config.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_mbedtls_config_transform_autogen.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/psa_crypto_config.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_psa_config_autogen.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_mbedtls_device_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_mbedtls_config_transform_autogen.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/psa_crypto_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_psa_config_autogen.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sl_mbedtls_support\config\sli_psa_acceleration.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_psa_builtin_config_autogen.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_psa_builtin_config_autogen.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\mbedtls\config_psa.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\psa\crypto_legacy.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\psa\crypto_adjust_config_synonyms.h:

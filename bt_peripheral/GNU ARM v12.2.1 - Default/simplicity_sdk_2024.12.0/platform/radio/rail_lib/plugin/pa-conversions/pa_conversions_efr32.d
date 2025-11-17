@@ -62,7 +62,7 @@ simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/pa-conversions/pa_conver
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_bus.h \
@@ -77,7 +77,7 @@ simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/pa-conversions/pa_conver
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_types.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\chip\efr32\efr32xg2x\rail_chip_specific.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_features.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_rail_util_pa_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_rail_util_pa_config.h \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/radio/rail_lib/plugin/pa-conversions/pa_curve_types_efr32.h \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.h \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/radio/rail_lib/plugin/pa-conversions/efr32xg26/sl_rail_util_pa_curves_20dbm.h \
@@ -146,7 +146,7 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\ef
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_bus.h:
@@ -161,7 +161,7 @@ C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/radio/rail_lib/plugin
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_types.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\chip\efr32\efr32xg2x\rail_chip_specific.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_features.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_rail_util_pa_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_rail_util_pa_config.h:
 C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/radio/rail_lib/plugin/pa-conversions/pa_curve_types_efr32.h:
 C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/radio/rail_lib/plugin/pa-conversions/pa_curves_efr32.h:
 C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/radio/rail_lib/plugin/pa-conversions/efr32xg26/sl_rail_util_pa_curves_20dbm.h:

@@ -62,16 +62,16 @@ simplicity_sdk_2024.12.0/platform/service/sleeptimer/src/sl_sleeptimer.o: \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/service/sleeptimer/src/sli_sleeptimer_hal.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sli_sleeptimer.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_sleeptimer_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_sleeptimer_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_atomic.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_power_manager_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_power_manager_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sli_power_manager.h \
@@ -138,16 +138,16 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\ef
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
 C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/service/sleeptimer/src/sli_sleeptimer_hal.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sli_sleeptimer.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_sleeptimer_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_sleeptimer_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_atomic.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_power_manager_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_power_manager_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sli_power_manager.h:

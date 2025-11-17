@@ -53,7 +53,7 @@ simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_ut
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_prs_signals.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_dma_descriptor.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_ldmaxbar_defines.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h \
@@ -63,7 +63,7 @@ simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_ut
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_features.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_assert_error_codes.h \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_util_pti.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/sl_rail_util_pti_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_rail_util_pti_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_types.h
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\em_device.h:
@@ -118,7 +118,7 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\ef
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_prs_signals.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_dma_descriptor.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_ldmaxbar_defines.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h:
@@ -128,5 +128,5 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\chip\e
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_features.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_assert_error_codes.h:
 C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/radio/rail_lib/plugin/rail_util_pti/sl_rail_util_pti.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/sl_rail_util_pti_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_rail_util_pti_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_types.h:

@@ -67,7 +67,7 @@ simplicity_sdk_2024.12.0/platform/service/clock_manager/src/sl_clock_manager_hal
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/service/clock_manager/src/sli_clock_manager_hal.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
@@ -147,7 +147,7 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\ef
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h:
 C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/service/clock_manager/src/sli_clock_manager_hal.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:

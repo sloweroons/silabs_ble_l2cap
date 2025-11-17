@@ -63,8 +63,8 @@ simplicity_sdk_2024.12.0/platform/service/interrupt_manager/src/sl_interrupt_man
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_interrupt_manager_s2_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_interrupt_manager_s2_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
 C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/service/interrupt_manager/src/sli_interrupt_manager.h:
@@ -129,6 +129,6 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\ef
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_interrupt_manager_s2_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_interrupt_manager_s2_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:

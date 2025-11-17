@@ -65,7 +65,7 @@ simplicity_sdk_2024.12.0/util/third_party/crypto_ip/libcryptosoc/src/sx_blk_ciph
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_prs_signals.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_dma_descriptor.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_ldmaxbar_defines.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\crypto_ip\libcryptosoc\include\sx_memcpy.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\crypto_ip\libcryptosoc\include\sx_memcmp.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\crypto_ip\libcryptosoc\include\cryptolib_def.h \
@@ -139,7 +139,7 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\ef
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_prs_signals.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_dma_descriptor.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_ldmaxbar_defines.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\crypto_ip\libcryptosoc\include\sx_memcpy.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\crypto_ip\libcryptosoc\include\sx_memcmp.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\crypto_ip\libcryptosoc\include\cryptolib_def.h:

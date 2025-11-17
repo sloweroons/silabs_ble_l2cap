@@ -62,9 +62,9 @@ simplicity_sdk_2024.12.0/platform/service/memory_manager/src/sl_memory_manager_r
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\memory_manager\inc\sl_memory_manager_region.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_memory_manager_region_config.h
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_memory_manager_region_config.h
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\em_device.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26b420f3200im68.h:
@@ -127,6 +127,6 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\ef
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\memory_manager\inc\sl_memory_manager_region.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_memory_manager_region_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_memory_manager_region_config.h:

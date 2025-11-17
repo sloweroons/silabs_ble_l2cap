@@ -1,7 +1,7 @@
 simplicity_sdk_2024.12.0/platform/service/iostream/src/sl_iostream_eusart.o: \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/service/iostream/src/sl_iostream_eusart.c \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream.h \
@@ -63,9 +63,9 @@ simplicity_sdk_2024.12.0/platform/service/iostream/src/sl_iostream_eusart.o: \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\common\inc\ecode.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\s2_signals\dmadrv_signals.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_ldma.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/dmadrv_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/dmadrv_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/sl_power_manager_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_power_manager_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
@@ -85,7 +85,7 @@ simplicity_sdk_2024.12.0/platform/service/iostream/src/sl_iostream_eusart.o: \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_bus.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream.h:
@@ -147,9 +147,9 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\dmad
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\common\inc\ecode.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\s2_signals\dmadrv_signals.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_ldma.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/dmadrv_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/dmadrv_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/sl_power_manager_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_power_manager_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:

@@ -1,7 +1,7 @@
 simplicity_sdk_2024.12.0/platform/service/memory_manager/src/sl_memory_manager_dynamic_reservation.o: \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/service/memory_manager/src/sl_memory_manager_dynamic_reservation.c \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/sl_memory_manager_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_memory_manager_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\memory_manager\inc\sl_memory_manager.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h \
@@ -9,7 +9,7 @@ simplicity_sdk_2024.12.0/platform/service/memory_manager/src/sl_memory_manager_d
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sli_code_classification.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\memory_manager\inc\sl_memory_manager_region.h \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/service/memory_manager/src/sli_memory_manager.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_bit.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h \
@@ -17,7 +17,7 @@ simplicity_sdk_2024.12.0/platform/service/memory_manager/src/sl_memory_manager_d
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_gcc.h
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/sl_memory_manager_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_memory_manager_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\memory_manager\inc\sl_memory_manager.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h:
@@ -25,7 +25,7 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_cl
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sli_code_classification.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\memory_manager\inc\sl_memory_manager_region.h:
 C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/service/memory_manager/src/sli_memory_manager.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_bit.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h:

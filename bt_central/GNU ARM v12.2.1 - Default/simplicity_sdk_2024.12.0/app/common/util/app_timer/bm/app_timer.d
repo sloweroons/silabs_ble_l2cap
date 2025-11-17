@@ -13,7 +13,7 @@ simplicity_sdk_2024.12.0/app/common/util/app_timer/bm/app_timer.o: \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sli_code_classification.h \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/app/common/util/app_timer/bm/app_timer_internal.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/sl_power_manager_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_power_manager_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h \
@@ -32,7 +32,7 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_cl
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sli_code_classification.h:
 C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/app/common/util/app_timer/bm/app_timer_internal.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/sl_power_manager_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_power_manager_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h:

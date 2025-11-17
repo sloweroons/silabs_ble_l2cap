@@ -1,10 +1,10 @@
 simplicity_sdk_2024.12.0/hardware/driver/configuration_over_swo/src/sl_cos.o: \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/hardware/driver/configuration_over_swo/src/sl_cos.c \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\hardware\driver\configuration_over_swo\inc\sl_cos.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/sl_rail_util_pti_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_rail_util_pti_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_types.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\chip\efr32\efr32xg2x\rail_chip_specific.h \
@@ -64,10 +64,10 @@ simplicity_sdk_2024.12.0/hardware/driver/configuration_over_swo/src/sl_cos.o: \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\hardware\driver\configuration_over_swo\inc\sl_cos.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/sl_rail_util_pti_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_rail_util_pti_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_types.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\chip\efr32\efr32xg2x\rail_chip_specific.h:

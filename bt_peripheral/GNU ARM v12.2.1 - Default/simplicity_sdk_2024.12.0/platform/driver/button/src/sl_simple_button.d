@@ -11,7 +11,7 @@ simplicity_sdk_2024.12.0/platform/driver/button/src/sl_simple_button.o: \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_simple_button_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_simple_button_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\clock_manager\inc\sl_clock_manager.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_clock.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h \
@@ -27,7 +27,7 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_simple_button_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_simple_button_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\clock_manager\inc\sl_clock_manager.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_clock.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h:

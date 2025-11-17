@@ -4,9 +4,9 @@ simplicity_sdk_2024.12.0/platform/service/clock_manager/src/sl_clock_manager_ini
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\clock_manager\inc\sl_clock_manager_init.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/service/clock_manager/src/sli_clock_manager_init_hal.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_clock_manager_tree_config.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_clock_manager_oscillator_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_clock_manager_tree_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_clock_manager_oscillator_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\em_device.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26b420f3200im68.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\core_cm33.h \
@@ -71,9 +71,9 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\clock_manager\inc\sl_clock_manager_init.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h:
 C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/service/clock_manager/src/sli_clock_manager_init_hal.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_clock_manager_tree_config.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_clock_manager_oscillator_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_clock_manager_tree_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_clock_manager_oscillator_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\em_device.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26b420f3200im68.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\core_cm33.h:

@@ -57,12 +57,12 @@ simplicity_sdk_2024.12.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_s
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_prs_signals.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_dma_descriptor.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_ldmaxbar_defines.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\udelay\inc\sl_udelay.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\hardware\driver\mx25_flash_shutdown\inc\sl_mx25_flash_shutdown_usart\sl_mx25_flash_shutdown.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/sl_mx25_flash_shutdown_usart_config.h
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_mx25_flash_shutdown_usart_config.h
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\clock_manager\inc\sl_clock_manager.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h:
@@ -120,9 +120,9 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\ef
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_prs_signals.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_dma_descriptor.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_ldmaxbar_defines.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\udelay\inc\sl_udelay.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\hardware\driver\mx25_flash_shutdown\inc\sl_mx25_flash_shutdown_usart\sl_mx25_flash_shutdown.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/sl_mx25_flash_shutdown_usart_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_mx25_flash_shutdown_usart_config.h:

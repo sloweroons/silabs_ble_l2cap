@@ -1,0 +1,8 @@
+---
+workspace_name: "bt_central"
+label: "bt_central_"
+quality: "unknown"
+project:
+- id: "main"
+  path: "bt_central.slcp"
+  output: "."

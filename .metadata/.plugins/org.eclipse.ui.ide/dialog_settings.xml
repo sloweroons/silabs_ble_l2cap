@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="installedFeatures">
-		<item value="org.eclipse.cdt.debug.ui.memory:10.6.0.202201122357"/>
-		<item value="org.eclipse.cdt.gnu.build:10.6.0.202201122357"/>
-		<item value="org.eclipse.cdt.native:10.6.0.202203091838"/>
-		<item value="org.eclipse.cdt.platform:10.6.0.202203091838"/>
-		<item value="org.eclipse.draw2d:3.10.100.201606061308"/>
-		<item value="org.eclipse.embedcdt.debug.gdbjtag.jlink:6.1.2.202102181132"/>
-		<item value="org.eclipse.embedcdt.debug.gdbjtag:6.1.2.202102181132"/>
-		<item value="org.eclipse.emf.common:2.25.0.v20220123-0838"/>
-		<item value="org.eclipse.emf.ecore:2.27.0.v20220123-0838"/>
-		<item value="org.eclipse.help:2.3.900.v20220308-0310"/>
-		<item value="org.eclipse.platform:4.23.0.v20220308-0722"/>
-		<item value="org.eclipse.rcp:4.23.0.v20220308-0722"/>
-		<item value="org.eclipse.zest:1.7.0.201606061308"/>
+		<item value="org.eclipse.cdt.debug.ui.memory:11.6.1.202406241230"/>
+		<item value="org.eclipse.cdt.gnu.build:11.6.1.202406241230"/>
+		<item value="org.eclipse.cdt.native:11.6.1.202407022008"/>
+		<item value="org.eclipse.cdt.platform:11.6.1.202407022008"/>
+		<item value="org.eclipse.draw2d:3.22.0.202411181923"/>
+		<item value="org.eclipse.embedcdt.debug.gdbjtag.jlink:6.6.1.202408270735"/>
+		<item value="org.eclipse.embedcdt.debug.gdbjtag:6.6.1.202408270735"/>
+		<item value="org.eclipse.emf.common:2.33.0.v20240911-1027"/>
+		<item value="org.eclipse.emf.ecore:2.39.0.v20241018-1213"/>
+		<item value="org.eclipse.help:2.3.2000.v20241120-1800"/>
+		<item value="org.eclipse.platform:4.34.0.v20241120-1800"/>
+		<item value="org.eclipse.rcp:4.34.0.v20241120-1800"/>
+		<item value="org.eclipse.zest:3.22.0.202411181923"/>
 	</list>
 	<section name="ExternalProjectImportWizard">
 		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
@@ -22,12 +22,20 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral_"/>
 			<item value="C:\Users\berta\SimplicityStudio\v5_workspace\bt_soc_empty"/>
 			<item value="C:\Users\berta\SimplicityStudio\v5_workspace\bt_soc_client"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
 		</list>
+		<section name="ExternalProjectImportWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="706"/>
+			<item key="DIALOG_Y_ORIGIN" value="187"/>
+			<item key="DIALOG_WIDTH" value="525"/>
+			<item key="DIALOG_HEIGHT" value="710"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
 	</section>
 	<section name="CleanDialogSettings">
 		<item key="BUILD_NOW" value="true"/>
@@ -36,5 +44,13 @@
 		<item key="DIALOG_WIDTH" value="500"/>
 		<item key="DIALOG_HEIGHT" value="467"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="655"/>
+		<item key="DIALOG_Y_ORIGIN" value="337"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
 	</section>
 </section>

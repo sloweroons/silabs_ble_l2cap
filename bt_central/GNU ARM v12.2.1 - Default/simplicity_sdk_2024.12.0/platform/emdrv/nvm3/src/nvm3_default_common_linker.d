@@ -54,7 +54,7 @@ simplicity_sdk_2024.12.0/platform/emdrv/nvm3/src/nvm3_default_common_linker.o: \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_prs_signals.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_dma_descriptor.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_ldmaxbar_defines.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\nvm3\inc\nvm3_generic.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\common\inc\ecode.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\nvm3\inc\nvm3_hal.h \
@@ -63,7 +63,7 @@ simplicity_sdk_2024.12.0/platform/emdrv/nvm3/src/nvm3_default_common_linker.o: \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\nvm3\inc\nvm3_default.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\nvm3\inc\nvm3_hal_flash.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/nvm3_default_config.h
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/nvm3_default_config.h
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\nvm3\inc\nvm3.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\em_device.h:
@@ -118,7 +118,7 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\ef
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_prs_signals.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_dma_descriptor.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32bg22\include\efr32bg22_ldmaxbar_defines.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\nvm3\inc\nvm3_generic.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\common\inc\ecode.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\nvm3\inc\nvm3_hal.h:
@@ -127,4 +127,4 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\nvm3\inc\nvm3_default.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\nvm3\inc\nvm3_hal_flash.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_central_\config/nvm3_default_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/nvm3_default_config.h:

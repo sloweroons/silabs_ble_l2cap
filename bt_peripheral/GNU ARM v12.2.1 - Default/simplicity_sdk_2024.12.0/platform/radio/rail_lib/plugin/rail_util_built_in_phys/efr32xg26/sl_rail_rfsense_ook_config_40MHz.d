@@ -62,7 +62,7 @@ simplicity_sdk_2024.12.0/platform/radio/rail_lib/plugin/rail_util_built_in_phys/
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/radio/rail_lib/plugin/rail_util_built_in_phys/efr32xg26/sl_rail_rfsense_ook_config_40MHz.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_types.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\chip\efr32\efr32xg2x\rail_chip_specific.h \
@@ -129,7 +129,7 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\ef
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h:
 C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/radio/rail_lib/plugin/rail_util_built_in_phys/efr32xg26/sl_rail_rfsense_ook_config_40MHz.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\common\rail_types.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\radio\rail_lib\chip\efr32\efr32xg2x\rail_chip_specific.h:

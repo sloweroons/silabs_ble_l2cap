@@ -3,17 +3,17 @@ simplicity_sdk_2024.12.0/protocol/bluetooth/src/sli_bt_host_adaptation.o: \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sli_bt_host_adaptation.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_bluetooth_config.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_bluetooth_connection_config.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_bluetooth_advertiser_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_bluetooth_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_bluetooth_connection_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_bluetooth_advertiser_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bt_stack_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bt_ll_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_gcc.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_bt_host_adaptation_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_bt_host_adaptation_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bt_api.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bgapi.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bt_api_compatibility.h \
@@ -86,17 +86,17 @@ simplicity_sdk_2024.12.0/protocol/bluetooth/src/sli_bt_host_adaptation.o: \
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sli_bt_host_adaptation.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_bluetooth_config.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_bluetooth_connection_config.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_bluetooth_advertiser_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_bluetooth_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_bluetooth_connection_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_bluetooth_advertiser_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bt_stack_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bt_ll_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_gcc.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_bt_host_adaptation_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_bt_host_adaptation_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bt_api.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bgapi.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bt_api_compatibility.h:

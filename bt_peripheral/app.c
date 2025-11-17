@@ -38,8 +38,8 @@
 
 static uint16_t local_sdu_size = 576; // 23 to 65533
 static uint16_t local_pdu_size = 124; // 23 to 252, TODO: optimize for MTU
-static uint16_t credit = 8; // 1 to 65535
 static uint16_t spsm = 0x23; // IPSP
+static uint16_t initial_credits = 16; // TODO : pool this, if we start running out then send explicit credit requests
 static uint16_t cid = 0x00; // 0x40-0x7F, device/channel endpoint identifier
 
 // The advertising set handle allocated from Bluetooth stack.
@@ -73,13 +73,14 @@ const sl_button_t sl_button_instance1 = {
 void fragment_and_send_l2cap_data(uint8_t connection_handle, uint16_t cid,
                          uint8_t *data, uint16_t data_len) {
     uint16_t offset = 0;
+    sl_status_t s;
 
     uint16_t first_frame_length = (2 + data_len <= local_pdu_size) ? 2 + data_len : local_pdu_size;
     uint8_t first_frame[first_frame_length];
     first_frame[0] = (uint8_t)(data_len & 0xFF);
     first_frame[1] = (uint8_t)((data_len >> 8) & 0xFF);
     memcpy(&first_frame[2], &data[0], first_frame_length);
-    sl_status_t s = sl_bt_l2cap_channel_send_data(connection_handle, cid, first_frame_length, first_frame);
+    s = sl_bt_l2cap_channel_send_data(connection_handle, cid, first_frame_length, first_frame);
 
     offset += first_frame_length - 2;
 
@@ -87,7 +88,7 @@ void fragment_and_send_l2cap_data(uint8_t connection_handle, uint16_t cid,
 
     while (remaining > 0) {
         uint16_t chunk_size = (remaining > local_pdu_size) ? local_pdu_size : remaining;
-        sl_status_t status = sl_bt_l2cap_channel_send_data(connection_handle, cid, chunk_size, &data[offset]);
+        s = sl_bt_l2cap_channel_send_data(connection_handle, cid, chunk_size, &data[offset]);
         offset += chunk_size;
         remaining -= chunk_size;
     }
@@ -191,7 +192,7 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
       // React to L2CAP channel open request
     case sl_bt_evt_l2cap_le_channel_open_request_id:
       cid = evt->data.evt_l2cap_le_channel_open_request.cid;
-      sl_bt_l2cap_send_le_channel_open_response(evt->data.evt_l2cap_le_channel_open_request.connection, evt->data.evt_l2cap_le_channel_open_request.cid, local_sdu_size, local_pdu_size, credit, sl_bt_l2cap_connection_result_successful);
+      sl_bt_l2cap_send_le_channel_open_response(evt->data.evt_l2cap_le_channel_open_request.connection, evt->data.evt_l2cap_le_channel_open_request.cid, local_sdu_size, local_pdu_size, initial_credits, sl_bt_l2cap_connection_result_successful);
       break;
 
       // React to being able to send more data
@@ -201,7 +202,7 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
       // React to receiving data
     case sl_bt_evt_l2cap_channel_data_id:
       if (evt->data.evt_l2cap_channel_data.data.len == 1 && evt->data.evt_l2cap_channel_data.data.data[0] == 0xff) {
-          sl_bt_l2cap_channel_send_credit(connection_handle, cid, credit);
+          sl_bt_l2cap_channel_send_credit(connection_handle, cid, 1);
           uint8_t data[] = "this is data generated upon request";
           //sl_bt_l2cap_channel_send_data(connection_handle, cid, sizeof(data), data);
           fragment_and_send_l2cap_data(connection_handle, cid, data, sizeof(data));

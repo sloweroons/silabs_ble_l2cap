@@ -62,7 +62,7 @@ simplicity_sdk_2024.12.0/platform/security/sl_component/sl_protocol_crypto/src/s
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/security/sl_component/sl_protocol_crypto/src/sli_radioaes_management.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sli_psec_osal\inc\sli_psec_osal.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sli_psec_osal\inc\sli_psec_osal_baremetal.h \
@@ -75,16 +75,16 @@ simplicity_sdk_2024.12.0/platform/security/sl_component/sl_protocol_crypto/src/s
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\mbedtls\private_access.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\psa\build_info.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\mbedtls\build_info.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_mbedtls_config.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_mbedtls_config_autogen.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_mbedtls_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_mbedtls_config_autogen.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sl_mbedtls_support\config\sli_mbedtls_omnipresent.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sl_mbedtls_support\config\sli_mbedtls_acceleration.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_mbedtls_device_config.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_mbedtls_config_transform_autogen.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/psa_crypto_config.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_psa_config_autogen.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_mbedtls_device_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_mbedtls_config_transform_autogen.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/psa_crypto_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_psa_config_autogen.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sl_mbedtls_support\config\sli_psa_acceleration.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_psa_builtin_config_autogen.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_psa_builtin_config_autogen.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\mbedtls\config_psa.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\psa\crypto_legacy.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\psa\crypto_adjust_config_synonyms.h \
@@ -218,7 +218,7 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\ef
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_prs_signals.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_dma_descriptor.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26_ldmaxbar_defines.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h:
 C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/security/sl_component/sl_protocol_crypto/src/sli_radioaes_management.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sli_psec_osal\inc\sli_psec_osal.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sli_psec_osal\inc\sli_psec_osal_baremetal.h:
@@ -231,16 +231,16 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\inclu
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\mbedtls\private_access.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\psa\build_info.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\mbedtls\build_info.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_mbedtls_config.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_mbedtls_config_autogen.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_mbedtls_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_mbedtls_config_autogen.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sl_mbedtls_support\config\sli_mbedtls_omnipresent.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sl_mbedtls_support\config\sli_mbedtls_acceleration.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_mbedtls_device_config.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_mbedtls_config_transform_autogen.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/psa_crypto_config.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_psa_config_autogen.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_mbedtls_device_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_mbedtls_config_transform_autogen.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/psa_crypto_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_psa_config_autogen.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\security\sl_component\sl_mbedtls_support\config\sli_psa_acceleration.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sli_psa_builtin_config_autogen.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sli_psa_builtin_config_autogen.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\mbedtls\config_psa.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\psa\crypto_legacy.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\psa\crypto_adjust_config_synonyms.h:

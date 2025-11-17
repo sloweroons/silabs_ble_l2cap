@@ -1,7 +1,7 @@
 simplicity_sdk_2024.12.0/platform/service/sleeptimer/src/sl_sleeptimer_hal_sysrtc.o: \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/service/sleeptimer/src/sl_sleeptimer_hal_sysrtc.c \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\peripheral\inc\sl_hal_sysrtc.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\em_device.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26b420f3200im68.h \
@@ -71,14 +71,14 @@ simplicity_sdk_2024.12.0/platform/service/sleeptimer/src/sl_sleeptimer_hal_sysrt
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/service/sleeptimer/src/sli_sleeptimer_hal.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sli_sleeptimer.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_sleeptimer_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_sleeptimer_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\clock_manager\inc\sl_clock_manager.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_clock.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_peripheral.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_peripheral_types.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_clock.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_power_manager_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_power_manager_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_prs.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_gpio.h \
@@ -86,7 +86,7 @@ simplicity_sdk_2024.12.0/platform/service/sleeptimer/src/sl_sleeptimer_hal_sysrt
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_bus.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\peripheral\inc\sl_hal_sysrtc.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\em_device.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26b420f3200im68.h:
@@ -156,14 +156,14 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
 C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/service/sleeptimer/src/sli_sleeptimer_hal.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sli_sleeptimer.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_sleeptimer_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_sleeptimer_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\clock_manager\inc\sl_clock_manager.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_clock.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_peripheral.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_peripheral_types.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_clock.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_power_manager_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_power_manager_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_prs.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_gpio.h:

@@ -47,7 +47,7 @@
 static uint16_t local_mtu_size = 1280;
 static uint16_t local_sdu_size = 1280; // 23 to 65533
 static uint16_t local_pdu_size = 252; // 23 to 252
-static uint16_t credit = 10000; // 1 to 65535
+static uint16_t initial_credits = 16; // TODO : pool this, if we start running out then send explicit credit requests
 static uint16_t spsm = 0x23; // IPSP
 static uint16_t cid = 0x00; // 0x40-0x7F
 
@@ -243,7 +243,8 @@ SL_WEAK void app_process_action(void)
   if (!was_pressed && is_pressed) {
       uint8_t data = 0xff;
       sl_status_t status = sl_bt_l2cap_channel_send_data(connection_handle, cid, sizeof(data), &data);
-      //printf("\t\tresult : 0X%04lx\n", status);
+      if (status > 0)
+        printf(ANSI_COLOR_RED "CEN - L2CAP send operation has failed with error code : 0X%04lx\n" ANSI_COLOR_RESET, status);
   }
   was_pressed = is_pressed;
 }
@@ -394,9 +395,8 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
           printf("\t\tremote PDU size : %u\n", remote_pdu_size);
           printf("\t\tlocal SDU size : %u\n", local_sdu_size);
           printf("\t\tremote SDU size : %u\n", remote_sdu_size);
+          printf("\t\tinitial credit count : %u\n", initial_credits);
 
-          //printf("CEN - # Sending initial %u credit(s).\n", credit);
-          //sl_bt_l2cap_channel_send_credit(evt->data.evt_l2cap_le_channel_open_response.connection, cid, credit);
       } else {
           printf(ANSI_COLOR_RED "CEN - -> L2CAP connection FAILED.\n" ANSI_COLOR_RESET);
           printf("\t\terror code : %u\n", evt->data.evt_l2cap_le_channel_open_response.errorcode);
@@ -424,17 +424,22 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
       fragment_index++;
       memcpy(message_buffer + length_index, fragment_buffer, payload_offset);
       length_index += payload_offset;
-      printf("CEN - # Sending additional %u credit(s).\n", evt->data.evt_l2cap_channel_data.data.len);
-      sl_bt_l2cap_channel_send_credit(evt->data.evt_l2cap_channel_data.connection, evt->data.evt_l2cap_channel_data.cid, evt->data.evt_l2cap_channel_data.data.len);
       if (length_index == message_length) {
           printf(ANSI_COLOR_CYAN "CEN - -> Data transmission finished.\n" ANSI_COLOR_RESET);
           printf("\t\tdata string: '%s'\n", message_buffer);
           if (evt->data.evt_l2cap_channel_data.data.len > 0) {
             if (evt->data.evt_l2cap_channel_data.data.data[0] == 8 && evt->data.evt_l2cap_channel_data.data.data[1] == 8) {
-                sl_bt_l2cap_close_channel(evt->data.evt_l2cap_channel_data.connection, evt->data.evt_l2cap_channel_data.cid);
+                sl_status_t status = sl_bt_l2cap_close_channel(evt->data.evt_l2cap_channel_data.connection, evt->data.evt_l2cap_channel_data.cid);
+                if (status > 0)
+                  printf(ANSI_COLOR_RED "CEN - L2CAP close channel operation has failed with error code : 0X%04lx\n" ANSI_COLOR_RESET, status);
+
                 printf("CEN - L2CAP connection closed (STOP COMMAND RECEIVED)\n");
             }
           }
+          printf("CEN - # Sending additional %u credit(s).\n", fragment_index);
+          sl_status_t status = sl_bt_l2cap_channel_send_credit(evt->data.evt_l2cap_channel_data.connection, evt->data.evt_l2cap_channel_data.cid, fragment_index);
+          if (status > 0)
+            printf(ANSI_COLOR_RED "CEN - L2CAP send credit operation has failed with error code : 0X%04lx\n" ANSI_COLOR_RESET, status);
           memset(message_buffer, 0x00, 4*MAX_BUFFER_SIZE);
           fragment_index = 0;
           length_index = 0;
@@ -451,7 +456,7 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
            uint16_t uuid = evt->data.evt_gatt_service.uuid.data[0] | (evt->data.evt_gatt_service.uuid.data[1] << 8);
            printf("\t\tuuid : 0x%04X\n", uuid);
        }
-       printf("\t\thandle : [%lu]\n", service_handle);
+       printf("\t\thandle : %lu\n", service_handle);
 
        break;
 
@@ -471,7 +476,7 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
                   uuid[7], uuid[6],
                   uuid[5], uuid[4], uuid[3], uuid[2], uuid[1], uuid[0]);
        }
-       printf("\t\thandle : [%u]\n", characteristic_handle);
+       printf("\t\thandle : %u\n", characteristic_handle);
 
        break;
 
@@ -479,8 +484,6 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
     case sl_bt_evt_gatt_characteristic_value_id:
       printf(ANSI_COLOR_YELLOW "CEN - -> Characteristic value received.\n" ANSI_COLOR_RESET);
       printf("\t\tvalue at 0 : %u\n", evt->data.evt_gatt_characteristic_value.value.data[0]);
-      printf("CEN - # Sending additional %u credit(s).\n", credit);
-      sl_bt_l2cap_channel_send_credit(evt->data.evt_gatt_characteristic_value.connection, cid, 256);
       break;
 
     case sl_bt_evt_gatt_procedure_completed_id:
@@ -509,9 +512,10 @@ void sl_bt_on_event(sl_bt_msg_t *evt) {
             printf("\t\tconnection handle : %u\n", connection_handle);
 
             memset(message_buffer, 0x00, sizeof(message_buffer));
-            sl_status_t status = sl_bt_l2cap_open_le_channel(connection_handle, spsm, local_sdu_size, local_pdu_size, credit, &cid);
-            //printf("\t\tresult : 0X%04lx\n", status);
-            printf("CEN - # Sending initial %u credit(s).\n", credit);
+            sl_status_t status = sl_bt_l2cap_open_le_channel(connection_handle, spsm, local_sdu_size, local_pdu_size, initial_credits, &cid);
+            if (status > 0)
+              printf(ANSI_COLOR_RED "CEN - L2CAP channel open operation has failed with error code : 0X%04lx\n" ANSI_COLOR_RESET, status);
+
 
             //sl_bt_gatt_set_characteristic_notification(evt->data.evt_gatt_characteristic.connection, evt->data.evt_gatt_characteristic.characteristic, sl_bt_gatt_indication);
 

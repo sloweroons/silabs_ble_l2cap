@@ -1,0 +1,8 @@
+---
+workspace_name: "bt_peripheral"
+label: "bt_peripheral_"
+quality: "unknown"
+project:
+- id: "main"
+  path: "bt_peripheral.slcp"
+  output: "."

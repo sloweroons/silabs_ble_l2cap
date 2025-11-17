@@ -2,7 +2,7 @@ simplicity_sdk_2024.12.0/platform/service/power_manager/src/common/sl_power_mana
  C:/Users/MSI/SimplicityStudio/SDKs/simplicity_sdk/platform/service/power_manager/src/common/sl_power_manager_em4.c \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_power_manager_config.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_power_manager_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
@@ -17,7 +17,7 @@ simplicity_sdk_2024.12.0/platform/service/power_manager/src/common/sl_power_mana
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sli_power_manager.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\em_device.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26b420f3200im68.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\core_cm33.h \
@@ -83,7 +83,7 @@ simplicity_sdk_2024.12.0/platform/service/power_manager/src/common/sl_power_mana
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\sli_em_cmu.h
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\config/sl_power_manager_config.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/sl_power_manager_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h:
@@ -98,7 +98,7 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sli_power_manager.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\MSI\SimplicityStudio\v5_workspace\bt_peripheral_\autogen/sl_component_catalog.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\em_device.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\efr32mg26\include\efr32mg26b420f3200im68.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\core_cm33.h:
