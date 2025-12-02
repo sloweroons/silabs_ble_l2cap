@@ -43,21 +43,21 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="false"/>
 		<list key="findhistory">
-			<item value="send_"/>
-			<item value="send_cred"/>
-			<item value="cid"/>
-			<item value="btn"/>
-			<item value="cid ="/>
-			<item value="local_c"/>
-			<item value="ANSI_COLOR_CYAN"/>
-			<item value="additional"/>
-			<item value="request"/>
-			<item value="send_c"/>
-			<item value="initial"/>
-			<item value="initial c"/>
-			<item value="initial_credits"/>
-			<item value="credit"/>
-			<item value="init"/>
+			<item value="c"/>
+			<item value="characteristics"/>
+			<item value="cred"/>
+			<item value="connection_updated ="/>
+			<item value="characteristic_add"/>
+			<item value="active_connections[active_connections_size-1]"/>
+			<item value="typedef struct characteristic {"/>
+			<item value="active_connections[active_connections_size]"/>
+			<item value="uuid"/>
+			<item value="connection_handles"/>
+			<item value="active_connections_size"/>
+			<item value="service_han"/>
+			<item value="remote-_cid"/>
+			<item value="characteristic_handle ="/>
+			<item value="connection_up"/>
 		</list>
 	</section>
 </section>

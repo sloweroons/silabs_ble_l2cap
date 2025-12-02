@@ -36,7 +36,7 @@
 #include "sl_simple_button.h"
 #include "sl_simple_button_instances.h"
 
-static uint16_t local_sdu_size = 576; // 23 to 65533
+static uint16_t local_sdu_size = 1280; // 23 to 65533
 static uint16_t local_pdu_size = 124; // 23 to 252, TODO: optimize for MTU
 static uint16_t spsm = 0x23; // IPSP
 static uint16_t initial_credits = 16; // TODO : pool this, if we start running out then send explicit credit requests
