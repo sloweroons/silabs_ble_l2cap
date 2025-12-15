@@ -1,5 +1,6 @@
 app.o: ../app.c \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral/app.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h \
@@ -11,7 +12,6 @@ app.o: ../app.c \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\app\common\util\app_assert\app_assert.h \
  C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h \
  C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/app_assert_config.h \
- ../app.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_simple_button.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_button.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h \
@@ -19,6 +19,7 @@ app.o: ../app.c \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h \
  C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_simple_button_instances.h
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral/app.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h:
@@ -30,7 +31,6 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\protocol\bluetooth\inc\sl_bt_a
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\app\common\util\app_assert\app_assert.h:
 C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\autogen/sl_component_catalog.h:
 C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_peripheral\config/app_assert_config.h:
-../app.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_simple_button.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_button.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h:

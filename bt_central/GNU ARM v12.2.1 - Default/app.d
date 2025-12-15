@@ -1,5 +1,6 @@
 app.o: ../app.c \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central/app.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h \
@@ -78,13 +79,14 @@ app.o: ../app.c \
  C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_power_manager_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h \
  C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/app_log_config.h \
- ../app.h \
  C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_simple_button_instances.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_simple_button.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_button.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h \
- c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h
+ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_bluetooth_connection_config.h
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central/app.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h:
@@ -163,9 +165,9 @@ c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager
 C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_power_manager_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h:
 C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/app_log_config.h:
-../app.h:
 C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_simple_button_instances.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_simple_button.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_button.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_bluetooth_connection_config.h:

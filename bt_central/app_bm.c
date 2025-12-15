@@ -27,10 +27,10 @@
  * 3. This notice may not be removed or altered from any source distribution.
  *
  ******************************************************************************/
+#include <app.h>
 #include <stdint.h>
 #include <stdbool.h>
 #include "sl_core.h"
-#include "app.h"
 
 // Semaphore indicating that it is required to execute application process action.
 static uint16_t proceed_semaphore;

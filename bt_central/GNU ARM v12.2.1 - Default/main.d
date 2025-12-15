@@ -1,8 +1,8 @@
 main.o: ../main.c \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h \
+ C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central/app.h \
  C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\system\inc\sl_system_init.h \
- ../app.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h \
  C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_power_manager_config.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h \
@@ -19,9 +19,9 @@ main.o: ../main.c \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h \
  c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\system\inc\sl_system_process_action.h
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
+C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central/app.h:
 C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\autogen/sl_component_catalog.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\system\inc\sl_system_init.h:
-../app.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h:
 C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\config/sl_power_manager_config.h:
 c:\users\msi\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h:

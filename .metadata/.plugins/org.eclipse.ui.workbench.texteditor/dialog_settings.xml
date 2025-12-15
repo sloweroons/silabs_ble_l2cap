@@ -43,10 +43,14 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="false"/>
 		<list key="findhistory">
+			<item value="sl_sta"/>
+			<item value="supported_service"/>
+			<item value="0x1820"/>
+			<item value="service"/>
+			<item value="btn"/>
 			<item value="send_"/>
 			<item value="send_cred"/>
 			<item value="cid"/>
-			<item value="btn"/>
 			<item value="cid ="/>
 			<item value="local_c"/>
 			<item value="ANSI_COLOR_CYAN"/>
@@ -54,10 +58,6 @@
 			<item value="request"/>
 			<item value="send_c"/>
 			<item value="initial"/>
-			<item value="initial c"/>
-			<item value="initial_credits"/>
-			<item value="credit"/>
-			<item value="init"/>
 		</list>
 	</section>
 </section>

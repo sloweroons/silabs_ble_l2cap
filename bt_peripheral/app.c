@@ -27,12 +27,12 @@
  * 3. This notice may not be removed or altered from any source distribution.
  *
  ******************************************************************************/
+#include <app.h>
 #include "sl_common.h"
 #include "sl_bt_api.h"
 #include "app_assert.h"
 #include <string.h>
 #include <stdio.h>
-#include "app.h"
 #include "sl_simple_button.h"
 #include "sl_simple_button_instances.h"
 

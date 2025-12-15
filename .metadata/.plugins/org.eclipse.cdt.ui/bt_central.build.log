@@ -1,4 +1,4 @@
-20:29:32 **** Incremental Build of configuration GNU ARM v12.2.1 - Default for project bt_central ****
+16:09:08 **** Incremental Build of configuration GNU ARM v12.2.1 - Default for project bt_central ****
 make -j16 all 
 make[1]: Nothing to be done for 'main-build'.
 "C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\commander\commander.exe" postbuild "C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central/bt_central.slpb" --parameter build_dir:"C:\Users\MSI\SimplicityStudio\silabs_ble_l2cap\bt_central\GNU ARM v12.2.1 - Default"
@@ -7,5 +7,5 @@ Running task GBL3 create...
 DONE
  
 
-20:29:34 Build Finished. 0 errors, 0 warnings. (took 1s.368ms)
+16:09:10 Build Finished. 0 errors, 0 warnings. (took 1s.717ms)
 
